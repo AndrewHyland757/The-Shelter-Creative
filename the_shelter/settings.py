@@ -16,7 +16,7 @@ DEBUG = True
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = ['8000-andrewhylan-theshelterc-ekjq8rdm0z0.ws-eu116.gitpod.io', 'the-shelter-creative-1cb9f175cfbe.herokuapp.com']
+ALLOWED_HOSTS = ['8000-andrewhylan-theshelterc-ekjq8rdm0z0.ws-eu116.gitpod.io', 'the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'www.thesheltercreative.com']
 
 
 # Application definition
