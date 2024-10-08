@@ -1,0 +1,1 @@
+web: gunicorn the_shelter.wsgi:application

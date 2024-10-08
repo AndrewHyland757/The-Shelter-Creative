@@ -1,0 +1,95 @@
+{% load static %} {% block extra_css %}
+  <link rel="stylesheet" href="{% static 'styles/info.css' %}" />
+{% endblock %}
+
+<div
+  class="modal"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+  >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <section class="section-info">
+        <div class="close-container">
+          <button type="button" class="button button--close" data-dismiss="modal" aria-label="Close">close</button>
+        </div>
+        <div class="main-container">
+          <div class="info-col-left">
+            <p class="info-text">
+              THE SHELTER is a creative studio specializing in brand experiences
+              and content development for luxury, retail, lifestyle, and
+              cultural organizations all around the world.
+              <br>
+              <br>
+              We focus on reinvigorating brand visions by understanding customer
+              and market needs, analyzing socio-cultural trends and
+              designing a unique identity that guides a brand culture with
+              intelligence, character, and clarity.
+            </p>
+          </div>
+          <div class="info-col-right">
+            <div class="sub-info-container sub-info-container--contact">
+              <p class="heading heading--contact">
+                Email:&nbsp;<a href="mailto:info@theshelter.com"
+                  >info@theshelter.com</a
+                  >
+              </p>
+              <p class="heading heading--contact">
+                Instagram:&nbsp;<a
+                  href="https://www.instagram.com/thesheltercreative/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@thesheltercreative</a
+                  >
+              </p>
+            </div>
+            <div class="sub-info-container">
+              <p class="heading">Services</p>
+              <p class="item">Brand Strategy & Development</p>
+              <p class="item">Creative & Art Direction</p>
+              <p class="item">Communication & Content</p>
+              <p class="item">Concept & Narrative Development</p>
+              <p class="item">Print, Editorial & Digital Style Design</p>
+              <p class="item">Naming & Branding</p>
+              <p class="item">Logo & Visual Identity</p>
+              <p class="item">Copywriting & Voice</p>
+              <p class="item">Photography, Film & Video</p>
+              <p class="item">Creative Production & Art buying</p>
+              <p class="item">Research & Curation</p>
+              <p class="item">Experiential & Environments</p>
+              <p class="item">Talent acquisition & creative teams</p>
+            </div>
+            <div class="sub-info-container">
+              <p class="heading">Clients</p>
+              <div class="client-container">
+                <div class="client-list--left">
+                  <p class="item">Adolfo Domínguez</p>
+                  <p class="item">Carolina Herrera</p>
+                  <p class="item">Casa Camper</p>
+                  <p class="item">Coosy</p>
+                  <p class="item">L’Officiel</p>
+                  <p class="item">Levare</p>
+                  <p class="item">Massimo Dutti</p>
+                  <p class="item">Pepa London</p>
+                </div>
+                <div class="client-list--right">
+                  <p class="item">Purificación García</p>
+                  <p class="item">S Moda</p>
+                  <p class="item">Shiweed</p>
+                  <p class="item">TOUS</p>
+                  <p class="item">Vogue</p>
+                  <p class="item">Volupte</p>
+                  <p class="item">XTI Shoes</p>
+                  <p class="item">Yakum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

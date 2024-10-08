@@ -1,0 +1,322 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block extra_css %}
+  
+  <link rel="stylesheet" href="{% static 'home/styles/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/styles//color_changes.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/styles/brand_container.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/styles/section_slides.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+  <!-------- SECTION 1 --------->
+
+  <div class="section">
+    <picture>
+      <source
+        srcset="{% static '/home/images/home_images/landing/The_Shelter_Creative_Landing_sm.jpg' %}"
+        media="(max-width: 600px)">
+      <source
+        srcset="{% static '/home/images/home_images/landing/The_Shelter_Creative_Landing.jpg' %}"
+        media="(max-width: 1200px)">
+      <img
+        class="img-full-screen"
+        src="{% static '/home/images/home_images/landing/The_Shelter_Creative_Landing.jpg' %}"
+        alt="Image of a modern roof structure with beams by The Shelter Creative"
+        >
+    </picture>
+  </div>
+
+  <!-------- SECTION 2 --------->
+
+  <div class="section section--2">
+    <div class="img-container">
+      <div class="img-container--half-screen">
+        <img
+          src="{% static '/home/images/home_images/s-moda/The_Shelter_Creative_S_Moda_Beauty_Satoshi_Saikusa_1.jpg' %}"
+          alt="Image of close up of a female model's face for S Moda by Satoshi_Saikusa">
+      </div>
+      <div class="img-container--half-screen">
+        <img
+          src="{% static '/home/images/home_images/s-moda/The_Shelter_Creative_S_Moda_Beauty_Satoshi_Saikusa_2.jpg' %}"
+          alt="Image of close up of a female model's face for S Moda by Satoshi_Saikusa">
+      </div>
+    </div>
+    <div class="brand-service-container">
+      <div class="company company--centered">
+        <p>S Moda</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service main-service--centered">
+        <p>Creative Production</p>
+      </div>
+    </div>
+  </div>
+  
+   <!-------- SECTION 3 --------->
+
+   <div class="section section--slides">
+    <div class="slide slide--1">
+      <div class="slide-text-container slide-text-container--1">
+        <p>
+          We craft distinctive brand experiences that embody organization's values.
+        </p>
+      </div>
+    </div>
+    <div class="slide slide--2">
+      <div class="slide-text-container slide-text-container--2">
+        <p>Art and culture form the foundation of our brand creation
+          process.
+        </p>
+      </div>
+    </div>
+    <div class="slide slide--3">
+      <div class="slide-text-container slide-text-container--3">
+        <p>
+          Connecting brands with worldwide audiences through captivating global narratives.
+        </p>
+      </div>
+    </div>
+  </div>
+
+   <!-------- SECTION 4 --------->
+
+   <div class="section">
+    <div class="img-container img-container--right">
+      <picture>
+        <source
+          srcset="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_sm.jpg' %}"
+          media="(max-width: 600px) and (orientation: portrait)"
+          >
+        <source
+          srcset="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_md.jpg' %}"
+          media="(max-width: 1200px) and (orientation: portrait)"
+          >
+        <img
+          src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez.jpg' %}"
+          alt="Ecommerce image of female model for Adolfo_Dominguez - The Shelter Creative"
+          >
+      </picture>
+    </div>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>adolfo dominguez</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Creative Direction</p>
+      </div>
+    </div>
+  </div>
+
+  <!-------- SECTION 5 --------->
+
+  <div class="section">
+    <picture>
+      <source
+        srcset="{% static '/home/images/home_images/photography/The_Shelter_Creative_Illes_Balears_Classics_sm.jpg' %}"
+        media="(max-width: 600px)">
+      <source
+        srcset="{% static '/home/images/home_images/photography/The_Shelter_Creative_Illes_Balears_Classics_landscape_sm.jpg' %}"
+        media="(max-width: 600px) and (orientation: landscape)">
+      <source
+        srcset="{% static '/home/images/home_images/photography/The_Shelter_Creative_Illes_Balears_Classics_md.jpg' %}"
+        media="(max-width: 1200px)">
+      <img
+        class="img-full-screen"
+        src="{% static '/home/images/home_images/photography/The_Shelter_Creative_Illes_Balears_Classics.jpg' %}"
+        alt="Photograph of a classic sailing boat during the Illes Balears Classic boat race by The Shelter Creative"
+        >
+    </picture>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>Illes Balears Clàssics</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Photography</p>
+      </div>
+    </div>
+  </div>
+
+  <!-------- SECTION 6 --------->
+
+  <div class="section">
+    <picture class="img-container--center img-container">
+      <source
+        srcset="{% static '/home/images/home_images/l_officiel/The_Shelter_Creative_L_Officiel_sm.jpg' %}"
+        media="(max-width: 600px)">
+      <img
+        class="img-container--center-img"
+        src="{% static '/home/images/home_images/l_officiel/The_Shelter_Creative_L_Officiel.jpg' %}"
+        alt="L'Officiel image - The Shelter Creative">
+    </picture>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>L’Officiel</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Creative Direction</p>
+      </div>
+    </div>
+  </div>
+
+  <!-------- SECTION 7 --------->
+
+  <div class="section">
+    <picture>
+      <source
+        srcset="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_Woman_Dariio_Vazquez_sm.jpg' %}"
+        media="(max-width: 600px)"
+        >
+      <source
+        srcset="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_Woman_Dariio_Vazquez_md.jpg' %}"
+        media="(max-width: 1200px)"
+        >
+      <img
+        class="img-full-screen"
+        src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_Woman_Dariio_Vazquez.jpg' %}"
+        alt="The Shelter Creative image of woman for Adolfo Domínguez by Dario Vazquez"
+        >
+    </picture>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>Adolfo Domínguez</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Creative Direction</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-------- SECTION 8 --------->
+
+  <div class="section">
+    <picture>
+      <source
+        srcset="{% static '/home/images/home_images/photography/The_Shelter_Creative_lilly_Berlin_sm.jpg' %}"
+        media="(max-width: 600px)"
+        >
+      <source
+        srcset="{% static '/home/images/home_images/photography/The_Shelter_Creative_lilly_Berlin_md.jpg' %}"
+        media="(max-width: 1200px)"
+        >
+      <img
+        class="img-full-screen"
+        src="{% static '/home/images/home_images/photography/The_Shelter_Creative_lilly_Berlin.jpg' %}"
+        alt="Close up photograph of a lilly flower in Berlin by The Shelter Creative"
+        >
+    </picture>
+  </div>
+
+  <!-------- SECTION 9 --------->
+
+  <div class="section section--8">
+    <div class="grid-container-1x3">
+      <div class="grid-1x3">
+        <div class="grid-item-1x3">
+          <img
+            src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_U_1.jpg' %}"
+            alt="Ecommerce image of male model in Adolfo_Dominguez U"
+            >
+        </div>
+        <div class="grid-item-1x3">
+          <img
+            src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_U_3.png' %}"
+            alt="Ecommerce image of male model in Adolfo_Dominguez U"
+            >
+        </div>
+        <div class="grid-item-1x3">
+          <img
+            src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_U_2.png' %}"
+            alt="Ecommerce image of female model in Adolfo_Dominguez U"
+            >
+        </div>
+      </div>
+    </div>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>U Adolfo Domínguez</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Creative Direction</p>
+      </div>
+    </div>
+  </div>
+
+  <!-------- SECTION 10 --------->
+
+  <div class="section">
+    <video id="myVideo" class="video" autoplay muted loop playsinline>
+      <source
+        src="{% static '/home/images/home_images/video/The_Shelter_Creative_Levare.mp4' %}"
+        type="video/mp4"
+        >
+      Your browser does not support the video tag.
+    </video>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>Levare</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Brand Strategy</p>
+      </div>
+    </div>
+  </div>
+
+  <!-------- SECTION 11 --------->
+
+  <div class="section">
+    <div class="img-container img-container--landscape">
+      <img
+        src="{% static '/home/images/home_images/tous/The_Shelter_Creative_TOUS.jpg' %}"
+        alt="TOUS red bag ecommerce image - The Shelter Creative">
+    </div>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>TOUS</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Creative Research</p>
+      </div>
+    </div>
+  </div>
+
+  <!-------- SECTION 12 --------->
+
+  <div class="section">
+    <picture class="picture-container">
+      <source
+        srcset="{% static '/home/images/home_images/yakum/The_Shelter_Creative_Yakum_Siekopais_Remolino_Ecuador_sm.jpg' %}"
+        media="(max-width: 600px)">
+      <source
+        srcset="{% static '/home/images/home_images/yakum/The_Shelter_Creative_Yakum_Siekopais_Remolino_Ecuador_md.jpg' %}"
+        media="(max-width: 1200px)">
+      <img
+        class="img-full-screen"
+        src="{% static '/home/images/home_images/yakum/The_Shelter_Creative_Yakum_Siekopais_Remolino_Ecuador.jpg' %}"
+        alt="by The Shelter Creative">
+    </picture>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>yakum</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Brand Strategy</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block extra_postloadjs %}
+  <script src="{% static 'home/js/home.js' %}"></script>
+{% endblock %}

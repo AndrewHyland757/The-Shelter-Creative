@@ -1,0 +1,114 @@
+.header-container {
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.header {
+	height: fit-content;
+	margin: 0rem 3rem;
+	margin-top: 2.4rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-left {
+	display: block;
+}
+
+.logo {
+	font-family: "BigNoodleToo", "Arial Narrow", sans-serif !important;
+	font-size: 3.6rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 3.04px;
+	color: #1e1c1c;
+	/* For the section transitions */
+	transition: color .75s ease-in-out;
+}
+
+.sublogo,
+.header-right button {
+	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.12px;
+	color: #1e1c1c;
+	/* For the section transitions */
+	transition: color .75s ease-in-out;
+}
+
+.sublogo {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}
+
+.header-right button {
+	font-size: 1.3rem;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+}
+
+.header-right button:visited {
+	background-color: transparent;
+}
+
+.logo:hover,
+.logo:active,
+.sublogo--email:hover,
+.sublogo--email:active,
+.header-right button:hover,
+.header-right button:active {
+	color: #626060;
+	text-decoration: none;
+	cursor: pointer !important;
+	/* For the hover transitions */
+	transition: color 0.1s ease-in-out;
+}
+
+/****** MEDIA QUERIES ******/
+
+@media only screen and (max-width: 992px) {
+
+	.header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header-left {
+		text-align: center;
+	}
+
+	.sublogo {
+		line-height: 1.3rem;
+	}
+
+	.header-right button {
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		letter-spacing: 0.12px;
+	}
+
+	.logo {
+		font-size: 3.4rem;
+		letter-spacing: 6.84px;
+		letter-spacing: 3.04px;
+	}
+
+	.sublogo--email {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.logo {
+		font-size: 2.6rem;
+		letter-spacing: 3px;
+	}
+}

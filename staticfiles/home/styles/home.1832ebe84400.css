@@ -1,0 +1,224 @@
+.section {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+}
+
+/************************** REUSABLE IMAGE CONTAINER CLASSSES **************************/
+
+.img-full-screen {
+	/* Full screen images */
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.img-container {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+}
+
+.img-container--center {
+	/* Image portrait centered */
+	justify-content: center;
+}
+
+.img-container--center-img {
+	height: 100%;
+	max-height: 100%;
+}
+
+.img-container--landscape {
+	justify-content: center;
+	align-items: center;
+}
+
+.img-container--landscape img {
+	height: 66vh;
+	width: auto;
+	object-fit: cover;
+}
+
+.img-container--right {
+	justify-content: end;
+}
+
+.img-container--right img {
+	width: 80vw;
+	height: 100vh;
+	object-fit: cover;
+}
+
+.img-container--half-screen {
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+}
+
+.img-container--half-screen img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+	.img-container--right {
+		justify-content: center;
+	}
+
+	.img-container--right img {
+		width: 100vw;
+	}
+
+	.img-container:has(.img-container--half-screen) {
+		align-items: center;
+	}
+
+	.img-container--half-screen {
+		height: auto;
+		aspect-ratio: 4 / 5;
+	}
+
+	.img-container-half--screen img {
+		height: auto;
+		width: 100%;
+		aspect-ratio: 4 / 5;
+	}
+}
+
+@media only screen and (max-width: 1200px) and (orientation: portrait) {
+	.img-container--center {
+		display: unset;
+	}
+
+	.img-container--center img {
+		height: 100vh;
+		width: 100vw;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 992px) {
+	.img-container--landscape img {
+		height: 100vh;
+		width: 100vw;
+		object-fit: cover;
+	}
+
+	.section--2 {
+		display: flex;
+		align-items: end;
+	}
+
+	.section--2 .img-container {
+		height: calc(100dvh - 12rem) !important;
+		margin-top: 8.75rem !important;
+		margin-bottom: 3.25rem;
+		/* adjust padding top/bottom to change image size */
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+	}
+}
+
+/*************************** SECTION 8 - GRID 1X3 **************************/
+
+.grid-container-1x3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.grid-1x3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.5rem;
+	width: 66%;
+	height: auto;
+}
+
+.grid-item-1x3 {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	aspect-ratio: 4 / 5;
+}
+
+.grid-item-1x3 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 992px) and (orientation: portrait) {
+
+	.section--8 {
+		display: flex;
+		align-items: end;
+	}
+
+	.grid-container-1x3 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100dvh;
+		width: 100vw;
+	}
+
+	.grid-1x3 {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, auto);
+		gap: 0;
+		height: 100dvh;
+		width: 100vw;
+		justify-items: center;
+	}
+
+	.grid-item-1x3 {
+		height: 50dvh;
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.grid-item-1x3 img {
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		margin: 0;
+	}
+
+	.grid-item-1x3:nth-child(2) {
+		display: none;
+	}
+}
+
+/*************************** SECTION - 10 VIDEO **************************/
+.section {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+}
+
+.video {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	overflow: hidden;
+	display: block;
+}

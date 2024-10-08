@@ -1,0 +1,192 @@
+.modal-dialog {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .modal-content {
+    height: 100vh;
+    height: 100dvh;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: #948a7a;
+  }
+  
+  .section-info::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .section-info {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .section-info {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+  }
+  
+  .section-info {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .close-container {
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    padding-right: 3rem;
+    margin-top: 2.4rem;
+    margin-bottom: 2.8rem;
+  }
+  
+  .close-container button {
+    color: #1e1c1c;
+    font-family: "HelveticaNowProTextMedium";
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    transition: color 0.5s ease-in-out;
+  }
+  
+  .modal .close-container button:hover {
+    color: #626060;
+  }
+  
+  .main-container {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    gap: 3rem;
+    padding: 0 3rem;
+  }
+  
+  .info-col-left,
+  .info-col-right {
+    border-top: 1px solid #1e1c1c;
+  }
+  
+  
+  .info-text {
+    color: #000;
+    font-family: "RecklessNeue", serif;
+    font-style: regular;
+    font-weight: 400;
+    font-size: 4.2rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.21px;
+    padding-top: 2.9rem;
+  }
+  
+  .sub-info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2.9rem 0 3.1rem 0;
+    border-top: 1px solid #1e1c1c;
+  }
+  
+  .sub-info-container--contact {
+    gap: 1.8rem;
+    border-top: none;
+  }
+  
+  .heading {
+    color: #1e1c1c;
+    font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    line-height: normal;
+    padding-bottom: 1.4rem;
+    text-transform: capitalize;
+  }
+  
+  .heading--contact {
+    padding-bottom: 0;
+  }
+  
+  .item {
+    color: #1e1c1c;
+    font-family: "RecklessNeue", serif;
+    font-style: regular;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+    letter-spacing: -0.17px;
+  }
+  
+  .heading--contact a {
+    color: #1e1c1c;
+    font-family: "RecklessNeue", serif;
+    font-style: regular;
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: normal;
+    text-transform: lowercase;
+    transition: color 0.5s ease-in-out;
+  }
+  
+  .heading--contact a:hover,
+  .heading--contact a:active {
+    color: #626060;
+  
+  }
+  
+  .client-container {
+    display: flex;
+    gap: 7.9rem;
+  }
+  
+  /*********** MEDIA QUERIES ***********/
+  
+  @media screen and (min-width: 1536px) {
+    .main-container {
+        grid-template-columns: 75% 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .info-text {
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+    }
+  
+    .close-container {
+      padding-right: 2rem;
+      margin-top: 2.4rem;
+      margin-bottom: 1.2rem;
+  }
+  
+    .close-container button {
+        font-size: 1.2rem;
+    }
+  
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.9rem;
+        padding: 0 2rem;
+    }
+  
+    .client-container {
+        padding-bottom: 75px;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .info-text {
+        font-size: 2.4rem;
+        line-height: 3.05rem;
+    }
+  }
