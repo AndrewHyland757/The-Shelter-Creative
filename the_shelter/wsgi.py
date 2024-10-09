@@ -5,5 +5,5 @@ from whitenoise import WhiteNoise
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_shelter.settings')
 
 application = get_wsgi_application()
-application = WhiteNoise(application)  # Wrap the application with Whitenoise
+application = WhiteNoise(application)
 
