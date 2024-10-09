@@ -7,6 +7,14 @@
     {% block meta %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="The Shelter Creative">
+
+    <meta property="og:description" content="We guide brands to choose whom they want to be.
+      Brand Culture Strategy - Creative & Communications direction.">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="{% static 'favicon/og-image.png' %}">
+    <meta property="og:url" content="https://thesheltercreative.com">
     {% endblock %}
 
     <title>The Shelter Creative</title>
@@ -78,6 +86,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="/site.webmanifest">
+
     <!-- Custom CSS -->
 
     <link rel="stylesheet" href="{% static 'styles/base.css' %}" />

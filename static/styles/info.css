@@ -190,3 +190,11 @@
         line-height: 3.05rem;
     }
   }
+
+  @media (max-width: 575.98px) {
+    .client-container {
+      flex-direction: column;
+      gap: 0rem;
+  }
+
+   }
