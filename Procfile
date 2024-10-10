@@ -1,1 +1,1 @@
-web: gunicorn the_shelter.wsgi:application
+web: gunicorn the_shelter.wsgi:application --log-file -
