@@ -12,12 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-DEBUG = False
+DEBUG = True
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = ['8000-andrewhylan-theshelterc-ekjq8rdm0z0.ws-eu116.gitpod.io', 'the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'www.thesheltercreative.com', 'thesheltercreative.com']
-
+CSRF_TRUSTED_ORIGINS = ['https://the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'https://8000-andrewhylan-theshelterc-ekjq8rdm0z0.ws-eu116.gitpod.io']
 # Application definition
 
 INSTALLED_APPS = [
@@ -125,13 +125,13 @@ CLOUDINARY_STORAGE = {
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Use Whitenoise for static files
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Media files settings
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Separate directory for user-uploaded files
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'  # Use Cloudinary for media files
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'  
 
 
 
