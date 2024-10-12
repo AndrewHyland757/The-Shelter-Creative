@@ -6,7 +6,7 @@
 
 <!--------------------SECTION - PROJECTS --------------------------->
 
-<div class="section section--projects" id="section--projects">
+<div class="section section--projects" id="section--projects--lg">
   <div class="projects">
     <div class="projects-list-container scrollable-content">
       {% for project in projects %}
@@ -55,6 +55,42 @@
   </div>
 </div>
 
+
+
+<div class="section section--projects" id="section-projects--sm">
+  
+    <div class="projects-list-container--sm">
+      {% for project in projects %}
+
+      <a class="projet-link" href=" {% url 'project' project.id %}">
+        <div class="project-item">
+          {% if project.list_image %}
+          <img
+            class="list-image-url"
+            src="{{ project.list_image.url }}"
+            style="display: none"
+          />
+          {% endif %}
+
+          <div class="brand">
+            <p>{{ project.company }}</p>
+          </div>
+
+          <div class="line-projects">
+          </div>
+
+          <div class="service">
+            <p>{{ project.main_service }}</p>
+          </div>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+
+    
+  </div>
+</div>
 
 <!-- Script to handle the image change in the projects section -->
 <script>
