@@ -1,32 +1,43 @@
+// Select all sections dynamically
+const sections = document.querySelectorAll('.section');
+
+// Initialize an empty anchors array
+let anchorsArray = [];
+
+// Loop through sections to generate anchors dynamically
+sections.forEach((section, index) => {
+  // Check if it's the projects section
+  if (section.classList.contains('section--projects')) {
+    anchorsArray.push('projects-section');
+  } else {
+    // Generate a default numbered anchor for other sections
+    anchorsArray.push((index + 1).toString());
+  }
+});
+
 new fullpage("#fullpage", {
+
+  
     licenseKey: '1MJ47-09EP9-8JUB7-7T6OK-OTCAO',
     autoScrolling: true,
     scrollHorizontally: true,
     verticalCentered: false,
     
-    anchors: [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12",
-      "13",
-      "14",
-    ],
-    lockAnchors: true,
+    anchors: anchorsArray, // Use the dynamically created anchors array
+    lockAnchors: false,
     scrollOverflow: true,
     normalScrollElements: ".scrollable-content",
     bigSectionsDestination: "bottom",
     controlArrows: false,
     slidesNavigation: false,
     continuousVertical: true, // Enable continuous vertical scrolling
+
+
+
+    scrollOverflow: true,
+  normalScrollElements: '.projects-list-container',
+  touchSensitivity: 5, // Adjust sensitivity to make touch scroll easier
+  fitToSection: false, // Allows more natural scroll without snapping back
     
     afterRender: function () {
       createCustomNavigation();

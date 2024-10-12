@@ -1,20 +1,16 @@
 /*********************** SECTION - PROJECTS ***********************/
 
-.section {
-    height: 100vh;
-    height: 100dvh;
-    width: 100vw;
-    position: relative;
-    overflow: hidden;
-  }
+
+
+
   
   .section--projects {
-      position: relative;
       display: flex;
       justify-content: center;
     }
     
     .projects {
+      width: 100vw;
       height: calc(100vh - 18rem); /* 100vh minus header height of 9.5rem and padding */
       top: 18rem; /* Sets top margin */
       position: absolute;
@@ -23,7 +19,8 @@
       grid-template-columns: 1fr auto;
       gap: 8.2rem;
       padding: 0 6.4rem 3.2rem 6.4rem;
-      width: 100vw;
+  
+      
       
     }
     
@@ -75,12 +72,11 @@
       font-style: italic;
     }
     
-    
-    /*
-    .line {
+ 
+    .line-projects {
       display: none;
     }
-    */
+   
     
     .projects-imgs-container,  /* Default image container for projects section */
     .project-img-container {
@@ -125,6 +121,8 @@
     }
     
     /************************** MEDIA QUERIES: SECTION - PROJECTS **************************/
+
+  
     
     @media only screen and (max-width: 1200px) {
     .projects {
@@ -178,6 +176,9 @@
     }
     
     @media only screen and (max-width: 992px) and (orientation: portrait) {
+
+        
+ 
       .projects {
         gap: 2.4rem;
       }
@@ -188,24 +189,60 @@
         line-height: 2.6rem;
       }
     }
+
+  
     
     @media only screen and (max-width: 768px),
       only screen and (max-width: 992px) and (orientation: landscape) {
+
+        .fp-viewing-projects-section .header {
+          display: none;
+        }
+
+        .fp-viewing-projects-section .section {
+          overflow: visible; /* Allow content to overflow naturally */
+        }
+         
+  .section--projects {
+    display: block;
+    justify-content: center;
+    overflow: unset;
+  }
+
+
       .projects {
-        height: calc(var(--vh, 1vh) * 100 - 12rem) !important;
-      
-        top: 14rem; /* Sets top margin */
+        height: auto;
+        min-height: 100dvh;
+        width: 100vw;
+        margin-top: 0;
+        top: 0;
+        position: unset;
+        left: 0;
+
+        transform: unset;
         display: block;
+      
         padding: 0;
-        padding-bottom: 4rem;
+        padding-bottom: 0;
+        padding-top: 6rem;
         background-color: pink;
+        
       }
     
       .projects-list-container {
-        padding: 0 2.4rem;
-        height: 100%;
+      
+         padding: 0 2.4rem;
+      
+       
+        height: fit-content;
         width: 100%;
         background-color: greenyellow;
+
+       
+        padding-bottom: 3.2rem;
+        margin-bottom: 12rem;
+  
+    
       }
     
       /* Adds the underline between */
@@ -214,13 +251,14 @@
       display: grid;
       grid-template-columns: auto 1fr auto;
       margin-bottom: 1rem;
-      border-bottom: none; 
+      border-bottom: none;
+      background-color: lightblue;
     }
     
-    .line {
+    .line-projects {
       display: block;
       margin: 0 .5rem;
-      margin-bottom: .6rem;
+      margin-bottom: .4rem;
       border-bottom: 1px solid black; 
     }
     
@@ -231,7 +269,7 @@
     
       .brand p,
       .service p {
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: normal;
       }
     
