@@ -18,10 +18,11 @@ def get_section_html_content(section):
     """
     company = section.project.company
     main_service_name = section.project.main_service.service_name
+   
 
 
-    project_description_1 = section.project_description_bold if section.project_description_1 else ''
-    project_description_2 = section.project_description if section.project_description_2 else ''
+    project_description_1 = section.project_description_1 if section.project_description_1 else ''
+    project_description_2 = section.project_description_2 if section.project_description_2 else ''
 
     
     services = section.project.services.all()
@@ -89,7 +90,7 @@ def get_section_html_content(section):
         (section.img_7_description, '{{ img_7_description }}'),
     ]
 
-
+    # Add alt value to images
     for desc_field, placeholder in image_descriptions:
         if desc_field:
             description = desc_field
@@ -97,12 +98,16 @@ def get_section_html_content(section):
             description = f"{company}: {main_service_name} by The Shelter Creative" 
         section_html_with_images = section_html_with_images.replace(placeholder, description)
 
-    if section.project_description_1:
-        section_html_with_content = section_html_with_images.replace('{{ project_description_1 }}', project_description_1)
-    if section.project_description_2:
-        section_html_with_content = section_html_with_images.replace('{{ project_description_2 }}', project_description_2)
-    else:
-        section_html_with_content = section_html_with_images
+
+    # Add text to html where applicable
+    section_html_with_content = (
+        section_html_with_images
+        .replace('{{ project_description_1 }}', project_description_1)
+        .replace('{{ project_description_2 }}', project_description_2)
+        .replace('{{ services }}', services_list)
+        .replace('{{ project_company }}', company)
+        .replace('{{ project_main_service }}', main_service_name)
+)
 
     return section_html_with_content
 
@@ -125,7 +130,7 @@ def change_color(section, page_position, section_css):
     .fp-viewing-{position} .logo,
     .fp-viewing-{position} .sublogo,
     .fp-viewing-{position} .header-right button {{
-        color: {new_color} !important;
+        color: {new_color};
     }}
     .fp-viewing-{position} .logo:hover,
     .fp-viewing-{position} .logo:active,
@@ -135,6 +140,26 @@ def change_color(section, page_position, section_css):
     .fp-viewing-{position} .header-right button:active {{
         color: {new_color_hover};
     }}
+    """
+    return section_css
+    
+
+
+def change_text_color(section, page_position, section_css):
+    """
+    Function to change the company/service text color at bottom of section.
+    """
+    position = page_position
+    new_color = section.new_header_color
+    
+    section_css += f"""
+    .fp-viewing-{position} .company p,
+    .fp-viewing-{position} .main-service p,
+    .fp-viewing-{position} .line {{
+        color: {new_color};
+        border-color: {new_color};
+    }}
+
     """
     return section_css
  
@@ -166,74 +191,81 @@ def project(request, project_id):
     section_8_css = None
     
    
-   # Process Section if they exist.
+    # Process Section if they exist.
 
     if project_page.section_1:
+        
         section_1 = project_page.section_1
         section_1_html_content = get_section_html_content(section_1)
         section_1_css = get_section_css(section_1)
-        # Calls the change_color function if change_color is True
-        if section_1.change_header_color:
-            section_1_css = change_color(section_1, "1", section_1_css)
-            print(section_1_css)  # Check the output
+    if section_1.change_header_color:
+        section_1_css = change_color(section_1, "1", section_1_css)
+    if section_1.change_text_color:
+        section_1_css = change_text_color(section_1, "1", section_1_css)
 
-
-        
     if project_page.section_2:
         section_2 = project_page.section_2
         section_2_html_content = get_section_html_content(section_2)
         section_2_css = get_section_css(section_2)
-        # Calls the change_color function if change_color is True
         if section_2.change_header_color:
             section_2_css = change_color(section_2, "2", section_2_css)
+        if section_2.change_text_color:
+            section_2_css = change_text_color(section_2, "2", section_2_css)
 
     if project_page.section_3:
         section_3 = project_page.section_3
         section_3_html_content = get_section_html_content(section_3)
         section_3_css = get_section_css(section_3)
-        # Calls the change_color function if change_color is True
         if section_3.change_header_color:
             section_3_css = change_color(section_3, "3", section_3_css)
+        if section_3.change_text_color:
+            section_3_css = change_text_color(section_3, "3", section_3_css)
 
     if project_page.section_4:
         section_4 = project_page.section_4
         section_4_html_content = get_section_html_content(section_4)
         section_4_css = get_section_css(section_4)
-        # Calls the change_color function if change_color is True
         if section_4.change_header_color:
             section_4_css = change_color(section_4, "4", section_4_css)
+        if section_4.change_text_color:
+            section_4_css = change_text_color(section_4, "4", section_4_css)
 
     if project_page.section_5:
         section_5 = project_page.section_5
         section_5_html_content = get_section_html_content(section_5)
         section_5_css = get_section_css(section_5)
-        # Calls the change_color function if change_color is True
         if section_5.change_header_color:
             section_5_css = change_color(section_5, "5", section_5_css)
+        if section_5.change_text_color:
+            section_5_css = change_text_color(section_5, "5", section_5_css)
 
     if project_page.section_6:
         section_6 = project_page.section_6
         section_6_html_content = get_section_html_content(section_6)
         section_6_css = get_section_css(section_6)
-        # Calls the change_color function if change_color is True
         if section_6.change_header_color:
             section_6_css = change_color(section_6, "6", section_6_css)
+        if section_6.change_text_color:
+            section_6_css = change_text_color(section_6, "6", section_6_css)
 
     if project_page.section_7:
         section_7 = project_page.section_7
         section_7_html_content = get_section_html_content(section_7)
         section_7_css = get_section_css(section_7)
-        # Calls the change_color function if change_color is True
         if section_7.change_header_color:
             section_7_css = change_color(section_7, "7", section_7_css)
+        if section_7.change_text_color:
+            section_7_css = change_text_color(section_7, "7", section_7_css)
 
     if project_page.section_8:
         section_8 = project_page.section_8
         section_8_html_content = get_section_html_content(section_8)
         section_8_css = get_section_css(section_8)
-        # Calls the change_color function if change_color is True
         if section_8.change_header_color:
             section_8_css = change_color(section_8, "8", section_8_css)
+        if section_8.change_text_color:
+            section_8_css = change_text_color(section_8, "8", section_8_css)
+
     
 
     context = {
