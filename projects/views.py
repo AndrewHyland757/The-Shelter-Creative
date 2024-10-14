@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Project, ProjectPage, Section, Section1, Section2, Template
+from .models import Project, ProjectPage, Section, Template
 
 
 def get_section_css(section):
@@ -11,66 +11,6 @@ def get_section_css(section):
     return section_css
 
 
-def get_section_1_html_content(section):
-    """
-    Retrieves the Section1 instance for the given project_page and returns 
-    the HTML with image URLs and other placeholders replaced.
-    """
-    # Get data from the model entry
-    company = section.project.company
-    main_service_name = section.project.main_service.service_name
-    img_1_url = section.img_1.url if section.img_1 else ''  
-    img_1_description = section.img_1_description if section.img_1_description else f"{company}: {main_service_name} by The Shelter Creative" 
-    # Checks for tablet and mobile images
-    img_1_tablet_url = section.img_1_tablet.url if section.img_1_tablet else img_1_url  
-    img_1_mobile_url = section.img_1_mobile.url if section.img_1_mobile else img_1_url
-
-    # Determine which HTML to use
-    if section.use_custom_html:
-        section_html = section.custom_html
-    else:
-        section_html = section.template.html_content if section.template else ''
-
-    # Repace placeholders in the template with the image urls
-    section_html_with_images = section_html.replace('{{ img_1_url }}', img_1_url).replace('{{ img_1_tablet_url }}', img_1_tablet_url).replace('{{ img_1_mobile_url }}', img_1_mobile_url).replace('{{ img_1_description }}', img_1_description)
-    
-    # Replace company name and main service placeholders
-    section_html_with_content = section_html_with_images.replace('{{ company_name }}', company).replace('{{ main_service }}', main_service_name)
-
-    return section_html_with_content
-    
-
-def get_section_2_html_content(section):
-    """
-    Retrieves the Section2 instance for the given project_page and returns 
-    the HTML with image URLs and other placeholders replaced.
-    """
-    # Get data from the model entry
-    company = section.project.company
-    main_service_name = section.project.main_service.service_name
-    img_1_url = section.img_1.url if section.img_1 else ''  # Convert ImageFieldFile to URL string
-    img_1_description = section.img_1_description if section.img_1_description else f"{company}: {main_service_name} by The Shelter Creative"
-    project_description_bold = section.project_description_bold if section.project_description_bold else ''
-    project_description = section.project_description if section.project_description else ''
-    services = section.services.all()
-    services_list = ''.join(f'<p class="service">{service.service_name}</p>' for service in services)
-   
-    # Determine which HTML use
-    if section.use_custom_html:
-        section_html = section.custom_html
-    else:
-        section_html = section.template.html_content if section.template else ''
-
-    # Replace image URL and placeholders in HTML content
-    section_html_with_images = section_html.replace('{{ img_1_url }}', img_1_url)
-    
-    # Replace {{ project_description }} & {{ services }} placeholders with project_description & services
-    section_html_with_content = section_html_with_images.replace('{{ project_description }}', project_description).replace('{{ project_description_bold }}', project_description_bold).replace('{{ services }}', services_list)
-
-
-    return section_html_with_content
-
-
 def get_section_html_content(section):
     """
     Retrieves a Section instance for the given project_page and returns 
@@ -78,6 +18,18 @@ def get_section_html_content(section):
     """
     company = section.project.company
     main_service_name = section.project.main_service.service_name
+
+
+    project_description_1 = section.project_description_bold if section.project_description_1 else ''
+    project_description_2 = section.project_description if section.project_description_2 else ''
+
+    
+    services = section.project.services.all()
+    if services:  # Check if services exists and is not empty
+        services_list = ''.join(f'<p class="service">{service.service_name}</p>' for service in services)
+        
+    else:
+        services_list = ''
 
     # Determine which HTML to use
     if section.use_custom_html:
@@ -91,20 +43,42 @@ def get_section_html_content(section):
     # List of image attributes and corresponding placeholder names
     images = [
         (section.img_1, '{{ img_1_url }}'),
-        (section.img_2, '{{ img_2_url }}'),
-        (section.img_3, '{{ img_3_url }}'),
-        (section.img_4, '{{ img_4_url }}'),
-        (section.img_5, '{{ img_5_url }}'),
-        (section.img_6, '{{ img_6_url }}'),
-    ]
+        (section.img_1_tablet, '{{ img_1_url_tablet }}'),
+        (section.img_1_mobile, '{{ img_1_url_mobile }}'),
 
-  
+        (section.img_2, '{{ img_2_url }}'),
+        (section.img_2_tablet, '{{ img_2_url_tablet }}'),
+        (section.img_2_mobile, '{{ img_2_url_mobile }}'),
+
+        (section.img_3, '{{ img_3_url }}'),
+        (section.img_3_tablet, '{{ img_3_url_tablet }}'),
+        (section.img_3_mobile, '{{ img_3_url_mobile }}'),
+
+        (section.img_4, '{{ img_4_url }}'),
+        (section.img_4_tablet, '{{ img_4_url_tablet }}'),
+        (section.img_4_mobile, '{{ img_4_url_mobile }}'),
+
+        (section.img_5, '{{ img_5_url }}'),
+        (section.img_5_tablet, '{{ img_5_url_tablet }}'),
+        (section.img_5_mobile, '{{ img_5_url_mobile }}'),
+
+        (section.img_6, '{{ img_6_url }}'),
+        (section.img_6_tablet, '{{ img_6_url_tablet }}'),
+        (section.img_6_mobile, '{{ img_6_url_mobile }}'),
+
+        (section.img_7, '{{ img_7_url }}'),
+        (section.img_7_tablet, '{{ img_7_url_tablet }}'),
+        (section.img_7_mobile, '{{ img_7_url_mobile }}'),
+
+    ]
 
     for img_field, placeholder in images:
         if img_field:
             img_url = img_field.url  # Convert ImageFieldFile to URL string
             section_html_with_images = section_html_with_images.replace(placeholder, img_url)
     
+
+
     image_descriptions = [
         (section.img_1_description, '{{ img_1_description }}'),
         (section.img_2_description, '{{ img_2_description }}'),
@@ -112,6 +86,7 @@ def get_section_html_content(section):
         (section.img_4_description, '{{ img_4_description }}'),
         (section.img_5_description, '{{ img_5_description }}'),
         (section.img_6_description, '{{ img_6_description }}'),
+        (section.img_7_description, '{{ img_7_description }}'),
     ]
 
 
@@ -122,14 +97,15 @@ def get_section_html_content(section):
             description = f"{company}: {main_service_name} by The Shelter Creative" 
         section_html_with_images = section_html_with_images.replace(placeholder, description)
 
-
-
-    if section.project_description:
-        section_html_with_content = section_html_with_images.replace('{{ project_description }}', project_description)
+    if section.project_description_1:
+        section_html_with_content = section_html_with_images.replace('{{ project_description_1 }}', project_description_1)
+    if section.project_description_2:
+        section_html_with_content = section_html_with_images.replace('{{ project_description_2 }}', project_description_2)
     else:
         section_html_with_content = section_html_with_images
 
     return section_html_with_content
+
 
 
 def change_color(section, page_position, section_css):
@@ -149,7 +125,7 @@ def change_color(section, page_position, section_css):
     .fp-viewing-{position} .logo,
     .fp-viewing-{position} .sublogo,
     .fp-viewing-{position} .header-right button {{
-        color: {new_color};
+        color: {new_color} !important;
     }}
     .fp-viewing-{position} .logo:hover,
     .fp-viewing-{position} .logo:active,
@@ -191,32 +167,21 @@ def project(request, project_id):
     
    
    # Process Section if they exist.
+
     if project_page.section_1:
         section_1 = project_page.section_1
-
-        # Call functions to get section 1 HTML content & CSS
-        section_1_html_content = get_section_1_html_content(section_1)
+        section_1_html_content = get_section_html_content(section_1)
         section_1_css = get_section_css(section_1)
-
         # Calls the change_color function if change_color is True
         if section_1.change_header_color:
             section_1_css = change_color(section_1, "1", section_1_css)
+            print(section_1_css)  # Check the output
 
-        # Check for color change in section 1 text
-        if section_1.change_text_color:  
-            new_color = section_1.new_text_color
-            section_1_css += f"""
-            .company p,
-            .main-service p,
-            .line {{
-                color: {new_color};
-                border-color: {new_color};
-            }}
-            """
+
         
     if project_page.section_2:
         section_2 = project_page.section_2
-        section_2_html_content = get_section_2_html_content(section_2)
+        section_2_html_content = get_section_html_content(section_2)
         section_2_css = get_section_css(section_2)
         # Calls the change_color function if change_color is True
         if section_2.change_header_color:

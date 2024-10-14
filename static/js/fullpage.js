@@ -15,6 +15,7 @@ sections.forEach((section, index) => {
   }
 });
 
+
 new fullpage("#fullpage", {
 
   

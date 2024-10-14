@@ -1,0 +1,27 @@
+<div class="section">
+      <img
+        class="img-full-screen"
+        src="{{ img_1 }}"
+        alt="">
+   
+    <div class="brand-service-container">
+      <div class="company">
+        <p>{{ project.company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>{{ project.main_service }}</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+  
+  .img-full-screen {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	overflow: hidden;
+}
+  </style>

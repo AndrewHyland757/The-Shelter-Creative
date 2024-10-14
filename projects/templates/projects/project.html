@@ -8,11 +8,28 @@
 
 {% block content %}
 
+
+
+
     {% if project_page.section_1 %}
         <style>
             {{ section_1_css|safe }} 
         </style>
-        {{ section_1_html_content|safe }}  
+        
+        <section>
+            {{ section_1_html_content|safe }}
+
+    <div class="brand-service-container">
+        <div class="company">
+          <p>{{ project.company }}</p>
+        </div>
+        <div class="line"></div>
+        <div class="main-service">
+          <p>{{ project.main_service }}</p>
+        </div>
+      </div>
+        </section>
+          
     {% endif %}
     
     {% if project_page.section_2 %}
@@ -63,5 +80,6 @@
         {{ section_8_html_content|safe }}  
 
     {% endif %}
-   
+
+
 {% endblock %}
