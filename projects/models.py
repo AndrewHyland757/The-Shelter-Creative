@@ -12,7 +12,7 @@ class Template(models.Model):
     """
     template_name = models.CharField(max_length=255)
     html_content = models.TextField(null=False)
-    css_content = models.TextField(null=False)
+    css_content = models.TextField(null=True, blank=True)
     
     def __str__(self):
         return f"{self.template_name}"
@@ -158,7 +158,7 @@ class Section(SectionCleanMixin, models.Model):
  
 
     def __str__(self):
-        return f"{self.project.company}: {self.html_description_name if self.template is None else self.template.template_name}"
+        return f"{self.project.company}: {self.html_description_name if self.html_description_name  else self.template.template_name}"
 
     class Meta:
         verbose_name = "Project Page Section"

@@ -4,10 +4,7 @@
          <div class="services-box">
             <div class="service-box-border"></div>
             <p class="services-heading">Services</p>
-            <p class="service">Event design</p>
-            <p class="service">Talent curation</p>
-            <p class="service">Photography</p>
-            <p class="service">Creative guest list</p>
+            {{ services }}
             <div class="service-box-border service-box-border--bottom"></div>
          </div>
          <div class="description-box">
@@ -20,7 +17,7 @@
          </div>
       </div>
       <div class="section2-img-container">
-         <img src="{{ img_1_url }}" alt="" />
+         <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
       </div>
    </div>
 </div>

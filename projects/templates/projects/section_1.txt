@@ -22,13 +22,14 @@
    </div>
 </div>
 
-  <style>
-  
+<style>
+
   .img-full-screen {
-	height: 100vh;
-	height: 100dvh;
-	width: 100vw;
-	object-fit: cover;
-	overflow: hidden;
-}
-  </style>
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  object-fit: cover;
+  overflow: hidden;
+  }
+  
+</style>

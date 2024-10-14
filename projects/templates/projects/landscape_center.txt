@@ -1,0 +1,38 @@
+  <div class="section">
+    <div class="img-container img-container--landscape">
+      <img
+        src="{{ img_1_url }}"
+        alt="{{ img_1_description }}">
+    </div>
+    <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
+  </div>
+
+<style>
+
+.img-container--landscape {
+	justify-content: center;
+	align-items: center;
+}
+
+.img-container--landscape img {
+	height: 66vh;
+	width: auto;
+	object-fit: cover;
+}
+
+@media (max-width: 992px) {
+	.img-container--landscape img {
+		height: 100vh;
+		width: 100vw;
+		object-fit: cover;
+	}
+}
+</style>
