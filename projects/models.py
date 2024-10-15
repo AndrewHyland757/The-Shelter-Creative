@@ -44,18 +44,9 @@ class Project(models.Model):
     class Meta:
         ordering = ['list_position']
 
-    @transaction.atomic
-    def save(self, *args, **kwargs):
-        # If list_position is None, find the highest list_position and increment it
-        if self.list_position is None:
-            max_position = Project.objects.aggregate(Max('list_position'))['list_position__max']
-            self.list_position = (max_position or 0) + 1
+    def __str__(self):
+        return f"{self.list_position} - {self.company}"
 
-        # Ensure list_position is unique by checking and incrementing if necessary
-        while Project.objects.filter(list_position=self.list_position).exists():
-            self.list_position += 1
-        
-        super(Project, self).save(*args, **kwargs)
 
 
 class SectionCleanMixin:

@@ -1,0 +1,21 @@
+<div class="section">
+    <picture class="img-container--center img-container">
+      <source
+        srcset="{{ img_1_url_mobile }}"
+        media="(max-width: 600px)">
+      <img
+        class="img-container--center-img"
+        src="{{ img_1_url }}"
+        alt="{{ img_1_description }}">
+    </picture>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+    </div>
+  </div>
+

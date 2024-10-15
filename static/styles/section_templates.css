@@ -273,7 +273,7 @@
 
 		padding-top: 0;
 		padding-bottom: 3.75rem;
-		background-color: palegoldenrod;
+	
 		display: flex;
 		justify-content: center;
 	}
@@ -286,7 +286,7 @@
 		width: 100%;
 		justify-items: center;
 		gap: 0.5rem;
-		background-color: blue;
+	
 	}
 
 	.grid-item-2x3 {
@@ -433,7 +433,7 @@
   }
   
   .services-heading {
-    font-family: "Helvetica";
+    font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
     font-size: 1.4rem;
     margin: 2.9rem 0 1.4rem;
   }
@@ -449,7 +449,7 @@
   .description-text {
     font-family: "RecklessNeue", serif;
     font-style: regular;
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 400;
     line-height: 3.5rem;
     letter-spacing: -0.2px;
@@ -487,10 +487,9 @@
   @media (max-width: 992px) {
   
   
-    .fp-viewing-2 .header-container,
-    .fp-viewing-3 .header-container {
-      display: none;
-    }
+    .fp-viewing-2:has(.container-section-2) .header-container {
+		display: none;
+	  }
   
     .container-section-2 {
       height: fit-content;
@@ -513,7 +512,7 @@
       padding: 0 2rem;
     }
     .description-text {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       line-height: 3.05rem;
     }
   
@@ -532,6 +531,7 @@
 
 /***************************  PROJECT.HTML SECTION 2 IMAGE LARGE **************************/
 
+/*
   .container-section-2-img-lg {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
@@ -550,37 +550,11 @@
 	padding-left: 3.6rem;
   }
   
-  .service-box-border {
-    width: 66%;
-    border-top: 1px solid black;
-  }
+
   
-  .service-box-border--bottom {
-    margin-top: 3.2rem;
-  }
+
   
-  .services-heading {
-    font-family: "Helvetica";
-    font-size: 1.4rem;
-    margin: 2.9rem 0 1.4rem;
-  }
   
-  .service {
-    font-family: "RecklessNeue", serif;
-    font-size: 1.7rem;
-    font-weight: 400;
-    line-height: 2.1rem;
-    letter-spacing: -0.17px;
-  }
-  
-  .description-text {
-    font-family: "RecklessNeue", serif;
-    font-style: regular;
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 3.5rem;
-    letter-spacing: -0.2px;
-  }
   
   .description-text--bold {
     text-shadow: 1px 0 0 currentColor;
@@ -599,8 +573,9 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: left; /* Anchors the image to the left as scales down */
+    object-position: left;  
   }
+
   
   @media (max-width: 1200px) {
     .description-text {
@@ -610,11 +585,7 @@
   }
   
   @media (max-width: 992px) {
-    /*
-    header {
-      display: none;
-    }
-      */
+   
   
     .container-section-2-img-lg {
       height: fit-content;
@@ -641,10 +612,8 @@
     .service-box-border {
       width: 100%;
     }
-    .description-text {
-      font-size: 2.4rem;
-      line-height: 3.05rem;
-    }
+	
+ 
   
     .description-text--bold {
       margin-bottom: 3rem;
@@ -655,5 +624,5 @@
     }
   }
 
-
+*/
   
