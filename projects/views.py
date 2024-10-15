@@ -119,13 +119,13 @@ def change_color(section, page_position, section_css):
     """
     position = page_position
     new_color = section.new_header_color
+    new_color_tablet = section.new_header_color_tablet
+    new_color_mobile = section.new_header_color_mobile
 
-    # Check if a new hove color is set
-    if section.new_header_color_hover:
-        new_color_hover = section.new_header_color_hover
-    else:
-        new_color_hover = new_color
-    
+    # Check if a new hover color is set, otherwise use new_color
+    new_color_hover = section.new_header_color_hover or new_color
+
+    # Base styles (Desktop)
     section_css += f"""
     .fp-viewing-{position} .logo,
     .fp-viewing-{position} .sublogo,
@@ -141,6 +141,51 @@ def change_color(section, page_position, section_css):
         color: {new_color_hover};
     }}
     """
+
+    # Tablet styles (if specified)
+    if new_color_tablet:
+        new_color_hover_tablet = section.new_header_color_hover_tablet or new_color_tablet
+        section_css += f"""
+        @media only screen and (min-width: 768px) {{
+            .fp-viewing-{position} .logo,
+            .fp-viewing-{position} .sublogo,
+            .fp-viewing-{position} .header-right button {{
+                color: {new_color_tablet};
+            }}
+            .fp-viewing-{position} .logo:hover,
+            .fp-viewing-{position} .logo:active,
+            .fp-viewing-{position} .sublogo--email:hover,
+            .fp-viewing-{position} .sublogo--email:active,
+            .fp-viewing-{position} .header-right button:hover,
+            .fp-viewing-{position} .header-right button:active {{
+                color: {new_color_hover_tablet};
+            }}
+        }}
+        """
+
+    # Mobile styles (if specified)
+    if new_color_mobile:
+        new_color_hover_mobile = section.new_header_color_hover_mobile or new_color_mobile
+        section_css += f"""
+        @media only screen and (max-width: 767px) {{
+            .fp-viewing-{position} .logo,
+            .fp-viewing-{position} .sublogo,
+            .fp-viewing-{position} .header-right button {{
+                color: {new_color_mobile};
+            }}
+            .fp-viewing-{position} .logo:hover,
+            .fp-viewing-{position} .logo:active,
+            .fp-viewing-{position} .sublogo--email:hover,
+            .fp-viewing-{position} .sublogo--email:active,
+            .fp-viewing-{position} .header-right button:hover,
+            .fp-viewing-{position} .header-right button:active {{
+                color: {new_color_hover_mobile};
+            }}
+        }}
+        """
+
+    return section_css
+
     return section_css
     
 
@@ -150,8 +195,11 @@ def change_text_color(section, page_position, section_css):
     Function to change the company/service text color at bottom of section.
     """
     position = page_position
-    new_color = section.new_header_color
+    new_color = section.new_text_color
+    new_color_tablet = section.new_text_color_tablet
+    new_color_mobile = section.new_text_color_mobile
     
+    # Base styles
     section_css += f"""
     .fp-viewing-{position} .company p,
     .fp-viewing-{position} .main-service p,
@@ -159,9 +207,36 @@ def change_text_color(section, page_position, section_css):
         color: {new_color};
         border-color: {new_color};
     }}
-
     """
+
+    # Tablet styles (if specified)
+    if new_color_tablet:
+        section_css += f"""
+        @media only screen and (min-width: 768px) {{
+            .fp-viewing-{position} .company p,
+            .fp-viewing-{position} .main-service p,
+            .fp-viewing-{position} .line {{
+                color: {new_color_tablet};
+                border-color: {new_color_tablet};
+            }}
+        }}
+        """
+
+    # Mobile styles (if specified)
+    if new_color_mobile:
+        section_css += f"""
+        @media only screen and (max-width: 767px) {{
+            .fp-viewing-{position} .company p,
+            .fp-viewing-{position} .main-service p,
+            .fp-viewing-{position} .line {{
+                color: {new_color_mobile};
+                border-color: {new_color_mobile};
+            }}
+        }}
+        """
+
     return section_css
+
  
 
 def project(request, project_id):

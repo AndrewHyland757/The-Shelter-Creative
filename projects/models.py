@@ -52,11 +52,11 @@ class Project(models.Model):
 class SectionCleanMixin:
     def clean(self):
         # Section 1 validation
-        if self.change_header_color and not self.new_header_color:
-            raise ValidationError("New Header Color must be set if 'Change Header Color' is checked.")
+        #if self.change_header_color and not self.new_header_color:
+            #raise ValidationError("New Header Color must be set if 'Change Header Color' is checked.")
 
-        if self.change_text_color and not self.new_text_color:
-            raise ValidationError("New Text Color must be set if 'Change Text Color' is checked.")
+        #if self.change_text_color and not self.new_text_color:
+            #raise ValidationError("New Text Color must be set if 'Change Text Color' is checked.")
 
         # Validate custom HTML and CSS fields
         if self.use_custom_html and not self.custom_html:
@@ -103,12 +103,23 @@ class Section(SectionCleanMixin, models.Model):
     project_description_2 = models.TextField(blank=True, null=True)
     
 
-   # Color changes for header and company/service text 
+   # Color changes for header
     change_header_color = models.BooleanField(default=False)
     new_header_color = models.CharField(max_length=200, blank=True, null=True)
     new_header_color_hover = models.CharField(max_length=200, blank=True, null=True)
+
+    new_header_color_tablet = models.CharField(max_length=200, blank=True, null=True)
+    new_header_color_hover_tablet = models.CharField(max_length=200, blank=True, null=True)
+
+    new_header_color_mobile = models.CharField(max_length=200, blank=True, null=True)
+    new_header_color_hover_mobile = models.CharField(max_length=200, blank=True, null=True)
+
+
+    # Color changes for company/service text
     change_text_color = models.BooleanField(default=False)
     new_text_color = models.CharField(max_length=200, blank=True, null=True)
+    new_text_color_tablet = models.CharField(max_length=200, blank=True, null=True)
+    new_text_color_mobile = models.CharField(max_length=200, blank=True, null=True)
 
     
        # Images and descriptions for up to 7 images
