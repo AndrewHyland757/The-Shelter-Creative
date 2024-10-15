@@ -8,7 +8,11 @@
 
 {% block content %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'projects/styles/section_2.css' %}" />
 
+
+{% endblock %}
 
 
     {% if project_page.section_1 %}

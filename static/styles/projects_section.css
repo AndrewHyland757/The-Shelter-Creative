@@ -201,28 +201,34 @@
 @media only screen and (max-width: 768px),
 only screen and (max-width: 992px) and (orientation: landscape) {
 
-	#section--projects--lg {
-		/* Remove section projects large */
-		display: none;
-	}
-
-	#section-projects--sm {
-		display: block;
-	}
-
 	.fp-viewing-projects-section .header {
 		/* Remove header */
 		display: none;
 	}
 
+	#section--projects--lg {
+		/* Remove section projects large */
+		display: none;
+	}
+
+	/*
+	#section-projects--sm {
+		display: block;
+	}
+*/
+	/*
+
 	.fp-viewing-projects-section .section {
 		overflow: visible;
 	}
-
+*/
 	.section--projects {
 		display: flex;
 		justify-content: center;
+		overflow: visible;
 	}
+
+
 
 	.projects-list-container--sm {
 		width: 100vw;
