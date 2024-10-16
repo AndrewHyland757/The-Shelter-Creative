@@ -21,5 +21,14 @@
         </div>
       </div>
     </div>
+    <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
 </div>
 

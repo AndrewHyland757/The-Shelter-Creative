@@ -1,0 +1,19 @@
+ <div class="section section--half-screen">
+    <div class="img-container">
+      <div class="img-container--half-screen">
+        <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+      </div>
+      <div class="img-container--half-screen">
+        <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+      </div>
+    </div>
+    <div class="brand-service-container">
+      <div class="company company--centered">
+        <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service main-service--centered">
+        <p>{{ project_main_service }}</p>
+      </div>
+    </div>
+  </div>
