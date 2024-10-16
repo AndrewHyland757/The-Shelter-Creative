@@ -1,5 +1,5 @@
 <div class="section">
-  <div class="container-section-2-img-lg">
+  <div class=".container-section-2-img-large">
     <div class="text-container">
       <div class="services-box">
         <div class="service-box-border"></div>

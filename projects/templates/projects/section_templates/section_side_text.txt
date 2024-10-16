@@ -1,14 +1,14 @@
 <div class="section">
-   <div class="container-img-side-text">
-      <div class="section-side-text-container">
-            <p class="text-side">
+   <div class="container-side-text-with-image">
+      <div class="container-side-text">
+            <p>
                {{ project_description_1 }}
             </p>
-            <p class="text-side">
+            <p>
                {{ project_description_2 }}
             </p>
       </div>
-      <div class="section-side-img-container">
+      <div class="container-side-imgage">
          <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
       </div>
    </div>

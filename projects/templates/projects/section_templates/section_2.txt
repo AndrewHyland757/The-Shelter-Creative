@@ -1,25 +1,23 @@
-<div class="section section--2">
+<div class="section">
    <div class="container-section-2">
-      <div class="text-container">
-         <div class="services-box">
-            <div class="service-box-border"></div>
+      <div class="container-section-2-text">
+         <div class="container-services">
+            <div class="section-2-border"></div>
             <p class="services-heading">Services</p>
             {{ services }}
-            <div class="service-box-border service-box-border--bottom"></div>
+            <div class="section-2-border section-2-border--bottom"></div>
          </div>
-         <div class="description-box">
-            <p class="description-text description-text--bold">
+         <div class="container-description-text">
+            <p class="section-2-text section-2-text--bold">
                {{ project_description_1 }}
             </p>
-            <p class="description-text">
+            <p class="section-2-text">
                {{ project_description_2 }}
             </p>
          </div>
       </div>
-      <div class="section2-img-container">
+      <div class="container-section-2-image">
          <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
       </div>
    </div>
 </div>
-
-

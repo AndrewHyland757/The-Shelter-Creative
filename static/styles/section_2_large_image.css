@@ -1,0 +1,95 @@
+/***************************  PROJECT.HTML SECTION 2 IMAGE LARGE **************************/
+
+
+.container-section-2-img-large {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 4.2rem;
+    height: 100dvh;
+    width: 100vw;
+    padding-left: 3.6rem;
+  }
+
+  .text-container-large_img {
+	height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5.4rem;
+    padding-top: 30rem;
+	padding-left: 3.6rem;
+  }
+  
+
+  
+
+  
+  
+  
+  .description-text--bold {
+    text-shadow: 1px 0 0 currentColor;
+    margin-bottom: 3.4rem;
+  }
+  
+  .section2B-img-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .section2B-img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;  
+  }
+
+  
+  @media (max-width: 1200px) {
+    .description-text {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+   
+  
+    .container-section-2-img-large {
+      height: fit-content;
+      min-height: 100dvh;
+      max-height: min-content;
+      flex-direction: column;
+      gap: 2.9rem;
+      height: fit-content;
+      padding: 0;
+      padding-bottom: 12rem;
+      padding-top: 5rem;
+      margin: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  
+    .text-container {
+      gap: 3.6rem;
+      width: 100vw;
+      padding: 0 2rem;
+      margin-left: 0;
+    }
+  
+    .service-box-border {
+      width: 100%;
+    }
+	
+ 
+  
+    .description-text--bold {
+      margin-bottom: 3rem;
+    }
+  
+    .section2-img-container {
+      display: none;
+    }
+  }
+
