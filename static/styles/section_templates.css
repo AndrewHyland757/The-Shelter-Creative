@@ -313,13 +313,14 @@
 
 /***************************  GRID 3 X 2 **************************/
 
+/*
 .grid-container-3x2 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
 	height: calc(100dvh - 9.5rem);
-	/* Header height */
+
 	margin-top: 9.5rem;
 }
 
@@ -343,7 +344,7 @@
 	width: 100%;
 }
 
-/* Media Query for screens 1200px or smaller */
+
 
 @media (max-width: 1200px) {
 	.grid-container-3x2 {
@@ -400,14 +401,7 @@
 	}
 }
       
-
-
-
-
-  
-
-
-
+*/
 
 
 

@@ -1,22 +1,23 @@
 <div class="section">
-  <div class=".container-section-2-img-large">
-    <div class="text-container">
-      <div class="services-box">
-        <div class="service-box-border"></div>
+  <div class="container-section-2-image-large">
+    <div class="text-container-section-2-image-large">
+      <div class="services-contaner">
+
+        <div class="section-2-border"></div>
         <p class="services-heading">Services</p>
         {{ services }}
-        <div class="service-box-border service-box-border--bottom"></div>
+        <div class="section-2-border section-2-border--bottom"></div>
       </div>
       <div class="description-box">
-        <p class="description-text description-text--bold">
+        <p class="section-2-text section-2-text--bold">
            {{ project_description_1 }}
         </p>
-        <p class="description-text">
+        <p class="section-2-text">
           {{ project_description_2 }}
         </p>
       </div>
     </div>
-    <div class="section2B-img-container">
+    <div class="image-container-section-2-image-large">
       <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
     </div>
   </div>
@@ -25,125 +26,119 @@
 
 <style>
 
-.container-section-2-img-lg {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    gap: 4.2rem;
-    height: 100dvh;
-    width: 100vw;
-    padding-left: 3.6rem;
-  }
-  
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5.4rem;
-    padding-top: 18.25rem;
-  }
-  
-  .service-box-border {
-    width: 66%;
-    border-top: 1px solid black;
-  }
-  
-  .service-box-border--bottom {
-    margin-top: 3.2rem;
-  }
-  
-  .services-heading {
-    font-family: "Helvetica";
-    font-size: 1.4rem;
-    margin: 2.9rem 0 1.4rem;
-  }
-  
-  .service {
-    font-family: "RecklessNeue", serif;
-    font-size: 1.7rem;
-    font-weight: 400;
-    line-height: 2.1rem;
-    letter-spacing: -0.17px;
-  }
-  
-  .description-text {
-    font-family: "RecklessNeue", serif;
-    font-style: regular;
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 3.5rem;
-    letter-spacing: -0.2px;
-  }
-  
-  .description-text--bold {
-    text-shadow: 1px 0 0 currentColor;
-    margin-bottom: 3.4rem;
-  }
-  
-  .section2B-img-container {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .section2B-img-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: left; /* Anchors the image to the left as scales down */
-  }
-  
-  @media (max-width: 1200px) {
-    .description-text {
-      font-size: 26px;
-      line-height: 32px;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    /*
-    header {
-      display: none;
-    }
-      */
-  
-    .container-section-2-img-lg {
-      height: fit-content;
-      min-height: 100dvh;
-      max-height: min-content;
-      flex-direction: column;
-      gap: 2.9rem;
-      height: fit-content;
-      padding: 0;
-      padding-bottom: 12rem;
-      padding-top: 5rem;
-      margin: 0;
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
-  
-    .text-container {
-      gap: 3.6rem;
-      width: 100vw;
-      padding: 0 2rem;
-      margin-left: 0;
-    }
-  
-    .service-box-border {
-      width: 100%;
-    }
-    .description-text {
-      font-size: 2.4rem;
-      line-height: 3.05rem;
-    }
-  
-    .description-text--bold {
-      margin-bottom: 3rem;
-    }
-  
-    .section2-img-container {
-      display: none;
-    }
-  }
+.container-section-2-image-large {
+	display: grid;
+	grid-template-columns: 1.25fr 1fr;
+	gap: 4.2rem;
+	height: 100dvh;
+	width: 100vw;
+	padding-left: 3.6rem;
+}
+
+.text-container-section-2-image-large {
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 5.4rem;
+	padding-top: 30rem;
+	padding-left: 3.6rem;
+}
+
+.section-2-border {
+	width: 66%;
+	border-top: 1px solid #1E1C1C;
+}
+
+.section-2-border--bottom {
+	margin-top: 3.2rem;
+}
+
+.services-heading {
+	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
+	font-size: 1.4rem;
+	margin: 2.9rem 0 1.4rem;
+}
+
+.service {
+	font-family: "RecklessNeue", serif;
+	font-size: 1.7rem;
+	font-weight: 400;
+	line-height: 2.1rem;
+	letter-spacing: -0.17px;
+}
+
+.section-2-text {
+	font-family: "RecklessNeue", serif;
+	font-style: regular;
+	font-size: 2.6rem;
+	font-weight: 400;
+	line-height: 3.5rem;
+	letter-spacing: -0.2px;
+}
+
+.section-2-text--bold {
+	text-shadow: 1px 0 0 currentColor;
+	margin-bottom: 3.4rem;
+}
+
+.image-container-section-2-image-large {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.image-container-section-2-image-large img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: left;
+}
+
+@media (max-width: 1200px) {
+	.section-2-text {
+		font-size: 26px;
+		line-height: 32px;
+	}
+}
+
+@media (max-width: 992px) {
+
+	.container-section-2-image-large {
+		height: fit-content;
+		min-height: 100dvh;
+		max-height: min-content;
+		flex-direction: column;
+		gap: 2.9rem;
+		height: fit-content;
+		padding: 0;
+		padding-bottom: 12rem;
+		padding-top: 5rem;
+		margin: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.text-container-section-2-image-large {
+		gap: 3.6rem;
+		width: 100vw;
+		padding: 0 2rem;
+		margin-left: 0;
+	}
+
+	.section-2-border {
+		width: 100%;
+	}
+
+	.section-2-border--bold {
+		margin-bottom: 3rem;
+	}
+
+	.image-container-section-2-image-large {
+		display: none;
+	}
+}
+
 
 <style>

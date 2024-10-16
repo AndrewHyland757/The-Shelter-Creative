@@ -1,0 +1,25 @@
+<div class="section section--grid-3x2">
+    <div class="container-grid-3x2">
+      <div class="grid-3x2">
+        <div class="grid-item-3x2">
+           <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+        </div>
+        <div class="grid-item-3x2">
+           <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+        </div>
+        <div class="grid-item-3x2">
+           <img src="{{ img_3_url }}" alt="{{ img_3_description }}" />
+        </div>
+        <div class="grid-item-3x2">
+           <img src="{{ img_4_url }}" alt="{{ img_4_description }}" />
+        </div>
+        <div class="grid-item-3x2">
+           <img src="{{ img_5_url }}" alt="{{ img_5_description }}" />
+        </div>
+        <div class="grid-item-3x2">
+            <img src="{{ img_6_url }}" alt="{{ img_6_description }}" />
+        </div>
+      </div>
+    </div>
+</div>
+

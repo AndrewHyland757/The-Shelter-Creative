@@ -1,6 +1,9 @@
 <div class="section">
    <div class="container-side-text-with-image">
-      <div class="container-side-text">
+      <div class="image-container">
+         <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+      </div>
+      <div class="text-container">
             <p>
                {{ project_description_1 }}
             </p>
@@ -8,8 +11,84 @@
                {{ project_description_2 }}
             </p>
       </div>
-      <div class="container-side-imgage">
-         <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
-      </div>
    </div>
 </div>
+
+
+
+<style>
+.container-side-text-with-image {
+	height: calc(100dvh - 9.5rem);
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr 1.25fr;
+	gap: 4.2rem;
+	align-items: center;
+	margin-top: 9.5rem;
+	padding: 6.2rem 8.2rem;
+}
+
+.container-side-text-with-image .text-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	justify-content: center;
+}
+
+.container-side-text-with-image .text-container p {
+	font-family: "RecklessNeue", serif;
+	font-style: regular;
+	font-size: 2.6rem;
+	font-weight: 400;
+	line-height: 3.5rem;
+	letter-spacing: -0.2px;
+}
+
+
+.container-side-text-with-image .image-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.container-side-text-with-image .image-container img {
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+	aspect-ratio: 4 / 5;
+}
+
+
+@media (max-width: 1200px) {
+	.container-side-text-with-image {
+		padding: 6.2rem 3.6rem;
+	}
+}
+
+@media (max-width: 992px) {
+
+	.container-side-text-with-image .text-container p {
+		font-size: 2.2rem;
+		line-height: 2.8rem;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.container-side-text-with-image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 2.4rem;
+	}
+
+	.container-side-text-with-image .image-container {
+		display: none;
+	}
+}
+
+</style>
