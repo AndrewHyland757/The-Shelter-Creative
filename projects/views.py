@@ -122,31 +122,30 @@ def change_color(section, page_position, section_css):
     new_color_tablet = section.new_header_color_tablet
     new_color_mobile = section.new_header_color_mobile
 
-    # Check if a new hover color is set, otherwise use new_color
-    new_color_hover = section.new_header_color_hover or new_color
-
     # Base styles (Desktop)
-    section_css += f"""
-    .fp-viewing-{position} .logo,
-    .fp-viewing-{position} .sublogo,
-    .fp-viewing-{position} .header-right button {{
-        color: {new_color};
-    }}
-    .fp-viewing-{position} .logo:hover,
-    .fp-viewing-{position} .logo:active,
-    .fp-viewing-{position} .sublogo--email:hover,
-    .fp-viewing-{position} .sublogo--email:active,
-    .fp-viewing-{position} .header-right button:hover,
-    .fp-viewing-{position} .header-right button:active {{
-        color: {new_color_hover};
-    }}
-    """
+    if new_color:
+        new_color_hover = section.new_header_color_hover or new_color
+        section_css += f"""
+        .fp-viewing-{position} .logo,
+        .fp-viewing-{position} .sublogo,
+        .fp-viewing-{position} .header-right button {{
+            color: {new_color};
+        }}
+        .fp-viewing-{position} .logo:hover,
+        .fp-viewing-{position} .logo:active,
+        .fp-viewing-{position} .sublogo--email:hover,
+        .fp-viewing-{position} .sublogo--email:active,
+        .fp-viewing-{position} .header-right button:hover,
+        .fp-viewing-{position} .header-right button:active {{
+            color: {new_color_hover};
+        }}
+        """
 
     # Tablet styles (if specified)
     if new_color_tablet:
         new_color_hover_tablet = section.new_header_color_hover_tablet or new_color_tablet
         section_css += f"""
-        @media only screen and (min-width: 768px) {{
+        @media only screen and (max-width: 768px) {{
             .fp-viewing-{position} .logo,
             .fp-viewing-{position} .sublogo,
             .fp-viewing-{position} .header-right button {{
