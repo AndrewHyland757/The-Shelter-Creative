@@ -56,17 +56,19 @@
 }
 
 .image-container-section-2 {
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
 	height: 100%;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
 }
 
 .image-container-section-2 img {
 	height: 100%;
 	width: auto;
+	/*
 	aspect-ratio: 4 / 5;
+	*/
 	object-fit: cover;
 }
 

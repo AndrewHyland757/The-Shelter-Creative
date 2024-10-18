@@ -121,8 +121,10 @@ class Section(SectionCleanMixin, models.Model):
     new_text_color_tablet = models.CharField(max_length=200, blank=True, null=True)
     new_text_color_mobile = models.CharField(max_length=200, blank=True, null=True)
 
+    # Field for video file
+    video_file = models.FileField(upload_to='project_videos', blank=True, null=True)  # For uploading video files
     
-       # Images and descriptions for up to 7 images
+    # Images and descriptions for up to 7 images
     img_1 = models.ImageField(upload_to='project_images', blank=True, null=True)
     img_1_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
     img_1_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
