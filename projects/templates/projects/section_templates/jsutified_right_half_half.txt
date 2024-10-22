@@ -1,0 +1,77 @@
+    <div class="section">
+      <div class="container--justified-right">
+        <div class="img-container--justified-right">
+           <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+           <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+          </div>
+      </div>
+
+      <div class="brand-service-container">
+        <div class="company">
+            <p>{{ project_company }}</p>
+        </div>
+        <div class="line"></div>
+        <div class="main-service">
+            <p>{{ project_main_service }}</p>
+        </div>
+   </div>
+    </div>
+
+
+
+
+
+
+<style>
+
+.container--justified-right {
+	height: 100dvh;
+	width: 100vw;
+	display: flex;
+	justify-content: end;
+
+}
+
+.img-container--justified-right {
+	height: 100dvh;
+	width: 80vw;
+	display: flex;
+	overflow: hidden;
+}
+
+.img-container--justified-right img {
+	height: 100dvh;
+	width: 50%;
+	object-fit: cover;
+}
+
+
+@media (max-width: 992px) and (orientation: portrait) {
+
+	.container--justified-right {
+		height: calc(100dvh - 12rem) !important;
+		width: 100vw;
+		margin-top: 8.75rem !important;
+		margin-bottom: 3.25rem;
+		background-color: pink;
+		justify-content: start;
+		align-items: center;
+
+	}
+
+	.img-container--justified-right {
+		height: fit-content;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		background-color: lightblue;
+	}
+
+	.img-container--justified-right img {
+		height: auto;
+		aspect-ratio: 4 / 5;
+		width: 50%;
+	}
+}
+
+</style>

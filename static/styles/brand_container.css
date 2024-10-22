@@ -1,6 +1,6 @@
-.brand-service-container {
+.brand-service-container,
+.brand-service-container--scrollable {
 	width: 100vw;
-	height: 10rem;
 	display: flex;
 	justify-content: center;
 	align-items: end;
@@ -8,6 +8,16 @@
 	position: absolute;
 	z-index: 20;
 	bottom: 0;
+}
+
+.brand-service-container {
+	height: 10rem;
+	position: absolute;
+}
+
+.brand-service-container--scrollable {
+	height: fit-content;
+	position: relative;
 }
 
 .company--centered,
@@ -52,6 +62,12 @@
 
 	.brand-service-container {
 		padding: 1.2rem .5rem;
+	}
+
+	.brand-service-container--scrollable {
+		padding: 1.2rem .5rem;
+
+		position: absolute;
 	}
 
 	.company p,
