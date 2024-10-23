@@ -1,0 +1,46 @@
+<div class="section">
+   <div class="img-container img-container--right--aline-top">
+      <picture>
+         <source
+            srcset="{{ img_1_url_mobile }}"
+            media="(max-width: 600px)">
+         <source
+            srcset="{{ img_1_url_tablet }}"
+            media="(max-width: 1200px)">
+         <img
+            class="image-aline-top"
+            src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+      </picture>
+   </div>
+   <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
+</div>
+
+
+<style>
+
+.img-container--right--aline-top {
+    justify-content: end;
+    align-items: start;
+    position: relative; /* Ensure the positioning of the img inside */
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+}
+
+.image-aline-top {
+    position: absolute;
+    width: 80vw;
+    height: 100dvh;
+    object-fit: cover;
+    top: 0; /* Anchors the image to the top */
+    right: 0;
+    object-position: top; /* Ensures the image will be cropped from the bottom, not the top */
+}
+  
+</style>

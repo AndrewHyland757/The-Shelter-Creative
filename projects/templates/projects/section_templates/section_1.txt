@@ -46,5 +46,15 @@
 .img-full-screen--bottom {
 	object-position: bottom center;
 }
+
+@media (max-width: 1200px) {
+	.img-container--right--aline-top {
+		justify-content: center;
+	}
+	
+	.image-aline-top {
+		width: 100vw;
+	}
+}
   
 </style>

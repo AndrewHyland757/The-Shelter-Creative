@@ -183,6 +183,8 @@ class ProjectPage(models.Model):
     section_6 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_6')
     section_7 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_7')
     section_8 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_8')
+    section_9 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_9')
+    section_10 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_10')
     
     def __str__(self):
         return f"Project page - {self.project.company}"
