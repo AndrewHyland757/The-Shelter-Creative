@@ -4,10 +4,7 @@ from .models import Project, Service, Template, Section, ProjectPage
 
 admin.site.register(Project)
 admin.site.register(Service)
-
-
 admin.site.register(Template)
-admin.site.register(ProjectPage)
 
 
 class SectionAdmin(admin.ModelAdmin):
@@ -68,13 +65,27 @@ class SectionAdmin(admin.ModelAdmin):
             'classes': ('collapse',),
             'fields': ('img_7', 'img_7_tablet', 'img_7_mobile', 'img_7_description'),
         }),
-       
     )
-
-        
-        
-    
 
 admin.site.register(Section, SectionAdmin)
 
 
+
+@admin.register(ProjectPage)
+class ProjectPageAdmin(admin.ModelAdmin):
+    """
+    Filter the section options based on the project associated with the ProjectPage
+    """
+    list_select_related = ('project',)
+    raw_id_fields = ('project',)
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name.startswith('section_'):
+            if request.resolver_match.kwargs.get('object_id'):
+                project_page = ProjectPage.objects.get(pk=request.resolver_match.kwargs['object_id'])
+                kwargs["queryset"] = Section.objects.filter(project=project_page.project)
+            elif request.POST.get('project'):
+                kwargs["queryset"] = Section.objects.filter(project_id=request.POST['project'])
+            else:
+                kwargs["queryset"] = Section.objects.none()
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
