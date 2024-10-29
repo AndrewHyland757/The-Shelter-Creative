@@ -2,6 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from django.db import transaction
 from django.db.models import Max
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -122,7 +123,7 @@ class Section(SectionCleanMixin, models.Model):
     new_text_color_mobile = models.CharField(max_length=200, blank=True, null=True)
 
     # Field for video file
-    video_file = models.FileField(upload_to='project_videos', blank=True, null=True)  # For uploading video files
+    video_file = CloudinaryField(resource_type='video', folder='project_videos', blank=True, null=True)
     
     # Images and descriptions for up to 7 images
     img_1 = models.ImageField(upload_to='project_images', blank=True, null=True)
