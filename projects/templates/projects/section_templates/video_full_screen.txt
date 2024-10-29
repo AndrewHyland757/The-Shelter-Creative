@@ -1,0 +1,38 @@
+  <div class="section">
+    <video id="myVideo" class="video" autoplay muted loop playsinline>
+      <source
+        src="{{ video_url }}"
+        type="video/mp4"
+        >
+      Your browser does not support the video tag.
+    </video>
+    <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
+</div>
+
+<style>
+
+.section {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+}
+
+.video {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	overflow: hidden;
+	display: block;
+}
+</style>

@@ -14,12 +14,10 @@ def get_section_css(section):
 def get_section_html_content(section):
     """
     Retrieves a Section instance for the given project_page and returns 
-    the HTML with image URLs and other placeholders replaced.
+    the HTML with image URLs, video URL, and other placeholders replaced.
     """
     company = section.project.company
     main_service_name = section.project.main_service.service_name
-   
-
 
     project_description_1 = section.project_description_1 if section.project_description_1 else ''
     project_description_2 = section.project_description_2 if section.project_description_2 else ''
@@ -79,7 +77,6 @@ def get_section_html_content(section):
             section_html_with_images = section_html_with_images.replace(placeholder, img_url)
     
 
-
     image_descriptions = [
         (section.img_1_description, '{{ img_1_description }}'),
         (section.img_2_description, '{{ img_2_description }}'),
@@ -98,6 +95,10 @@ def get_section_html_content(section):
             description = f"{company}: {main_service_name} by The Shelter Creative" 
         section_html_with_images = section_html_with_images.replace(placeholder, description)
 
+    # Replace video URL if video_file is not null
+    if section.video_file:
+        video_url = section.video_file.url  # Get the video URL
+        section_html_with_images = section_html_with_images.replace('{{ video_url }}', video_url)
 
     # Add text to html where applicable
     section_html_with_content = (

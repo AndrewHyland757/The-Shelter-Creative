@@ -1,21 +1,20 @@
-    <div class="section">
-      <div class="container--justified-right">
-        <div class="img-container--justified-right">
-           <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
-           <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
-          </div>
+<div class="section">
+   <div class="container--justified-right">
+      <div class="img-container--justified-right">
+         <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+         <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
       </div>
-
-      <div class="brand-service-container">
-        <div class="company">
-            <p>{{ project_company }}</p>
-        </div>
-        <div class="line"></div>
-        <div class="main-service">
-            <p>{{ project_main_service }}</p>
-        </div>
    </div>
-    </div>
+   <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
+</div>
 
 
 
