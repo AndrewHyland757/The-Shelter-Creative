@@ -1,0 +1,92 @@
+<div class="section">
+  <div class="grid-container-2x1">
+    <div class="grid-2x1">
+      <div class="grid-item-2x1">
+        <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+      </div>
+      <div class="grid-item-2x1">
+        <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+      </div>
+    </div>
+  </div>
+  <div class="brand-service-container">
+    <div class="company">
+      <p>{{ project_company }}</p>
+    </div>
+    <div class="line"></div>
+    <div class="main-service">
+      <p>{{ project_main_service }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+.grid-container-2x1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.grid-2x1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 66%;
+  height: auto;
+}
+
+.grid-item-2x1 {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.grid-item-2x1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 968px) and (orientation: portrait) {
+  .section--grid-2x1 {
+    display: block;
+  }
+
+  .grid-container-2x1 {
+    height: calc(var(--vh, 1vh) * 100 - 9rem);
+    height: calc(100dvh - 9rem);
+    margin-top: 9rem !important;
+    padding-top: 1.4rem;
+    padding-bottom: 6.2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .grid-2x1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  .grid-item-2x1 {
+    height: 100%;
+    width: fit-content;
+    overflow: hidden;
+  }
+
+  .grid-item-2x1 img {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+</style>

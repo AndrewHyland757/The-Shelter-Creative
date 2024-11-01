@@ -1,0 +1,149 @@
+<div class="section">
+  <div class="container-layout-1">
+    <div class="image-container-layout-1">
+      <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+      <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+    </div>
+  </div>
+  <div class="brand-service-container">
+      <div class="company">
+        <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>{{ project_main_service }}</p>
+      </div>
+  </div>
+</div>
+
+<style>
+
+.container-layout-1 {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-container-layout-1 {
+  width: 80vw;
+  height: 100dvh;
+  display: flex;
+}
+
+.image-container-layout-1 img:nth-of-type(1) {
+  height: 100dvh;
+  width: 50%;
+  object-fit: cover;
+  object-position: top;
+  /* This ensures the image is cropped from the bottom */
+}
+
+.image-container-layout-1 img:nth-of-type(2) {
+  height: 100dvh;
+  width: 50%;
+  padding: 12rem 8.2rem;
+  object-fit: cover;
+  object-position: top;
+  /* This ensures the image is cropped from the bottom */
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  .container-layout-1 {
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .image-container-layout-1 {
+    width: 100vw;
+
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+  }
+
+  .image-container-layout-1 img:nth-of-type(1) {
+    height: 75dvh;
+  }
+
+  .image-container-layout-1 img:nth-of-type(2) {
+    height: 55dvh;
+    padding: 0 6.2rem;
+  }
+}
+
+@media (max-width: 792px) and (orientation: portrait) {
+  .container-layout-1 {
+    height: calc(var(--vh, 1vh) * 100 - 15.2rem);
+    height: calc(100dvh - 15.2rem);
+    margin-top: 9rem !important;
+    margin-bottom: 6.2rem;
+    padding-top: 1.4rem;
+
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+  }
+
+  .image-container-layout-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  .image-container-layout-1 img:nth-of-type(1),
+  .image-container-layout-1 img:nth-of-type(2) {
+    height: 100%;
+    width: auto;
+    padding: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/*
+
+@media (max-width: 1200px) {
+  .container-layout-1 {
+  }
+
+  .image-container-layout-1 {
+    width: 100vw;
+    align-items: center;
+  }
+
+  .image-container-layout-1 img:nth-of-type(1) {
+    height: 75vh;
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .image-container-layout-1 img:nth-of-type(2) {
+    padding: 0 6.2rem;
+    height: 65dvh;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-layout-1 {
+    justify-content: center;
+  }
+
+  .image-container-layout-1 img:nth-of-type(1) {
+    height: 100dvh;
+    width: 100vw;
+  }
+
+  .image-container-layout-1 img:nth-of-type(2) {
+    display: none;
+  }
+}
+
+</style>

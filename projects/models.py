@@ -14,6 +14,7 @@ class Template(models.Model):
     template_name = models.CharField(max_length=255)
     html_content = models.TextField(null=False)
     css_content = models.TextField(null=True, blank=True)
+    template_description = models.TextField(null=True)
     
     def __str__(self):
         return f"{self.template_name}"
@@ -176,16 +177,17 @@ class ProjectPage(models.Model):
     """
 
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    section_1 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_1')
-    section_2 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_2')
-    section_3 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_3')
-    section_4 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_4')
-    section_5 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_5')
-    section_6 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_6')
-    section_7 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_7')
-    section_8 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_8')
-    section_9 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_9')
-    section_10 = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, blank=True, related_name='section_10')
+    section_1 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_1')
+    section_2 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_2')
+    section_3 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_3')
+    section_4 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_4')
+    section_5 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_5')
+    section_6 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_6')
+    section_7 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_7')
+    section_8 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_8')
+    section_9 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_9')
+    section_10 = models.ForeignKey(Section, on_delete=models.SET_NULL, null=True, blank=True, related_name='section_10')
+    
     
     def __str__(self):
         return f"Project page - {self.project.company}"
