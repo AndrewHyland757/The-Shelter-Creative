@@ -16,3 +16,15 @@ def home(request):
     template = "home/home.html"
   
     return render(request, template, context)
+
+
+
+
+def test(request):
+    """
+    Renders home page.
+    """
+
+    template = "home/test.html"
+  
+    return render(request, template)
