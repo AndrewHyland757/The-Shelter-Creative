@@ -1,5 +1,5 @@
-<div class="section section--grid-3x2">
-    <div class="container-grid-3x2">
+<div class="section">
+    <div class="grid-container-3x2">
       <div class="grid-3x2">
         <div class="grid-item-3x2">
            <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
@@ -31,4 +31,120 @@
       </div>
    </div>
 </div>
+
+<style>
+
+.grid-container-3x2 {
+	height: calc(100dvh - 9.5rem);
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 9.5rem;
+}
+
+.grid-3x2 {
+	max-width: 1000px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 0.5rem;
+	overflow: hidden;
+	padding: 0 3.6rem;
+}
+
+.grid-item-3x2 {
+	height: fit-content;
+	width: 100%;
+	overflow: hidden;
+	aspect-ratio: 4 / 5;
+}
+
+.grid-item-3x2 img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+	.brand-service-container--scrollable {
+		display: none;
+	}
+
+	.grid-container-3x2 {
+		height: 100dvh;
+		margin-top: 0rem;
+
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.grid-3x2 {
+		height: 100%;
+		max-width: unset;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 0.5rem;
+		overflow: hidden;
+		padding: 0.5rem 3.6rem;
+	}
+
+	.grid-item-3x2 {
+		height: 100%;
+		width: fit-content;
+		overflow: hidden;
+	}
+
+	.grid-item-3x2 img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		aspect-ratio: 4 / 5;
+	}
+}
+
+@media (max-width: 992px) and (orientation: portrait) {
+	.grid-container-3x2 {
+		height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+		height: calc(100dvh - 16.2rem);
+		display: flex;
+		justify-content: center;
+		margin-top: 11.2rem;
+		margin-bottom: 5rem;
+		padding: 0;
+	}
+
+	.grid-3x2 {
+		max-width: unset;
+		width: 100%;
+		padding: 0 1.2rem;
+	}
+
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+	.grid-container-3x2 {
+		height: 100dvh;
+		margin-top: 0;
+		margin-bottom: 0;
+		overflow: hidden;
+		padding: 0 1.2rem;
+	}
+
+	.grid-3x2 {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		max-width: unset;
+		width: 100%;
+		padding: 0;
+	}
+
+	.grid-item-3x2 {
+		height: 100%;
+		width: auto;
+		aspect-ratio: 4 / 5;
+	}
+}
+</style>
 

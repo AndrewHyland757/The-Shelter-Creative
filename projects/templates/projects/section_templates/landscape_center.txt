@@ -1,6 +1,7 @@
   <div class="section">
-    <div class="img-container img-container--landscape">
+    <div class="image-container-center-landscape">
       <img
+        class="image-center-landscape"
         src="{{ img_1_url }}"
         alt="{{ img_1_description }}">
     </div>
@@ -17,22 +18,25 @@
 
 <style>
 
-.img-container--landscape {
-	justify-content: center;
-	align-items: center;
-}
-
-.img-container--landscape img {
-	height: 66vh;
-	width: auto;
-	object-fit: cover;
-}
-
-@media (max-width: 992px) {
-	.img-container--landscape img {
-		height: 100vh;
-		width: 100vw;
-		object-fit: cover;
-	}
-}
+.image-container-center-landscape {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .image-center-landscape {
+    height: 66vh;
+    width: auto;
+  }
+  
+  @media (max-width: 1200px) and (orientation: portrait) {
+    .image-center-landscape {
+      height: 100vh;
+      width: auto;
+    }
+  }
 </style>

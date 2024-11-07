@@ -1,5 +1,5 @@
-<div class="section section--grid-2x3">
-   <div class="grid-container grid-container-2x3">
+<div class="section">
+   <div class="grid-container-2x3">
       <div class="grid-2x3">
          <div class="grid-item-2x3">
             <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
@@ -32,14 +32,13 @@
    </div>
 </div>
 
-
 <style>
 
 .grid-container-2x3 {
-	display: flex;
-	justify-content: center;
 	width: 100vw;
 	min-height: calc(100dvh - 9.5rem);
+	display: flex;
+	justify-content: center;
 	margin-top: 9.5rem;
 	padding-top: 8.6rem;
 	padding-bottom: 1.2rem;
@@ -69,30 +68,26 @@
 	object-fit: cover;
 }
 
-
-@media (max-width: 968px) and (orientation: portrait) {
-	.section--grid-2x3 {
-		display: block;
-	}
-
+@media (max-width: 968px) {
 	.grid-container-2x3 {
-		height: calc(var(--vh, 1vh) * 100 - 9rem);
-		height: calc(100dvh - 9rem);
-		margin-top: 9rem !important;
-
-		padding-top: 1.2rem;
-		padding-bottom: 6rem;
-
+		min-height: unset;
+		height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+		height: calc(100dvh - 16.2rem);
 		display: flex;
 		justify-content: center;
+		margin-top: 11.2rem;
+		margin-bottom: 5rem;
+		padding: 0;
 	}
+}
 
+@media (max-width: 968px) and (orientation: portrait) {
 	.grid-2x3 {
+		height: 100%;
+		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr;
-		height: 100%;
-		width: 100%;
 		justify-items: center;
 		gap: 0.5rem;
 	}
@@ -100,7 +95,6 @@
 	.grid-item-2x3 {
 		height: 100%;
 		width: fit-content;
-		overflow: hidden;
 	}
 
 	.grid-item-2x3 img {
@@ -113,7 +107,36 @@
 	.grid-item-2x3:nth-child(4),
 	.grid-item-2x3:nth-child(5),
 	.grid-item-2x3:nth-child(6) {
-		/* Add your styles here */
+		display: none;
+	}
+}
+
+@media (max-width: 968px) and (orientation: landscape) {
+	.grid-2x3 {
+		height: 100%;
+		width: fit-content;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		justify-items: center;
+		gap: 0.5rem;
+		padding: 0;
+	}
+
+	.grid-item-2x3 {
+		height: 100%;
+		width: fit-content;
+	}
+
+	.grid-item-2x3 img {
+		height: 100%;
+		width: auto;
+		aspect-ratio: 4 / 5;
+	}
+
+	.grid-item-2x3:nth-child(4),
+	.grid-item-2x3:nth-child(5),
+	.grid-item-2x3:nth-child(6) {
 		display: none;
 	}
 }

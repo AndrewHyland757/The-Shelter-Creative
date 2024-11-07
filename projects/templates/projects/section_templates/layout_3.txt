@@ -18,7 +18,7 @@
 
 <style>
 
-container-layout-3 {
+.container-layout-3 {
   width: 100vw;
   height: 100dvh;
   display: flex;
@@ -77,14 +77,12 @@ container-layout-3 {
 
 @media (max-width: 792px) and (orientation: portrait) {
   .container-layout-3 {
-    height: calc(var(--vh, 1vh) * 100 - 15.2rem);
-    height: calc(100dvh - 15.2rem);
-    margin-top: 9rem !important;
-    margin-bottom: 6.2rem;
-    padding-top: 1.4rem;
+    height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+    height: calc(100dvh - 16.2rem);
     display: flex;
     justify-content: center;
-    background-color: pink;
+    margin-top: 11.2rem;
+    margin-bottom: 5rem;
   }
 
   .image-container-layout-3 {

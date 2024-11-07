@@ -3,10 +3,11 @@
 
 {% block extra_css %}
   
-  <link rel="stylesheet" href="{% static 'home/styles/home.css' %}" />
+  
   <link rel="stylesheet" href="{% static 'home/styles//color_changes.css' %}" />
   <link rel="stylesheet" href="{% static 'home/styles/brand_container.css' %}" />
   <link rel="stylesheet" href="{% static 'home/styles/section_slides.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/styles/home-2.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -31,14 +32,14 @@
 
   <!-------- SECTION 2 --------->
 
-  <div class="section section--half-screen">
-    <div class="img-container">
-      <div class="img-container--half-screen">
+  <div class="section">
+    <div class="full-viewport-half-half">
+      <div class="image-container-half-screen">
         <img
           src="{% static '/home/images/home_images/s-moda/The_Shelter_Creative_S_Moda_Beauty_Satoshi_Saikusa_1.jpg' %}"
           alt="Image of close up of a female model's face for S Moda by Satoshi_Saikusa">
       </div>
-      <div class="img-container--half-screen">
+      <div class="image-container-half-screen">
         <img
           src="{% static '/home/images/home_images/s-moda/The_Shelter_Creative_S_Moda_Beauty_Satoshi_Saikusa_2.jpg' %}"
           alt="Image of close up of a female model's face for S Moda by Satoshi_Saikusa">
@@ -84,8 +85,8 @@
    <!-------- SECTION 4 --------->
 
    <div class="section">
-    <div class="img-container img-container--right">
-      <picture>
+    <div class="full-viewport-right-align-1-image">
+      <picture class="image-container-right-1-image">
         <source
           srcset="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_sm.jpg' %}"
           media="(max-width: 600px) and (orientation: portrait)"
@@ -95,6 +96,7 @@
           media="(max-width: 1200px) and (orientation: portrait)"
           >
         <img
+         class="image-full-width"
           src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez.jpg' %}"
           alt="Ecommerce image of female model for Adolfo_Dominguez - The Shelter Creative"
           >
@@ -125,7 +127,7 @@
         srcset="{% static '/home/images/home_images/photography/The_Shelter_Creative_Illes_Balears_Classics_md.jpg' %}"
         media="(max-width: 1200px)">
       <img
-        class="img-full-screen"
+        class="img-full-screen img-full-screen-top"
         src="{% static '/home/images/home_images/photography/The_Shelter_Creative_Illes_Balears_Classics.jpg' %}"
         alt="Photograph of a classic sailing boat during the Illes Balears Classic boat race by The Shelter Creative"
         >
@@ -144,12 +146,12 @@
   <!-------- SECTION 6 --------->
 
   <div class="section">
-    <picture class="img-container--center img-container">
+    <picture class="image-container-center-portrait">
       <source
         srcset="{% static '/home/images/home_images/l_officiel/The_Shelter_Creative_L_Officiel_sm.jpg' %}"
         media="(max-width: 600px)">
       <img
-        class="img-container--center-img"
+        class="image-center-portrait"
         src="{% static '/home/images/home_images/l_officiel/The_Shelter_Creative_L_Officiel.jpg' %}"
         alt="L'Officiel image - The Shelter Creative">
     </picture>
@@ -213,41 +215,7 @@
     </picture>
   </div>
 
-  <!-------- SECTION 9 --------->
 
-  <div class="section section--8">
-    <div class="grid-container-1x3">
-      <div class="grid-1x3">
-        <div class="grid-item-1x3">
-          <img
-            src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_U_1.jpg' %}"
-            alt="Ecommerce image of male model in Adolfo_Dominguez U"
-            >
-        </div>
-        <div class="grid-item-1x3">
-          <img
-            src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_U_3.png' %}"
-            alt="Ecommerce image of male model in Adolfo_Dominguez U"
-            >
-        </div>
-        <div class="grid-item-1x3">
-          <img
-            src="{% static '/home/images/home_images/adolfo_dominguez/The_Shelter_Creative_Adolfo_Dominguez_U_2.png' %}"
-            alt="Ecommerce image of female model in Adolfo_Dominguez U"
-            >
-        </div>
-      </div>
-    </div>
-    <div class="brand-service-container">
-      <div class="company">
-        <p>U Adolfo Domínguez</p>
-      </div>
-      <div class="line"></div>
-      <div class="main-service">
-        <p>Creative Direction</p>
-      </div>
-    </div>
-  </div>
 
   <!-------- SECTION 10 --------->
 
@@ -273,8 +241,9 @@
   <!-------- SECTION 11 --------->
 
   <div class="section">
-    <div class="img-container img-container--landscape">
+    <div class="image-container-center-landscape">
       <img
+        class="image-center-landscape"
         src="{% static '/home/images/home_images/tous/The_Shelter_Creative_TOUS.jpg' %}"
         alt="TOUS red bag ecommerce image - The Shelter Creative">
     </div>
@@ -315,38 +284,7 @@
     </div>
   </div>
 
-    <!-------- SECTION 13 --------->
 
-    
-    <div class="section">
-      <div class="img-container img-container--right--aline-top">
-        <picture>
-          <source
-          srcset="{% static '/home/images/home_images/s-moda/The_Shelter_Creative_S_Moda_33_sm.jpg' %}"
-          media="(max-width: 600px)">
-        <source
-          srcset="{% static '/home/images/home_images/s-moda/The_Shelter_Creative_S_Moda_33_md.jpg' %}"
-          media="(max-width: 1200px)">
-          <img
-          class="image-aline-top"
-          src="{% static '/home/images/home_images/s-moda/The_Shelter_Creative_S_Moda_43.jpg' %}"
-            alt="Ecommerce image of female model for Adolfo_Dominguez - The Shelter Creative"
-            >
-        </picture>
-      </div>
-      <div class="brand-service-container">
-        <div class="company">
-          <p>S Moda</p>
-        </div>
-        <div class="line"></div>
-        <div class="main-service">
-          <p>Creative Direction</p>
-        </div>
-      </div>
-    </div>
-
-  
-     <!-------- SECTION 14 --------->
 
 
 

@@ -1,13 +1,14 @@
 <div class="section">
-    <picture class="img-container--center img-container">
+    <picture class="image-container-center-portrait">
       <source
         srcset="{{ img_1_url_mobile }}"
         media="(max-width: 600px)">
       <img
-        class="img-container--center-img"
+        class="image-center-portrait"
         src="{{ img_1_url }}"
         alt="{{ img_1_description }}">
     </picture>
+
     <div class="brand-service-container">
       <div class="company">
         <p>{{ project_company }}</p>
@@ -18,4 +19,22 @@
       </div>
     </div>
   </div>
+
+  <style>
+  .image-container-center-portrait {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-center-portrait {
+    height: 100%;
+    width: auto;
+  }
+
+</style>
 

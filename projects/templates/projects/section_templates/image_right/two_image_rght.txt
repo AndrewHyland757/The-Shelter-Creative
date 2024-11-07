@@ -1,0 +1,85 @@
+
+<div class="section">
+   <div class="full-viewport-right-align-2-image">
+      <div class="image-container-right-2-image">
+         <img class="image-half-width" src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+         <img class="image-half-width" src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+      </div>
+   </div>
+   <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
+</div>
+
+
+<style>
+.full-viewport-right-align-2-image {
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+}
+
+.image-container-right-2-image {
+  height: 100vh;
+  height: 100dvh;
+  width: 80vw;
+  display: flex;
+  overflow: hidden;
+}
+
+.image-container-right-2-image .image-half-width {
+  height: 100dvh;
+  width: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  .full-viewport-right-align-2-image {
+    height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+    height: calc(100dvh - 16.2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11.2rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
+  }
+
+  .image-container-right-2-image {
+    height: fit-content;
+    width: 100vw;
+  }
+
+  .image-container-right-2-image .image-half-width {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  .full-viewport-right-align-2-image {
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .image-container-right-2-image {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .image-container-right-2-image .image-half-width {
+    height: 100vh;
+    width: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+</style>

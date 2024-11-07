@@ -26,73 +26,196 @@
 
 
   <style>
-
-  .grid-container-1x3 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	width: 100vw;
+.grid-container-1x3 {
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-1x3 {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.5rem;
-	width: 66%;
-	height: auto;
+  width: 70%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
 .grid-item-1x3 {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	aspect-ratio: 4 / 5;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
 }
 
 .grid-item-1x3 img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@media (max-width: 968px) and (orientation: portrait) {
-	.section--grid-1x3 {
-		display: block;
-	}
-
-	.grid-container-1x3 {
-		height: calc(var(--vh, 1vh) * 100 - 9rem);
-		height: calc(100dvh - 9rem);
-		margin-top: 9rem !important;
-
-		padding-top: 1.2rem;
-		padding-bottom: 6rem;
-
-		display: flex;
-		justify-content: center;
-	}
-
-	.grid-1x3 {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr 1fr;
-		height: 100%;
-		width: 100%;
-		justify-items: center;
-		gap: 1rem;
-	}
-
-	.grid-item-1x3 {
-		height: 100%;
-		width: fit-content;
-		overflow: hidden;
-	}
-
-	.grid-item-1x3 img {
-		height: 100%;
-		width: auto;
-		aspect-ratio: 4 / 5;
-	}
+@media (max-width: 1200px) {
+  .grid-1x3 {
+    width: 80%;
+  }
 }
+
+@media (max-width: 968px) and (orientation: landscape) {
+  .section--grid-1x3 {
+    display: block;
+  }
+
+  .grid-container-1x3 {
+    height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+    height: calc(100dvh - 16.2rem);
+    display: flex;
+    justify-content: center;
+    margin-top: 11.2rem;
+    margin-bottom: 5rem;
+  }
+
+  .grid-1x3 {
+    height: 100%;
+    width: fit-content;
+  }
+
+  .grid-item-1x3 {
+    height: 100%;
+    width: fit-content;
+  }
+
+  .grid-item-1x3 img {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* 3 images tablet/mobile portrait */
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .section--grid-1x3 {
+    display: block;
+  }
+
+  .grid-container-1x3 {
+    height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+    height: calc(100dvh - 16.2rem);
+    display: flex;
+    justify-content: center;
+    margin-top: 11.2rem;
+    margin-bottom: 5rem;
+  }
+
+  .grid-1x3 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .grid-item-1x3 {
+    height: 100%;
+    width: fit-content;
+  }
+
+  .grid-item-1x3 img {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* 2 images tablet/mobile portrait */
+/*
+@media (max-width: 768px) and (orientation: portrait) {
+  .section--grid-1x3 {
+    display: block;
+  }
+
+  .grid-container-1x3 {
+    height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+      height: calc(100dvh - 16.2rem);
+      display: flex;
+      justify-content: center;
+      margin-top: 11.2rem;
+      margin-bottom: 5rem;
+  }
+
+  .grid-1x3 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .grid-item-1x3 {
+    height: 100%;
+    width: fit-content;
+  }
+
+  .grid-item-1x3:nth-of-type(2) {
+    display: none;
+  }
+
+  .grid-item-1x3 img {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+*/
+
+/* 1 images tablet/mobile portrait */
+/*
+@media (max-width: 768px) and (orientation: portrait) {
+  .section--grid-1x3 {
+    display: block;
+  }
+
+  .grid-container-1x3 {
+    height: calc(var(--vh, 1vh) * 100 - 18.2rem);
+    height: calc(100dvh - 18.2rem);
+    display: flex;
+    justify-content: center;
+    margin-top: 12.2rem;
+    margin-bottom: 6rem;
+  }
+
+  .grid-1x3 {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .grid-item-1x3 {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .grid-item-1x3:nth-of-type(2),
+  .grid-item-1x3:nth-of-type(3) {
+    display: none;
+  }
+
+  .grid-item-1x3 img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+}
+*/
+
+
   </style>

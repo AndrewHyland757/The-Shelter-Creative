@@ -1,9 +1,9 @@
- <div class="section section--half-screen">
-    <div class="img-container">
-      <div class="img-container--half-screen">
+<div class="section">
+    <div class="full-viewport-half-half">
+      <div class="image-container-half-screen">
         <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
       </div>
-      <div class="img-container--half-screen">
+      <div class="image-container-half-screen">
         <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
       </div>
     </div>
@@ -16,4 +16,64 @@
         <p>{{ project_main_service }}</p>
       </div>
     </div>
-  </div>
+</div>
+
+<style>
+
+.full-viewport-half-half {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .image-container-half-screen {
+    height: 100%;
+    width: 50vw;
+    overflow: hidden;
+  }
+
+  .image-container-half-screen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  
+  @media (max-width: 1200px) and (orientation: portrait) {
+    .full-viewport-half-half {
+      height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+      height: calc(100dvh - 16.2rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 11.2rem;
+      margin-bottom: 5rem;
+      overflow: hidden;
+    }
+  
+    .image-container-half-screen {
+      height: auto;
+      width: 50vw;
+      aspect-ratio: 4 / 5;
+    }
+  }
+  
+  @media (max-width: 992px) and (orientation: landscape) {
+    .full-viewport-half-half {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .image-container-half-screen {
+      height: 100%;
+      width: auto;
+      aspect-ratio: 4 / 5;
+    }
+  }
+  
+
+</style>
+  

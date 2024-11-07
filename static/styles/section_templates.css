@@ -253,7 +253,7 @@
 */
 /***************************  GRID 2 X 3 **************************/
 
-
+/*
 .grid-container-2x3 {
 	display: flex;
 	justify-content: center;
@@ -332,7 +332,7 @@
 	.grid-item-2x3:nth-child(4),
 	.grid-item-2x3:nth-child(5),
 	.grid-item-2x3:nth-child(6) {
-		/* Add your styles here */
+		
 		display: none;
 	}
 }

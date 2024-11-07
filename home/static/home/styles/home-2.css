@@ -1,0 +1,177 @@
+/* Full screen image classes */
+
+.img-full-screen {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  object-fit: cover;
+}
+
+.img-full-screen-top {
+  object-position: top center;
+}
+
+.img-full-screen-bottom {
+  object-position: bottom center;
+}
+
+/***************** half half ****************/
+
+.full-viewport-half-half {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .image-container-half-screen {
+    height: 100%;
+    width: 50vw;
+    overflow: hidden;
+  }
+
+  .image-container-half-screen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  
+  @media (max-width: 1200px) and (orientation: portrait) {
+    .full-viewport-half-half {
+      height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+      height: calc(100dvh - 16.2rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 11.2rem;
+      margin-bottom: 5rem;
+      overflow: hidden;
+    }
+  
+    .image-container-half-screen {
+      height: auto;
+      width: 50vw;
+      aspect-ratio: 4 / 5;
+    }
+  }
+  
+  @media (max-width: 992px) and (orientation: landscape) {
+    .full-viewport-half-half {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .image-container-half-screen {
+      height: 100%;
+      width: auto;
+      aspect-ratio: 4 / 5;
+    }
+  }
+
+ /********************  1 image right - no aligned crop ********************************/
+
+.full-viewport-right-align-1-image {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	display: flex;
+	justify-content: end;
+}
+
+.image-container-right-1-image {
+	height: 100vh;
+	height: 100dvh;
+	width: 80vw;
+	display: flex;
+	overflow: hidden;
+}
+
+.image-container-right-1-image .image-full-width {
+	height: 100dvh;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+	.full-viewport-right-align-1-image {
+		justify-content: center;
+	}
+
+	.image-container-right-1-image {
+		width: 100vw;
+	}
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+	.full-viewport-right-align-1-image {
+		justify-content: center;
+	}
+
+	.image-container-right-1-image {
+		width: 100vw;
+		justify-content: center;
+	}
+
+	.image-container-right-1-image .image-full-width {
+		height: 100dvh;
+		width: auto;
+		object-fit: cover;
+	}
+}
+
+
+/*********** Portrait center **************/
+
+.image-container-center-portrait {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-center-portrait {
+    height: 100%;
+    width: auto;
+  }
+  
+/*********** Video **************/
+
+  .video {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	overflow: hidden;
+	display: block;
+}
+
+
+/*********** Landscape center **************/
+
+.image-container-center-landscape {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .image-center-landscape {
+    height: 66vh;
+    width: auto;
+  }
+  
+  @media (max-width: 1200px) and (orientation: portrait) {
+    .image-center-landscape {
+      height: 100vh;
+      width: auto;
+    }
+  }

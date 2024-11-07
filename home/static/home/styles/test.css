@@ -1,4 +1,22 @@
+.img-full-screen {
+  width: 100vw;
+  height: 100dvh;
+  object-fit: cover;
+}
 
+.img-full-screen-top {
+  width: 100vw;
+  height: 100dvh;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.img-full-screen-bottom {
+  width: 100vw;
+  height: 100dvh;
+  object-fit: cover;
+  object-position: bottom center;
+}
 
 
 
