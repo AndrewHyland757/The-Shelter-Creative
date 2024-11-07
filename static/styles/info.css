@@ -23,20 +23,14 @@
 }
 
 .section-info {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
-.section-info {
 	height: 100vh;
 	width: 100vw;
 	overflow-y: auto;
-}
-
-.section-info {
-	-ms-overflow-style: none;
+  -ms-overflow-style: none;
 	scrollbar-width: none;
 }
+
+
 
 .close-container {
 	height: fit-content;
@@ -50,7 +44,7 @@
 
 .close-container button {
 	color: #1e1c1c;
-	font-family: "HelveticaNowProTextMedium";
+	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;;
 	font-size: 1.3rem;
 	font-style: normal;
 	font-weight: 500;
@@ -64,6 +58,10 @@
 .modal .close-container button:hover {
 	color: #626060;
 }
+
+
+/****************************/
+
 
 .main-container {
 	display: grid;

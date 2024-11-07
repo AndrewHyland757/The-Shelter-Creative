@@ -28,7 +28,15 @@
 	/* For the section transitions */
 	transition: color .75s ease-in-out;
 }
+.header-right {
 
+	height: fit-content;
+	display: flex;
+	gap: 1.8rem;
+	
+	
+	
+}
 .sublogo,
 .header-right button {
 	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;

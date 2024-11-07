@@ -113,13 +113,14 @@
 
     {% include 'header.html' %}
     {% include 'info.html' %}
-
+    {% include 'projects_modal.html' %}
+    
     <!--fullpage -->
 
     <div id="fullpage">
       {% block content %}
       {% endblock %}
-      {% include 'projects_section.html' %}
+      
     </div>
 
     {% block postloadjs %}
