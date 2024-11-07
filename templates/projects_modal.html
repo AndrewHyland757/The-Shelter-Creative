@@ -22,54 +22,83 @@
         <div class="close-container">
           <button type="button" class="button button--close" data-dismiss="modal" aria-label="Close">close</button>
         </div>
-        <div class="projects-container">
-            <div class="projects-list-container scrollable-content">
-                <div class="projects-heading-container">
-                    <p>client</p>
-                    <p>service</p>
-                </div>
-                {% for project in projects %}
+
+
+<div class="projects-container">
+  <div class="column-left">
+    <div class="project-heading-container">
+      <div class="brand">
+        <p>Project</p>
+      </div>
+    
+      <div class="service">
+        <p>Service</p>
+      </div>
+    </div>
+    <div class="projects-list-container scrollable-content">
+
+               
+      {% for project in projects %}
+
+      <a class="project-link" href=" {% url 'project' project.id %}">
+        <div class="project-item">
+          {% if project.list_image %}
+          <img
+            class="list-image-url"
+            src="{{ project.list_image.url }}"
+            style="display: none"
+          />
+          {% endif %}
+
+          <div class="brand">
+            <p>{{ project.company }}</p>
+          </div>
+
+          <div class="line-projects">
+          </div>
+
+          <div class="service">
+            <p>{{ project.main_service }}</p>
+          </div>
+        </div>
+      </a>
+
+      {% endfor %}
+  
+    </div>
+
+  </div>
+
+
+
+
+  <div class="column-right">
+    <div class="projects-imgs-container">
+      <img
+        src="{% static 'images/projects_section/The_Shelter_Creative_Tous.jpg' %}"
+        alt=""
+      />
+      <img
+        src="{% static 'images/projects_section/The_Shelter_Creative_Massimo Dutti_Stores.jpg' %}"
+        alt=""
+      />
+      <img
+        class="img-3"
+        src="{% static 'images/projects_section/The_Shelter_Creative_Casa_Camper_Berlin.jpg' %}"
+        alt=""
+      />
+    </div>
+    
+  </div>
+</div>
+        
+
+        
           
-                <a class="projet-link" href=" {% url 'project' project.id %}">
-                  <div class="project-item">
-                    {% if project.list_image %}
-                    <img
-                      class="list-image-url"
-                      src="{{ project.list_image.url }}"
-                      style="display: none"
-                    />
-                    {% endif %}
-          
-                    <div class="brand">
-                      <p>{{ project.company }}</p>
-                    </div>
-          
-                    <div class="line-projects">
-                    </div>
-          
-                    <div class="service">
-                      <p>{{ project.main_service }}</p>
-                    </div>
-                  </div>
-                </a>
-          
-                {% endfor %}
-              </div>
-              <div class="projects-imgs-container">
-                <img
-                  src="{% static 'images/projects_section/The_Shelter_Creative_Tous.jpg' %}"
-                  alt=""
-                />
-                <img
-                  src="{% static 'images/projects_section/The_Shelter_Creative_Massimo Dutti_Stores.jpg' %}"
-                  alt=""
-                />
-                <img
-                  class="img-3"
-                  src="{% static 'images/projects_section/The_Shelter_Creative_Casa_Camper_Berlin.jpg' %}"
-                  alt=""
-                />
-              </div>
+
+      
+            
+              
           
         </div>
 

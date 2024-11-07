@@ -64,28 +64,69 @@
 
 
 .projects-container {
-	height: calc(100vh - 14rem);
-    width: 100%;
-    top: 14rem;
+	
+    width: 100vw;
+	
+	height: calc(100vh - 9rem);
+    top: 9rem;
     position: absolute;
-    display: grid;
-	grid-template-columns: 1fr auto;
+	
+
+    display: flex;
 	gap: 8.2rem;
 	padding: 0 6.4rem 3.2rem 6.4rem;
-  
+	
 }
 
 /****************************/
-
-.projects-list-container {
+.column-right,
+.column-left {
+	width: 50vw;
 	height: 100%;
 	overflow-y: auto;
+	/*
 	padding-bottom: 3.2rem;
+	
 	margin-bottom: 12rem;
+	*/
+
+}
+
+
+.column-left {
 	scrollbar-width: none;
 	/* Firefox */
 	-ms-overflow-style: none;
 	/* Internet Explorer 10+ */
+	display: flex;
+	flex-direction: column;
+
+	
+
+}
+
+.column-right {
+
+	
+	
+}
+
+
+
+.projects-list-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	/*
+	padding-bottom: 3.2rem;
+	margin-bottom: 12rem;
+	*/
+	scrollbar-width: none;
+	/* Firefox */
+	-ms-overflow-style: none;
+	/* Internet Explorer 10+ */
+	
+	
 }
 
 .projects-list-container::-webkit-scrollbar {
@@ -93,44 +134,55 @@
 	display: none;
 }
 
-.projects-heading-container {
-    width: 100%;
-    height: fit-content;
 
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2.4rem;
-}
 
-.projects-heading-container p {
-    font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
-    text-transform: capitalize;
-    font-size: 1.6rem;
-}
-.projects-heading-container p:nth-of-type(2) {
-    padding-right: 16rem;
-}
 
-.projects-heading-container p:nth-of-type(1) {
-    padding-left: 8rem;
-}
 
-.projet-link {
+
+
+.project-link {
 	text-decoration: none;
+	
 }
 
-.project-item {
+.project-item,
+.project-heading-container {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 0.75rem;
-	padding-bottom: 0;
+	
+}
+
+.project-heading-container {
+	margin-bottom: 3rem;
+	box-sizing: border-box;
+
+}
+
+
+.project-item {
 	box-sizing: border-box;
 	border-bottom: 2px solid transparent;
 	transition: border-color 0.3s ease;
+	margin-bottom: 0.75rem;
+	
 }
 
 .project-item:hover {
 	border-color: #1E1C1C;
+}
+
+
+.brand {
+	font-style: italic;
+	
+}
+
+.service {
+	width: 45%;
+    padding-right: 0;
+	
+	
 }
 
 .brand p,
@@ -148,29 +200,30 @@
 
 .brand p {
 	font-style: italic;
+
 }
 
-.service p {
-    padding-right: 8.2rem;
-}
+
+
+
+
+
+
+
 
 .line-projects {
 	display: none;
 }
 
+.column-right {
+	display: flex;
+	justify-content: center;
+}
 
 .projects-imgs-container,
-/* Default image container for projects section */
 .project-img-container {
-	/* Changes to this image container on project item hover ( JS function ) */
-	height: calc(100vh - 18rem);
-	/* 100vh minus header height of 9.5rem and padding */
-	top: 18rem;
-	/* Sets top margin */
-	position: sticky;
 	height: 100%;
 	width: auto;
-	max-width: 100%;
 	aspect-ratio: 4 / 5;
 	overflow: hidden;
 
@@ -190,6 +243,7 @@
 	overflow: hidden;
 	height: 100%;
 	object-fit: cover;
+
 }
 
 .img-3 {
@@ -204,138 +258,3 @@
 	object-fit: cover;
 }
 
-/************************** MEDIA QUERIES: SECTION - PROJECTS **************************/
-
-
-@media only screen and (max-width: 1200px) {
-	.projects {
-		display: grid;
-		grid-template-columns: 1.25fr 1fr;
-	}
-
-	.brand p,
-	.service p {
-		font-size: 2.6rem;
-		line-height: 3.2rem;
-	}
-
-	.project-item {
-		border-bottom: 1.5px solid transparent;
-		/* Start with a transparent border */
-	}
-}
-
-@media only screen and (max-width: 1200px) and (orientation: portrait) {
-	.projects {
-		gap: 4.2rem;
-		width: 100%;
-		padding: 0 2.4rem 3.2rem 2.4rem;
-	}
-
-	.projects-imgs-container {
-		/* Default image container for projects section */
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr 1fr;
-		gap: 2rem;
-		aspect-ratio: unset;
-	}
-
-	.img-3 {
-		grid-column: unset;
-		height: unset;
-	}
-
-	.project-img-container {
-		/* Changes to this image container on project item hover ( JS function ) */
-		height: auto;
-		width: 100%;
-		aspect-ratio: unset;
-	}
-
-	.project-img-container img {
-		/* Changes to this image class on hover */
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-}
-
-@media only screen and (max-width: 992px) and (orientation: portrait) {
-
-	.projects {
-		gap: 2.4rem;
-	}
-
-	.brand p,
-	.service p {
-		font-size: 2.4rem;
-		line-height: 2.6rem;
-	}
-}
-
-
-@media only screen and (max-width: 768px),
-only screen and (max-width: 992px) and (orientation: landscape) {
-
-	.fp-viewing-projects-section .header {
-		/* Remove header */
-		display: none;
-	}
-
-	#section--projects--lg {
-		/* Remove section projects large */
-		display: none;
-	}
-
-	
-	#section-projects--sm {
-		display: block;
-	}
-
-	/*
-
-	.fp-viewing-projects-section .section {
-		overflow: visible;
-	}
-*/
-	.section--projects {
-		display: flex;
-		justify-content: center;
-		overflow: visible;
-	}
-
-
-
-	.projects-list-container--sm {
-		width: 100vw;
-		min-height: 100dvh;
-		padding: 6.2rem 2.4rem;
-		margin-bottom: 6rem;
-	}
-
-	.project-item {
-		display: grid;
-		grid-template-columns: auto 1fr auto;
-		margin-bottom: 1rem;
-		border-bottom: none;
-		width: 100%;
-	}
-
-	.line-projects {
-		display: block;
-		margin: 0 .5rem;
-		margin-bottom: .4rem;
-		border-bottom: 1px solid black;
-	}
-
-	.service p:hover {
-		font-style: italic;
-	}
-
-	.brand p,
-	.service p {
-		font-size: 1.6rem;
-		line-height: normal;
-	}
-}
-   
