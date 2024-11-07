@@ -4,12 +4,12 @@
          <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
       </div>
       <div class="text-container">
-            <p>
-               {{ project_description_1 }}
-            </p>
-            <p>
-               {{ project_description_2 }}
-            </p>
+         <p>
+            {{ project_description_1 }}
+         </p>
+         <p>
+            {{ project_description_2 }}
+         </p>
       </div>
    </div>
 </div>
@@ -18,6 +18,7 @@
 
 <style>
 .container-side-text-with-image {
+	height: calc(100vh - 9.5rem);
 	height: calc(100dvh - 9.5rem);
 	width: 100vw;
 	display: grid;
@@ -46,7 +47,6 @@
 	letter-spacing: -0.2px;
 }
 
-
 .container-side-text-with-image .image-container {
 	height: 100%;
 	width: 100%;
@@ -62,7 +62,6 @@
 	aspect-ratio: 4 / 5;
 }
 
-
 @media (max-width: 1200px) {
 	.container-side-text-with-image {
 		padding: 6.2rem 3.6rem;
@@ -70,7 +69,6 @@
 }
 
 @media (max-width: 992px) {
-
 	.container-side-text-with-image .text-container p {
 		font-size: 2.2rem;
 		line-height: 2.8rem;
@@ -78,7 +76,6 @@
 }
 
 @media (max-width: 600px) {
-
 	.container-side-text-with-image {
 		display: flex;
 		align-items: center;

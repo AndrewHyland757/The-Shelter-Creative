@@ -1,24 +1,23 @@
 <div class="section">
-    <picture class="image-container-center-portrait">
+   <picture class="image-container-center-portrait">
       <source
-        srcset="{{ img_1_url_mobile }}"
-        media="(max-width: 600px)">
+         srcset="{{ img_1_url_mobile }}"
+         media="(max-width: 600px)">
       <img
-        class="image-center-portrait"
-        src="{{ img_1_url }}"
-        alt="{{ img_1_description }}">
-    </picture>
-
-    <div class="brand-service-container">
+         class="image-center-portrait"
+         src="{{ img_1_url }}"
+         alt="{{ img_1_description }}">
+   </picture>
+   <div class="brand-service-container">
       <div class="company">
-        <p>{{ project_company }}</p>
+         <p>{{ project_company }}</p>
       </div>
       <div class="line"></div>
       <div class="main-service">
          <p>{{ project_main_service }}</p>
       </div>
-    </div>
-  </div>
+   </div>
+</div>
 
   <style>
   .image-container-center-portrait {

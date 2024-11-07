@@ -24,6 +24,7 @@
 
 <style>
 .container-section-2 {
+	height: calc(100vh - 9.5rem);
 	height: calc(100dvh - 9.5rem);
 	width: 100vw;
 	display: grid;
@@ -45,7 +46,7 @@
 
 .section-2-border {
 	width: 66%;
-	border-top: 1px solid #1E1C1C;
+	border-top: 1px solid #1e1c1c;
 }
 
 .section-2-border--bottom {
@@ -81,11 +82,11 @@
 }
 
 .image-container-section-2 {
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
 	height: 100%;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
 }
 
 .image-container-section-2 img {
@@ -93,8 +94,9 @@
 	width: auto;
 	aspect-ratio: 4 / 5;
 	object-fit: cover;
+	/* Crop frpm bottom */
+	object-position: top center;
 }
-
 
 @media (max-width: 1200px) {
 	.text-container-section-2 {
@@ -112,7 +114,6 @@
 }
 
 @media (max-width: 992px) {
-
 	.fp-viewing-2:has(.container-section-2) .header-container {
 		display: none;
 	}
@@ -121,18 +122,15 @@
 		display: flex;
 		justify-content: center;
 		overflow: visible;
-
 	}
 
 	.container-section-2 {
-		min-height: 100dvh;
-		height: unset;
+		height: fit-content;
 		display: flex;
 		flex-direction: column;
 		gap: 0;
 		padding: 5rem 0 0 0;
 		margin-top: 4.2rem;
-		margin-bottom: 6rem;
 	}
 
 	.text-container-section-2 {
@@ -142,8 +140,8 @@
 	}
 
 	.section-2-text {
-		font-size: 2.2rem;
-		line-height: 3rem;
+		font-size: 2rem;
+		line-height: 2.6rem;
 	}
 
 	.section-2-border {

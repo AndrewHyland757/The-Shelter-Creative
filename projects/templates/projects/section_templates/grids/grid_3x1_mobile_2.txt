@@ -1,0 +1,136 @@
+
+<div class="section">
+   <div class="grid-container-1x3">
+      <div class="grid-1x3">
+         <div class="grid-item-1x3">
+            <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+         </div>
+         <div class="grid-item-1x3">
+            <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+         </div>
+         <div class="grid-item-1x3">
+            <img src="{{ img_3_url }}" alt="{{ img_3_description }}" />
+         </div>
+      </div>
+   </div>
+   <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
+</div>
+
+
+<style>
+
+.grid-container-1x3 {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-1x3 {
+	width: 70%;
+	height: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.5rem;
+}
+
+.grid-item-1x3 {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	aspect-ratio: 4 / 5;
+}
+
+.grid-item-1x3 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+	.grid-1x3 {
+		width: 80%;
+	}
+}
+
+@media (max-width: 968px) and (orientation: landscape) {
+
+	.grid-container-1x3 {
+		height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+		height: calc(100dvh - 16.2rem);
+		display: flex;
+		justify-content: center;
+		margin-top: 11.2rem;
+		margin-bottom: 5rem;
+	}
+
+	.grid-1x3 {
+		height: 100%;
+		width: fit-content;
+	}
+
+	.grid-item-1x3 {
+		height: 100%;
+		width: fit-content;
+	}
+
+	.grid-item-1x3 img {
+		height: 100%;
+		width: auto;
+		aspect-ratio: 4 / 5;
+	}
+}
+
+/* 2 images tablet/mobile portrait */
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .section--grid-1x3 {
+    display: block;
+  }
+
+  .grid-container-1x3 {
+    height: calc(var(--vh, 1vh) * 100 - 16.2rem);
+      height: calc(100dvh - 16.2rem);
+      display: flex;
+      justify-content: center;
+      margin-top: 11.2rem;
+      margin-bottom: 5rem;
+  }
+
+  .grid-1x3 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .grid-item-1x3 {
+    height: 100%;
+    width: fit-content;
+  }
+
+  .grid-item-1x3:nth-of-type(2) {
+    display: none;
+  }
+
+  .grid-item-1x3 img {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+</style>

@@ -1,83 +1,73 @@
 /********************  1 image right aligned bottom ********************************/
 
-   <div class="section">
-    <div class="full-viewport-right-align-1-image">
+<div class="section">
+   <div class="full-viewport-right-align-1-image">
       <picture class="image-container-right-1-image">
-        <source
-          srcset="{{ img_1_url_mobile }}"
-          media="(max-width: 600px) and (orientation: portrait)"
-          >
-        <source
-          srcset="{{ img_1_url_tablet }}"
-          media="(max-width: 1200px) and (orientation: portrait)"
-          >
-        <img
+      <source
+         srcset="{{ img_1_url_mobile }}"
+         media="(max-width: 600px) and (orientation: portrait)"
+         >
+      <source
+         srcset="{{ img_1_url_tablet }}"
+         media="(max-width: 1200px) and (orientation: portrait)"
+         >
+      <img
          class="image-full-width-bottom-aligned"
-          src="{{ img_1_url }}"
+         src="{{ img_1_url }}"
          alt="{{ img_1_description }}
-          >
-      </picture>
-    </div>
-    <div class="brand-service-container">
-        <div class="company">
-        <p>{{ project_company }}</p>
-        </div>
-        <div class="line"></div>
-        <div class="main-service">
-        <p>{{ project_main_service }}</p>
-        </div>
-    </div>
-  </div>
+         >
+         </picture>
+         </div>
+         <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
+</div>
 
   <style>
 
-  .full-viewport-right-align-1-image {
-  height: 100vh;
-  height: 100dvh;
-  width: 100vw;
-  display: flex;
-  justify-content: end;
-}
-
-.image-container-right-1-image {
-  height: 100vh;
-  height: 100dvh;
-  width: 80vw;
-  display: flex;
-  overflow: hidden;
+.full-viewport-right-align-1-image {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: end;
 }
 
 .image-container-right-1-image .image-full-width-bottom-aligned {
+  height: 100vh;
   height: 100dvh;
-  width: 100%;
+  width: 80vw;
   object-fit: cover;
-  object-position: bottom;
+  overflow: hidden;
+	object-position: bottom;
 }
 
 @media (max-width: 1200px) and (orientation: portrait) {
-  .full-viewport-right-align-1-image {
-    justify-content: center;
-  }
+	.full-viewport-right-align-1-image {
+		justify-content: center;
+	}
 
-  .image-container-right-1-image {
-    width: 100vw;
-  }
+	.image-container-right-1-image .image-full-width-bottom-aligned {
+		width: 100vw;
+	}
 }
 
 @media (max-width: 1200px) and (orientation: landscape) {
-  .full-viewport-right-align-1-image {
-    justify-content: center;
-  }
+	.full-viewport-right-align-1-image {
+		justify-content: center;
+	}
 
-  .image-container-right-1-image {
-    width: 100vw;
-    justify-content: center;
-  }
-
-  .image-container-right-1-image .image-full-width-bottom-aligned {
-    height: 100dvh;
-    width: auto;
-    object-fit: cover;
-  }
+	.image-container-right-1-image .image-full-width-bottom-aligned {
+      height: 100vh;
+		height: 100dvh;
+		width: 100vw;
+		object-fit: cover;
+	}
 }
 </style>

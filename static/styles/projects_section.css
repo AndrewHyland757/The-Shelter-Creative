@@ -13,9 +13,7 @@
 .projects {
 	width: 100vw;
 	height: calc(100vh - 18rem);
-	/* 100vh minus header height of 9.5rem and padding */
 	top: 18rem;
-	/* Sets top margin */
 	position: absolute;
 	transform: translate(-50%, 0);
 	display: grid;
@@ -211,11 +209,11 @@ only screen and (max-width: 992px) and (orientation: landscape) {
 		display: none;
 	}
 
-	/*
+	
 	#section-projects--sm {
 		display: block;
 	}
-*/
+
 	/*
 
 	.fp-viewing-projects-section .section {

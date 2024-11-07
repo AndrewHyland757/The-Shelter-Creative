@@ -1,23 +1,22 @@
 <div class="section">
-    <div class="full-viewport-half-half">
+   <div class="full-viewport-half-half">
       <div class="image-container-half-screen">
-        <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
+         <img src="{{ img_1_url }}" alt="{{ img_1_description }}" />
       </div>
       <div class="image-container-half-screen">
-        <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
+         <img src="{{ img_2_url }}" alt="{{ img_2_description }}" />
       </div>
-    </div>
-    <div class="brand-service-container">
+   </div>
+   <div class="brand-service-container">
       <div class="company company--centered">
-        <p>{{ project_company }}</p>
+         <p>{{ project_company }}</p>
       </div>
       <div class="line"></div>
       <div class="main-service main-service--centered">
-        <p>{{ project_main_service }}</p>
+         <p>{{ project_main_service }}</p>
       </div>
-    </div>
+   </div>
 </div>
-
 <style>
 
 .full-viewport-half-half {

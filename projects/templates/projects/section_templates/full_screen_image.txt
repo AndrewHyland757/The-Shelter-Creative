@@ -1,48 +1,51 @@
 **************** Full screen  - no alinement ****************** 
 
 <div class="section">
-  <picture>
-    <source
-      srcset="{{ img_1_url_mobile }}"
-      media="(max-width: 600px)">
-    <source
-      srcset="{{ img_1_url_tablet }}"
-      media="(max-width: 1200px)">
-    <img
-      class="img-full-screen"
-      src="{{ img_1_url }}"
-      alt="{{ img_1_description }}">
-  </picture>
-  <div class="brand-service-container">
-    <div class="company">
-      <p>{{ project_company }}</p>
-    </div>
-    <div class="line"></div>
-    <div class="main-service">
-      <p>{{ project_main_service }}</p>
-    </div>
-  </div>
+   <picture>
+      <source
+         srcset="{{ img_1_url_mobile }}"
+         media="(max-width: 600px)">
+      <source
+         srcset="{{ img_1_url_tablet }}"
+         media="(max-width: 1200px)">
+      <img
+         class="img-full-screen"
+         src="{{ img_1_url }}"
+         alt="{{ img_1_description }}">
+   </picture>
+   <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
 </div>
 
 <style>
 .img-full-screen {
-  width: 100vw;
-  height: 100dvh;
-  object-fit: cover;
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
 }
 
 .img-full-screen-top {
-  width: 100vw;
-  height: 100dvh;
-  object-fit: cover;
-  object-position: top center;
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	object-position: top center;
 }
 
 .img-full-screen-bottom {
-  width: 100vw;
-  height: 100dvh;
-  object-fit: cover;
-  object-position: bottom center;
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	object-position: bottom center;
 }
 </style>
 
@@ -50,29 +53,28 @@
 **************** Full screen  - aline top ******************
 
 <div class="section">
-  <picture>
-    <source
-      srcset="{{ img_1_url_mobile }}"
-      media="(max-width: 600px)">
-    <source
-      srcset="{{ img_1_url_tablet }}"
-      media="(max-width: 1200px)">
-    <img
-      class="img-full-screen-top"
-      src="{{ img_1_url }}"
-      alt="{{ img_1_description }}">
-  </picture>
-  <div class="brand-service-container">
-    <div class="company">
-      <p>{{ project_company }}</p>
-    </div>
-    <div class="line"></div>
-    <div class="main-service">
-      <p>{{ project_main_service }}</p>
-    </div>
-  </div>
+   <picture>
+      <source
+         srcset="{{ img_1_url_mobile }}"
+         media="(max-width: 600px)">
+      <source
+         srcset="{{ img_1_url_tablet }}"
+         media="(max-width: 1200px)">
+      <img
+         class="img-full-screen-top"
+         src="{{ img_1_url }}"
+         alt="{{ img_1_description }}">
+   </picture>
+   <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
 </div>
-
 <style>
 
 .img-full-screen-top {
@@ -86,29 +88,28 @@
 **************** Full screen  - aline bottom ******************
 
 <div class="section">
-  <picture>
-    <source
-      srcset="{{ img_1_url_mobile }}"
-      media="(max-width: 600px)">
-    <source
-      srcset="{{ img_1_url_tablet }}"
-      media="(max-width: 1200px)">
-    <img
-      class="img-full-screen-bottom"
-      src="{{ img_1_url }}"
-      alt="{{ img_1_description }}">
-  </picture>
-  <div class="brand-service-container">
-    <div class="company">
-      <p>{{ project_company }}</p>
-    </div>
-    <div class="line"></div>
-    <div class="main-service">
-      <p>{{ project_main_service }}</p>
-    </div>
-  </div>
+   <picture>
+      <source
+         srcset="{{ img_1_url_mobile }}"
+         media="(max-width: 600px)">
+      <source
+         srcset="{{ img_1_url_tablet }}"
+         media="(max-width: 1200px)">
+      <img
+         class="img-full-screen-bottom"
+         src="{{ img_1_url }}"
+         alt="{{ img_1_description }}">
+   </picture>
+   <div class="brand-service-container">
+      <div class="company">
+         <p>{{ project_company }}</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+         <p>{{ project_main_service }}</p>
+      </div>
+   </div>
 </div>
-
 <style>
 
 .img-full-screen-bottom {
