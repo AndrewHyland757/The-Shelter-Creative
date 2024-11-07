@@ -1,11 +1,11 @@
-  <div class="section">
-    <div class="image-container-center-landscape">
+<div class="section">
+   <div class="image-container-center-landscape">
       <img
-        class="image-center-landscape"
-        src="{{ img_1_url }}"
-        alt="{{ img_1_description }}">
-    </div>
-    <div class="brand-service-container">
+         class="image-center-landscape"
+         src="{{ img_1_url }}"
+         alt="{{ img_1_description }}">
+   </div>
+   <div class="brand-service-container">
       <div class="company">
          <p>{{ project_company }}</p>
       </div>
@@ -14,7 +14,7 @@
          <p>{{ project_main_service }}</p>
       </div>
    </div>
-  </div>
+</div>
 
 <style>
 
