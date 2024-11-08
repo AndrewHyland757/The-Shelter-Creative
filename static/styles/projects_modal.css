@@ -15,7 +15,9 @@
 	height: 100dvh;
 	border-radius: 0;
 	overflow: hidden;
+	/*
 	background-color: #948a7a;
+	*/
 }
 
 .section-projects::-webkit-scrollbar {
@@ -150,6 +152,17 @@
 	font-style: italic;
 }
 
+/*
+.project-heading-container .brand p,
+.project-heading-container .service p {
+	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 2.8rem;
+
+}
+
+*/
 .line-projects {
 	display: none;
 }
@@ -165,6 +178,7 @@
 	width: auto;
 	aspect-ratio: 4 / 5;
 	overflow: hidden;
+	padding: 3.2rem;
 }
 
 .projects-imgs-container {
