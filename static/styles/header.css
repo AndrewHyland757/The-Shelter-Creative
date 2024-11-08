@@ -25,18 +25,16 @@
 	line-height: normal;
 	letter-spacing: 3.04px;
 	color: #1e1c1c;
-	/* For the section transitions */
+	/* Section transitions */
 	transition: color .75s ease-in-out;
 }
-.header-right {
 
+.header-right {
 	height: fit-content;
 	display: flex;
 	gap: 1.8rem;
-	
-	
-	
 }
+
 .sublogo,
 .header-right button {
 	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
@@ -45,7 +43,7 @@
 	text-transform: uppercase;
 	letter-spacing: 0.12px;
 	color: #1e1c1c;
-	/* For the section transitions */
+	/* Section transitions */
 	transition: color .75s ease-in-out;
 }
 
@@ -74,11 +72,9 @@
 	color: #626060;
 	text-decoration: none;
 	cursor: pointer !important;
-	/* For the hover transitions */
+	/* Hover transitions */
 	transition: color 0.1s ease-in-out;
 }
-
-/****** MEDIA QUERIES ******/
 
 @media only screen and (max-width: 992px) {
 
@@ -92,14 +88,16 @@
 		text-align: center;
 	}
 
-	.sublogo {
-		line-height: 1.3rem;
+	.header-right {
+		flex-direction: column;
+		gap: 0;
 	}
 
+	.sublogo,
 	.header-right button {
 		font-size: 1.2rem;
-		line-height: 1.2rem;
-		letter-spacing: 0.12px;
+		line-height: 1.3rem;
+		letter-spacing: 0.25px;
 	}
 
 	.logo {

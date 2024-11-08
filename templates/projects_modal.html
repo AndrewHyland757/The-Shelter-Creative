@@ -1,110 +1,94 @@
-{% load static %} 
+{% load static %}
 
 {% block extra_css %}
- 
-  <link rel="stylesheet" href="{% static 'styles/projects_modal.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/projects_modal.css' %}">
 {% endblock %}
 
-
-
 <div
-  class="modal"
-  id="projects-modal"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="projects-modal"
-  aria-hidden="true"
-  >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <section class="section-projects">
-
-        <div class="close-container">
-          <button type="button" class="button button--close" data-dismiss="modal" aria-label="Close">close</button>
-        </div>
-
-
-<div class="projects-container">
-  <div class="column-left">
-    <div class="project-heading-container">
-      <div class="brand">
-        <p>Project</p>
+   class="modal"
+   id="projects-modal"
+   tabindex="-1"
+   role="dialog"
+   aria-labelledby="projects-modal"
+   aria-hidden="true"
+   >
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <section class="section-projects">
+            <div class="close-container">
+               <button type="button" class="button button--close" data-dismiss="modal" aria-label="Close">close</button>
+            </div>
+            <div class="projects-container">
+               <div class="column-left">
+                  <div class="project-heading-container">
+                     <div class="brand">
+                        <p>Project</p>
+                     </div>
+                     <div class="service">
+                        <p>Service</p>
+                     </div>
+                  </div>
+                  <div class="projects-list-container scrollable-content">
+                     {% for project in projects %}
+                     <a class="project-link" href=" {% url 'project' project.id %}">
+                        <div class="project-item">
+                           {% if project.list_image %}
+                           <img class="list-image-url" src="{{ project.list_image.url }}" alt="#" style="display: none">
+                           {% endif %}
+                           <div class="brand">
+                              <p>{{ project.company }}</p>
+                           </div>
+                           <div class="line-projects"></div>
+                           <div class="service">
+                              <p>{{ project.main_service }}</p>
+                           </div>
+                        </div>
+                     </a>
+                     {% endfor %}
+                  </div>
+               </div>
+               <div class="column-right">
+                  <div class="projects-imgs-container">
+                     <img
+                        src="{% static 'images/projects_section/The_Shelter_Creative_Tous.jpg' %}"
+                        alt=""
+                        >
+                     <img
+                        src="{% static 'images/projects_section/The_Shelter_Creative_Massimo Dutti_Stores.jpg' %}"
+                        alt=""
+                        >
+                     <img
+                        class="img-3"
+                        src="{% static 'images/projects_section/The_Shelter_Creative_Casa_Camper_Berlin.jpg' %}"
+                        alt=""
+                        >
+                  </div>
+               </div>
+            </div>
+            <div class="projects-container-small-screen">
+               {% for project in projects %}
+               <a class="project-link" href=" {% url 'project' project.id %}">
+                  <div class="project-item-small">
+                     <div class="project-image-container-small">
+                        {% if project.list_image %}
+                        <img  src="{{ project.list_image.url }}" alt="#">
+                        {% endif %}
+                     </div>
+                     <div class="project-text-container-small">
+                        <div class="brand">
+                           <p>{{ project.company }}</p>
+                        </div>
+                        <div class="line-project-small"></div>
+                        <div class="service">
+                           <p>{{ project.main_service }}</p>
+                        </div>
+                     </div>
+                  </div>
+               </a>
+               {% endfor %}
+            </div>
+         </section>
       </div>
-    
-      <div class="service">
-        <p>Service</p>
-      </div>
-    </div>
-    <div class="projects-list-container scrollable-content">
-
-               
-      {% for project in projects %}
-
-      <a class="project-link" href=" {% url 'project' project.id %}">
-        <div class="project-item">
-          {% if project.list_image %}
-          <img
-            class="list-image-url"
-            src="{{ project.list_image.url }}"
-            style="display: none"
-          />
-          {% endif %}
-
-          <div class="brand">
-            <p>{{ project.company }}</p>
-          </div>
-
-          <div class="line-projects">
-          </div>
-
-          <div class="service">
-            <p>{{ project.main_service }}</p>
-          </div>
-        </div>
-      </a>
-
-      {% endfor %}
-  
-    </div>
-
-  </div>
-
-
-
-
-  <div class="column-right">
-    <div class="projects-imgs-container">
-      <img
-        src="{% static 'images/projects_section/The_Shelter_Creative_Tous.jpg' %}"
-        alt=""
-      />
-      <img
-        src="{% static 'images/projects_section/The_Shelter_Creative_Massimo Dutti_Stores.jpg' %}"
-        alt=""
-      />
-      <img
-        class="img-3"
-        src="{% static 'images/projects_section/The_Shelter_Creative_Casa_Camper_Berlin.jpg' %}"
-        alt=""
-      />
-    </div>
-    
-  </div>
+   </div>
 </div>
-        
-
-        
-          
-
-      
-            
-              
-          
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
 <script src="{% static 'js/projects_modal.js' %}"></script>
