@@ -1,9 +1,17 @@
 <div class="section">
    <div class="image-container-center-landscape">
-      <img
-         class="image-center-landscape"
-         src="{{ img_1_url }}"
-         alt="{{ img_1_description }}">
+      <picture >
+         <source
+            srcset="{{ img_1_url_mobile }}"
+            media="(max-width: 600px)">
+         <source
+            srcset="{{ img_1_url_tablet }}"
+            media="(max-width: 1200px)">
+         <img
+            class="class="image-center-landscape""
+            src="{{ img_1_url }}"
+            alt="{{ img_1_description }}">
+      </picture>
    </div>
    <div class="brand-service-container">
       <div class="company">
@@ -17,26 +25,29 @@
 </div>
 
 <style>
-
 .image-container-center-landscape {
-    height: 100vh;
-    height: 100dvh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .image-center-landscape {
-    height: 66vh;
-    width: auto;
-  }
-  
-  @media (max-width: 1200px) and (orientation: portrait) {
-    .image-center-landscape {
-      height: 100vh;
-      width: auto;
-    }
-  }
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.image-center-landscape {
+	height: 66vh;
+	width: auto;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+	.image-container-center-landscape {
+		display: block;
+	}
+
+	.image-center-landscape {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
 </style>

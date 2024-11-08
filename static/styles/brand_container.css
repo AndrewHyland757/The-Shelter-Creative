@@ -38,8 +38,7 @@
 .company p,
 .main-service p {
 	color: #1e1c1c;
-	font-family: "Reckless Neue TRIAL";
-	font-style: regular;
+	font-family: "RecklessNeue", serif;
 	font-size: 1.8rem;
 	font-weight: 400;
 	line-height: normal;
@@ -66,7 +65,6 @@
 
 	.brand-service-container--scrollable {
 		padding: 1.2rem .5rem;
-
 		position: absolute;
 	}
 

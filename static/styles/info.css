@@ -26,10 +26,9 @@
 	height: 100vh;
 	width: 100vw;
 	overflow-y: auto;
-  -ms-overflow-style: none;
+	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
-
 
 
 .close-container {
@@ -44,7 +43,7 @@
 
 .close-container button {
 	color: #1e1c1c;
-	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;;
+	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
 	font-size: 1.3rem;
 	font-style: normal;
 	font-weight: 500;
@@ -59,10 +58,6 @@
 	color: #626060;
 }
 
-
-/****************************/
-
-
 .main-container {
 	display: grid;
 	grid-template-columns: 70% 1fr;
@@ -75,11 +70,9 @@
 	border-top: 1px solid #1e1c1c;
 }
 
-
 .info-text {
 	color: #000;
 	font-family: "RecklessNeue", serif;
-	font-style: regular;
 	font-weight: 400;
 	font-size: 4.2rem;
 	line-height: 4.8rem;
@@ -116,7 +109,6 @@
 .item {
 	color: #1e1c1c;
 	font-family: "RecklessNeue", serif;
-	font-style: regular;
 	font-weight: 400;
 	font-size: 1.7rem;
 	line-height: 2.1rem;
@@ -126,7 +118,6 @@
 .heading--contact a {
 	color: #1e1c1c;
 	font-family: "RecklessNeue", serif;
-	font-style: regular;
 	font-weight: 400;
 	font-size: 1.4rem;
 	font-style: italic;
@@ -145,8 +136,6 @@
 	display: flex;
 	gap: 7.9rem;
 }
-
-/*********** MEDIA QUERIES ***********/
 
 @media screen and (min-width: 1536px) {
 	.main-container {

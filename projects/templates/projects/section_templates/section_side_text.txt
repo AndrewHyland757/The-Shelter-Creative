@@ -66,6 +66,10 @@
 	.container-side-text-with-image {
 		padding: 6.2rem 3.6rem;
 	}
+
+	.container-side-text-with-image .image-container {
+		height: 75%;
+}
 }
 
 @media (max-width: 992px) {
