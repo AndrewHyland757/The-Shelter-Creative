@@ -199,6 +199,12 @@
 }
 
 /*************************** SECTION - 9 **************************/
+.fp-viewing-9 .company p,
+.fp-viewing-9 .main-service p,
+.fp-viewing-9 .line {
+	color: #f2f0ef;
+	border-color: #f2f0ef;
+}
 
 @media only screen and (max-width: 992px) {
 
