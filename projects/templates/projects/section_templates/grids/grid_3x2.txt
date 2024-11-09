@@ -73,7 +73,6 @@
 	.grid-container-3x2 {
 		height: 100dvh;
 		margin-top: 0rem;
-
 		width: 100vw;
 		display: flex;
 		align-items: center;
