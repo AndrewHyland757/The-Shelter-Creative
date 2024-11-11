@@ -2,7 +2,9 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from django.db import transaction
 from django.db.models import Max
+from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 
@@ -38,19 +40,22 @@ class Project(models.Model):
     Model for the projects.
     """
     company = models.CharField(max_length=255, null=False)
+    slug = models.SlugField(unique=True, null=True, blank=True)
     main_service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True, related_name='main_service')
     services = models.ManyToManyField(Service, related_name='secondary_services')  # Corrected: ManyToManyField does not accept null=False
     list_position = models.IntegerField(unique=True)
     list_image = models.ImageField(upload_to='project_images', blank=True, null=True)
-
-    def __str__(self):
-        return f"Project - {self.company}"
 
     class Meta:
         ordering = ['list_position']
 
     def __str__(self):
         return f"{self.list_position} - {self.company}"
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.company)
+        super().save(*args, **kwargs)
 
 
 

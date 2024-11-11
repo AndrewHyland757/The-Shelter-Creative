@@ -30,7 +30,7 @@
                   </div>
                   <div class="projects-list-container scrollable-content">
                      {% for project in projects %}
-                     <a class="project-link" href=" {% url 'project' project.id %}">
+                     <a class="project-link" href="{% url 'project' project.slug %}">
                         <div class="project-item">
                            {% if project.list_image %}
                            <img class="list-image-url" src="{{ project.list_image.url }}" alt="#" style="display: none">
@@ -51,23 +51,24 @@
                   <div class="projects-imgs-container">
                      <img
                         src="{% static 'images/projects_section/The_Shelter_Creative_Tous.jpg' %}"
-                        alt=""
+                        alt="A young man with curly hair wearing a necklace, smiling confidently against a neutral background. The Shelter Creative - Tous"
                         >
                      <img
                         src="{% static 'images/projects_section/The_Shelter_Creative_Massimo Dutti_Stores.jpg' %}"
-                        alt=""
+                        alt="Interior of Masimo Dutti Studio designed by Marcio D'Alessio. The Shelter Creative - Massimo Dutti"
                         >
                      <img
                         class="img-3"
-                        src="{% static 'images/projects_section/The_Shelter_Creative_Casa_Camper_Berlin.jpg' %}"
-                        alt=""
+                        src="{% static 'images/projects_section/The_Shelter_Creative_Adolfo_Dominguez_List_02.jpg' %}"
+                        static
+                        alt="A woman model in a black outfit strides across a concrete pathway. The Shelter Creative - Adolfo Dominguez"
                         >
                   </div>
                </div>
             </div>
             <div class="projects-container-small-screen">
                {% for project in projects %}
-               <a class="project-link" href=" {% url 'project' project.id %}">
+               <a class="project-link" href="{% url 'project' project.slug %}">
                   <div class="project-item-small">
                      <div class="project-image-container-small">
                         {% if project.list_image %}

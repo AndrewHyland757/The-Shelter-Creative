@@ -15,9 +15,9 @@
 	height: 100dvh;
 	border-radius: 0;
 	overflow: hidden;
-	/*
+	
 	background-color: #948a7a;
-	*/
+	
 }
 
 .section-projects::-webkit-scrollbar {
@@ -69,8 +69,8 @@
 	width: 100vw;
 	top: 9rem;
 	display: flex;
-	gap: 8.2rem;
-	padding: 0 6.4rem 3.2rem 6.4rem;
+	gap: 6.2rem;
+	padding: 0 8.2rem 3.2rem 8.2rem;
 }
 
 .column-right,
@@ -83,6 +83,7 @@
 .column-left {
 	display: flex;
 	flex-direction: column;
+	padding-top: 3.2rem;
 }
 
 .projects-list-container {
@@ -152,17 +153,6 @@
 	font-style: italic;
 }
 
-/*
-.project-heading-container .brand p,
-.project-heading-container .service p {
-	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
-	font-style: normal;
-	text-transform: uppercase;
-	font-size: 2.8rem;
-
-}
-
-*/
 .line-projects {
 	display: none;
 }
@@ -201,6 +191,7 @@
 .img-3 {
 	grid-column: 1 / 3;
 	height: 1fr;
+	object-position: top;
 }
 
 .project-img-container img {

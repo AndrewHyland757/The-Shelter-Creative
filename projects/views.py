@@ -239,12 +239,12 @@ def change_text_color(section, page_position, section_css):
 
  
 
-def project(request, project_id):
+def project(request, project_slug):
     """
     Renders an individual project.
     """
     projects = Project.objects.all()
-    project = get_object_or_404(Project, id=project_id)
+    project = get_object_or_404(Project, slug=project_slug)
     project_page = get_object_or_404(ProjectPage, project=project)
 
     # Initialize variables for Sections HTML and CSS content.

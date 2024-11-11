@@ -9,17 +9,19 @@ if os.path.isfile("env.py"):
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-DEBUG = False
+DEBUG = True
 
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = ['8000-andrewhylan-theshelterc-uslzmib1uyj.ws-eu116.gitpod.io', 'the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'www.thesheltercreative.com', 'thesheltercreative.com']
-CSRF_TRUSTED_ORIGINS = ['https://the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'https://8000-andrewhylan-theshelterc-uslzmib1uyj.ws-eu116.gitpod.io']
-# Application definition
+ALLOWED_HOSTS = ['8000-andrewhylan-theshelterc-kemw5u13gl5.ws-eu116.gitpod.io', 'the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'www.thesheltercreative.com', 'thesheltercreative.com']
+CSRF_TRUSTED_ORIGINS = ['https://the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'https://8000-andrewhylan-theshelterc-kemw5u13gl5.ws-eu116.gitpod.io']
+
+# CLOUDFARE
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
