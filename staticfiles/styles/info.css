@@ -1,30 +1,29 @@
-.modal-dialog {
-	margin: 0;
-	max-width: 100%;
-	width: 100%;
-	height: 100vh;
-	height: 100dvh;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
+
+.item,
+.info-text,
+.heading,
+.section-info .close-container button,
+.heading--contact a {
+	color: #1E1C1C;
 }
 
-.modal-content {
-	height: 100vh;
-	height: 100dvh;
-	border-radius: 0;
-	overflow: hidden;
-	
+.info-col-left,
+.info-col-right,
+.sub-info-container,
+.info-col-left,
+.info-col-righ {
+	border-top: 1px solid #1E1C1C;
 }
 
-.modal-content-info {
-	background-color: #948a7a;
+.section-info .close-container button:hover {
+	color: #626060;
 }
 
-.section-info::-webkit-scrollbar {
-	display: none;
+.heading--contact a:hover,
+.heading--contact a:active {
+	color: #626060;
 }
+
 
 .section-info {
 	height: 100vh;
@@ -34,34 +33,6 @@
 	scrollbar-width: none;
 }
 
-
-.close-container {
-	height: fit-content;
-	width: 100vw;
-	display: flex;
-	justify-content: end;
-	padding-right: 3rem;
-	margin-top: 2.4rem;
-	margin-bottom: 2.8rem;
-}
-
-.close-container button {
-	color: #1e1c1c;
-	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
-	font-size: 1.3rem;
-	font-style: normal;
-	font-weight: 500;
-	text-transform: uppercase;
-	text-decoration: none;
-	border: none;
-	background-color: transparent;
-	transition: color 0.5s ease-in-out;
-}
-
-.modal .close-container button:hover {
-	color: #626060;
-}
-
 .main-container {
 	display: grid;
 	grid-template-columns: 70% 1fr;
@@ -69,13 +40,7 @@
 	padding: 0 3rem;
 }
 
-.info-col-left,
-.info-col-right {
-	border-top: 1px solid #1e1c1c;
-}
-
 .info-text {
-	color: #000;
 	font-family: "RecklessNeue", serif;
 	font-weight: 400;
 	font-size: 4.2rem;
@@ -88,7 +53,7 @@
 	display: flex;
 	flex-direction: column;
 	padding: 2.9rem 0 3.1rem 0;
-	border-top: 1px solid #1e1c1c;
+	
 }
 
 .sub-info-container--contact {
@@ -96,8 +61,7 @@
 	border-top: none;
 }
 
-.heading {
-	color: #1e1c1c;
+.heading {	
 	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
 	font-size: 1.4rem;
 	font-style: normal;
@@ -111,7 +75,6 @@
 }
 
 .item {
-	color: #1e1c1c;
 	font-family: "RecklessNeue", serif;
 	font-weight: 400;
 	font-size: 1.7rem;
@@ -120,7 +83,6 @@
 }
 
 .heading--contact a {
-	color: #1e1c1c;
 	font-family: "RecklessNeue", serif;
 	font-weight: 400;
 	font-size: 1.4rem;
@@ -128,12 +90,6 @@
 	line-height: normal;
 	text-transform: lowercase;
 	transition: color 0.5s ease-in-out;
-}
-
-.heading--contact a:hover,
-.heading--contact a:active {
-	color: #626060;
-
 }
 
 .client-container {
