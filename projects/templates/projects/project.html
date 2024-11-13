@@ -3,39 +3,25 @@
 
 {% block extra_meta %}
     <meta name="description" content="{{ project.company }} {{ project.main_service }} by The Shelter Creative.">
-    <meta name="keywords" content="">
 {% endblock %}
 
 {% block content %}
-
-{% block extra_css %}
-<!--
-<link rel="stylesheet" href="{% static 'projects/styles/section_2.css' %}" />
--->
-
-{% endblock %}
-
 
     {% if project_page.section_1 %}
     <style>
         {{ section_1_css|safe }} 
     </style>
     {{ section_1_html_content|safe }}
-        
     {% endif %}
 
     
     {% if project_page.section_2 %}
-    
     <style>
         {{ section_2_css|safe }} 
     </style>
         {{ section_2_html_content|safe }}  
     {% endif %}
     
-
-
-
     {% if project_page.section_3 %}
         <style>
             {{ section_3_css|safe }}
@@ -76,21 +62,19 @@
             {{ section_8_css|safe }}
         </style>
         {{ section_8_html_content|safe }}  
-
     {% endif %}
 
     {% if project_page.section_9 %}
-    <style>
-        {{ section_9_css|safe }}
-    </style>
+        <style>
+            {{ section_9_css|safe }}
+        </style>
     {{ section_9_html_content|safe }}  
-
     {% endif %}
 
     {% if project_page.section_10 %}
-    <style>
-        {{ section_10_css|safe }}
-    </style>
+        <style>
+            {{ section_10_css|safe }}
+        </style>
     {{ section_10_html_content|safe }}  
 
     {% endif %}

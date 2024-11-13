@@ -1,10 +1,7 @@
-// Select all sections dynamically
+// Generate anchors
 const sections = document.querySelectorAll('.section');
-
-// Initialize an empty anchors array
 let anchorsArray = [];
 
-// Loop through sections to generate anchors dynamically
 sections.forEach((section, index) => {
   // Check if it's the projects section
   if (section.classList.contains('section--projects')) {
@@ -18,26 +15,23 @@ sections.forEach((section, index) => {
 
 new fullpage("#fullpage", {
 
-  
-    licenseKey: '1MJ47-09EP9-8JUB7-7T6OK-OTCAO',
-    autoScrolling: true,
-    scrollHorizontally: true,
-    verticalCentered: false,
-    
-    anchors: anchorsArray, // Use the dynamically created anchors array
-    lockAnchors: false,
-    scrollOverflow: true,
-    normalScrollElements: ".scrollable-content",
-    bigSectionsDestination: "bottom",
-    controlArrows: false,
-    slidesNavigation: false,
-    continuousVertical: true, // Enable continuous vertical scrolling
 
-
-
-    scrollOverflow: true,
+  licenseKey: '1MJ47-09EP9-8JUB7-7T6OK-OTCAO',
+  scrollingSpeed: 800,
+  autoScrolling: true,
+  scrollHorizontally: true,
+  verticalCentered: false,
+  anchors: anchorsArray, // Use the dynamically created anchors array
+  lockAnchors: false,
+  scrollOverflow: true,
+  normalScrollElements: ".scrollable-content",
+  bigSectionsDestination: "bottom",
+  controlArrows: false,
+  slidesNavigation: false,
+  continuousVertical: true, 
+  scrollOverflow: true,
   normalScrollElements: '.projects-list-container',
-  touchSensitivity: 5, // Adjust sensitivity to make touch scroll easier
+  touchSensitivity: 5, 
   fitToSection: false, // Allows more natural scroll without snapping back
     
     afterRender: function () {

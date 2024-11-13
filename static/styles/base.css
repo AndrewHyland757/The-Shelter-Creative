@@ -6,11 +6,33 @@ TEXT SECONDARY COLOR (OFF-WHITE): #F2F0EF
 TEXT SECONDARY COLOR HOVER : #E0E0E0 (light), #C0C0C0 (dark)
 */
 
+@font-face {
+	font-family: 'BigNoodleToo';
+	src: url("/static/fonts/logo_font/Myfontwebkit/webFonts/BigNoodleToo/font.woff2") format('woff2');
+	font-display: swap;
+  }
+
+@font-face {
+	font-family: 'RecklessNeue';
+	src: url('/static/fonts/reckless_neue/RecklessNeue-Book.woff2') format('woff2');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'HelveticaNowProTextMedium';
+	src: url('/static/fonts/helvetica_now/MyWebfontsKit/webFonts/HelveticaNowProTextMedium/font.woff2') format('woff2');
+	font-display: swap;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	color: #1E1C1C;
+}
+
+/* Hide scrollbars for Webkit browsers */
+*::-webkit-scrollbar {
+	display: none;
 }
 
 html {
@@ -18,11 +40,14 @@ html {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	/* smooth transitions */
+	background-color: #000;
+    -webkit-backface-visibility: hidden; /* iOS fix */
 }
 
-/* Hide scrollbars for Webkit browsers */
-*::-webkit-scrollbar {
-	display: none;
+body:has(modal[open]) {
+	/* Prevent scroll-through on modals */
+	overflow: hidden;
 }
 
 /* Remove fullpage.js watermark */
@@ -36,6 +61,10 @@ div.fp-watermark {
 	width: 100vw;
 	position: relative;
 	overflow: hidden;
+	/* smooth transitions */
+	transform: translateZ(0);
+	will-change: transform;
+	transition: opacity 0.3s ease;
 }
 
 a,

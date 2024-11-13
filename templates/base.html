@@ -24,13 +24,13 @@
 
     {% block extra_meta %}
     {% endblock %}
+    
+    {% block preloads %}
+    {% endblock %}
 
     {% block corecss %}
 
     <!-- Fonts -->
-
-    <link rel="stylesheet" type="text/css" href="{% static 'fonts/reckless_neue/reckless_neue.css' %}">
-
     <!--
       /**
       * @license
@@ -47,7 +47,6 @@
       *
       */
       -->
-      <link rel="stylesheet" type="text/css" href="{% static 'fonts/logo_font/Myfontwebkit/Myfontwebkit.css' %}">
  
     <!--
       /**
@@ -65,7 +64,6 @@
       *
       */
       -->
-    <link rel="stylesheet" type="text/css" href="{% static 'fonts/helvetica_now/MyWebfontsKit/MyWebfontsKit.css' %}">
 
     <!-- Fullpage CSS -->
     <link
@@ -106,6 +104,8 @@
 
     {% block extra_js %}
     {% endblock %}
+
+  
 
   </head>
 

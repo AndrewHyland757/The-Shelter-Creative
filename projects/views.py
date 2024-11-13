@@ -273,7 +273,6 @@ def project(request, project_slug):
     # Process Section if they exist.
 
     if project_page.section_1:
-        
         section_1 = project_page.section_1
         section_1_html_content = get_section_html_content(section_1)
         section_1_css = get_section_css(section_1)
