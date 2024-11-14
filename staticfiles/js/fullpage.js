@@ -20,8 +20,8 @@ new fullpage("#fullpage", {
   autoScrolling: true,
   scrollHorizontally: true,
   verticalCentered: false,
-  anchors: anchorsArray, // Use the dynamically created anchors array
-  lockAnchors: false,
+  anchors: anchorsArray,
+  lockAnchors: true,
   scrollOverflow: true,
   normalScrollElements: ".scrollable-content",
   bigSectionsDestination: "bottom",
@@ -31,7 +31,7 @@ new fullpage("#fullpage", {
   scrollOverflow: true,
   normalScrollElements: '.projects-list-container',
   touchSensitivity: 5, 
-  fitToSection: false, // Allows more natural scroll without snapping back
+  fitToSection: false,
     
     afterRender: function () {
       createCustomNavigation();

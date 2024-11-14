@@ -1,5 +1,3 @@
-/* Full screen image classes */
-
 .img-full-screen {
   width: 100vw;
   height: 100vh;
@@ -15,7 +13,7 @@
   object-position: bottom center;
 }
 
-/***************** half half ****************/
+ /**********************/
 
 .full-viewport-half-half {
     height: 100vh;
@@ -35,9 +33,6 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /*
-    object-position: top center;
-    */
   }
   
   @media (max-width: 1200px) and (orientation: portrait) {
@@ -73,7 +68,7 @@
     }
   }
 
- /********************  1 image right - no aligned crop ********************************/
+ /**********************/
 
 .full-viewport-right-align-1-image {
 	height: 100vh;
@@ -124,8 +119,7 @@
 	}
 }
 
-
-/*********** Portrait center **************/
+ /**********************/
 
 .image-container-center-portrait {
     height: 100vh;
@@ -142,7 +136,7 @@
     width: auto;
   }
   
-/*********** Video **************/
+ /**********************/
 
   .video {
 	height: 100vh;
@@ -154,7 +148,7 @@
 }
 
 
-/*********** Landscape center **************/
+ /**********************/
 
 .image-container-center-landscape {
     height: 100vh;
