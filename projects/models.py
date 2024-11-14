@@ -199,3 +199,6 @@ class ProjectPage(models.Model):
     
     def __str__(self):
         return f"Project page - {self.project.company}"
+
+    def get_absolute_url(self):
+        return f'/{self.project.slug}/'
