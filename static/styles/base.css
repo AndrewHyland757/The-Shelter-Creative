@@ -9,19 +9,16 @@ TEXT SECONDARY COLOR HOVER : #E0E0E0 (light), #C0C0C0 (dark)
 @font-face {
 	font-family: 'BigNoodleToo';
 	src: url("/static/fonts/logo_font/Myfontwebkit/webFonts/BigNoodleToo/font.woff2") format('woff2');
-	font-display: swap;
   }
-
-@font-face {
-	font-family: 'RecklessNeue';
-	src: url('/static/fonts/reckless_neue/RecklessNeue-Book.woff2') format('woff2');
-	font-display: swap;
-}
 
 @font-face {
 	font-family: 'HelveticaNowProTextMedium';
 	src: url('/static/fonts/helvetica_now/MyWebfontsKit/webFonts/HelveticaNowProTextMedium/font.woff2') format('woff2');
-	font-display: swap;
+}
+
+@font-face {
+	font-family: 'RecklessNeue';
+	src: url('/static/fonts/reckless_neue/RecklessNeue-Book.woff2') format('woff2');
 }
 
 * {
@@ -41,7 +38,6 @@ html {
 	padding: 0;
 	overflow: hidden;
 	/* smooth transitions */
-	background-color: #000;
     -webkit-backface-visibility: hidden; /* iOS fix */
 }
 

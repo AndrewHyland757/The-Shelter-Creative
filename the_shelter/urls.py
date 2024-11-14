@@ -6,9 +6,11 @@ from .views import handler404
 from django.contrib.sitemaps.views import sitemap
 from home.sitemaps import HomeSitemap
 from projects.sitemaps import ProjectSitemap
+from . import views
 
 
 handler404 = "the_shelter.views.handler404"
+
 
 sitemaps = {
     'home': HomeSitemap,
