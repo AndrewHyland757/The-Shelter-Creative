@@ -1,32 +1,37 @@
+// Generate anchors
+const sections = document.querySelectorAll('.section');
+let anchorsArray = [];
+
+sections.forEach((section, index) => {
+  // Check if it's the projects section
+  if (section.classList.contains('section--projects')) {
+    anchorsArray.push('projects-section');
+  } else {
+    // Generate a default numbered anchor for other sections
+    anchorsArray.push((index + 1).toString());
+  }
+});
+
+
 new fullpage("#fullpage", {
-    licenseKey: '1MJ47-09EP9-8JUB7-7T6OK-OTCAO',
-    autoScrolling: true,
-    scrollHorizontally: true,
-    verticalCentered: false,
-    
-    anchors: [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12",
-      "13",
-      "14",
-    ],
-    lockAnchors: true,
-    scrollOverflow: true,
-    normalScrollElements: ".scrollable-content",
-    bigSectionsDestination: "bottom",
-    controlArrows: false,
-    slidesNavigation: false,
-    continuousVertical: true, // Enable continuous vertical scrolling
+
+  licenseKey: '1MJ47-09EP9-8JUB7-7T6OK-OTCAO',
+  scrollingSpeed: 800,
+  autoScrolling: true,
+  scrollHorizontally: true,
+  verticalCentered: false,
+  anchors: anchorsArray, // Use the dynamically created anchors array
+  lockAnchors: false,
+  scrollOverflow: true,
+  normalScrollElements: ".scrollable-content",
+  bigSectionsDestination: "bottom",
+  controlArrows: false,
+  slidesNavigation: false,
+  continuousVertical: true, 
+  scrollOverflow: true,
+  normalScrollElements: '.projects-list-container',
+  touchSensitivity: 5, 
+  fitToSection: false, // Allows more natural scroll without snapping back
     
     afterRender: function () {
       createCustomNavigation();
@@ -37,7 +42,7 @@ new fullpage("#fullpage", {
     },
     onLeave: function (origin, destination, direction) {
       // Update custom navigation when changing sections
-      updateCustomNavigation(destination.index, 0); // Assume first slide of new section
+      updateCustomNavigation(destination.index, 0);
     },
   });
 
@@ -102,7 +107,7 @@ new fullpage("#fullpage", {
   function setupSwipeEvents() {
     var touchStartX = 0;
     var touchEndX = 0;
-    var swipeThreshold = 50; // Minimum swipe distance to trigger a slide change
+    var swipeThreshold = 50;
 
     // Add touch event listeners to the entire fullPage element to ensure all sections respond
     var sectionSlides = document.querySelector(".section--slides");
@@ -111,8 +116,8 @@ new fullpage("#fullpage", {
       sectionSlides.addEventListener(
         "touchstart",
         function (e) {
-          e.preventDefault(); // Prevent default browser behavior
-          touchStartX = e.changedTouches[0].screenX; // Capture the starting X position
+          e.preventDefault();
+          touchStartX = e.changedTouches[0].screenX;
         },
         { passive: false }
       ); // Mark passive as false to allow preventDefault()
@@ -120,8 +125,8 @@ new fullpage("#fullpage", {
       sectionSlides.addEventListener(
         "touchmove",
         function (e) {
-          e.preventDefault(); // Prevent default browser behavior
-          touchEndX = e.changedTouches[0].screenX; // Capture the current X position as the user moves their finger
+          e.preventDefault();
+          touchEndX = e.changedTouches[0].screenX; 
         },
         { passive: false }
       ); // Mark passive as false to allow preventDefault()
@@ -129,16 +134,12 @@ new fullpage("#fullpage", {
       sectionSlides.addEventListener(
         "touchend",
         function (e) {
-          e.preventDefault(); // Prevent default browser behavior
-          // When the user releases their finger, calculate the swipe distance
+          e.preventDefault();
           var swipeDistance = touchEndX - touchStartX;
 
-          // Determine the swipe direction
           if (swipeDistance < -swipeThreshold) {
-            // Swipe left (Next Slide)
             fullpage_api.moveSlideRight();
           } else if (swipeDistance > swipeThreshold) {
-            // Swipe right (Previous Slide)
             fullpage_api.moveSlideLeft();
           }
         },

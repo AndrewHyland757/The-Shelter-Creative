@@ -9,20 +9,16 @@ from projects.sitemaps import ProjectSitemap
 from . import views
 
 
-handler404 = "the_shelter.views.handler404"
-
-
-sitemaps = {
-    'home': HomeSitemap,
-    'projects': ProjectSitemap,
-}
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("home.urls")),
     path("project/", include("projects.urls")),
 ]
 
+sitemaps = {
+    'home': HomeSitemap,
+    'projects': ProjectSitemap,
+}
 
 if not settings.DEBUG:
     urlpatterns += [
@@ -30,6 +26,6 @@ if not settings.DEBUG:
              name='django.contrib.sitemaps.views.sitemap'),
     ]
 
+handler404 = "the_shelter.views.handler404"
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var videos = document.querySelectorAll('.video'); // Get all elements with the class 'video'
-
+  var videos = document.querySelectorAll('.video');
+  
   // Function to ensure a video is playing
   function ensureVideoIsPlaying(video) {
       if (video.paused) {
@@ -10,15 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Loop through each video and apply the functionality
   videos.forEach(function(video) {
-      // Ensure each video is playing
       ensureVideoIsPlaying(video);
       
-      // Set an interval to check each video
       setInterval(function() {
           ensureVideoIsPlaying(video);
       }, 1000);
 
-      // Handle video play/pause events for each video
       video.addEventListener('play', function() {
           console.log('Video started playing');
       });

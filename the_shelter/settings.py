@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-
 import dj_database_url
 
 if os.path.isfile("env.py"):
@@ -11,8 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-DEBUG = True
-
+DEBUG = False
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
@@ -20,8 +18,6 @@ ALLOWED_HOSTS = ['8000-andrewhylan-theshelterc-gnr6p3lbvyl.ws-eu116.gitpod.io', 
 CSRF_TRUSTED_ORIGINS = ['https://the-shelter-creative-1cb9f175cfbe.herokuapp.com', 'https://8000-andrewhylan-theshelterc-gnr6p3lbvyl.ws-eu116.gitpod.io']
 
 SITE_URL = 'https://www.thesheltercreative.com'
-
-
 
 # CLOUDFARE
 SECURE_SSL_REDIRECT = True
@@ -38,9 +34,7 @@ INSTALLED_APPS = [
     'home',
     'projects',
     'django.contrib.sitemaps',
-    
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,7 +67,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'the_shelter.wsgi.application'
 
-
 '''
 DATABASES = {
     'default': {
@@ -86,7 +79,6 @@ DATABASES = {
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -105,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -135,17 +126,12 @@ CLOUDINARY_STORAGE = {
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Media files settings
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Separate directory for user-uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'  
 
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

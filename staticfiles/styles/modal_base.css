@@ -15,6 +15,7 @@
 	height: 100dvh;
 	border-radius: 0;
 	overflow: hidden;
+	border: none;
 }
 
 .modal-content-info {
