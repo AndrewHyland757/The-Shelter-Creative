@@ -4,7 +4,7 @@
 - Design of the front-end for mobile and desktop using Figma.
 - Development the front-end.
 - Development of the back-end template database using Django.
-- Image Curation & image optimization includes editing and resizing images. 
+- Image Curation & image optimization including editing and resizing images. 
 - Deployment
 - SEO implementation 
 
@@ -58,14 +58,14 @@ Every design element was intentionally selected to create a cohesive, compelling
 
 ### Brief
 - A design communicates the brand value and appeals to the target audience.
-- A website personality and tone that is neutral, bold, confident and that quitely reflects luxury and sophistication.
+- A website personality and tone that is neutral, bold, confident, modern and that quitely reflects luxury and sophistication.
 - A website that is easy to navigate and locate necessary information for optimal user experience.
 
 ### Execution
 
 #### UX 
 
-- Full-Page Scrolling was decided on to be used as the scrolling pattern and is a core element to the website.
+- Full-Page Scrolling was decided on to be used as the scrolling pattern and is a core element of the website.
 - This was implemented using Fullpage.js. 
 - This provides an immersive and curated experience allowing users to focus on one image at a time minimising distractions from surrounding content and traditional scrolling. 
 - This turned out particularly effective in showcasing the clients work which primarialy deals in photography, branding and creative production.
