@@ -299,3 +299,4 @@ This thoughtfully designed homepage not only showcases the client’s portfolio 
 
 
 
+![Screenshot of 404](static/images/readme_images/404_1.png)
