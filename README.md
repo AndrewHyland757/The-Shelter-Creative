@@ -84,27 +84,18 @@ Every design element was intentionally selected to create a cohesive, compelling
 
 
 
-#### Header & Logo Design
 
-
-#### Primary Colours & Background Colours
-Two colors were selected for the text elements:
+#### Text Colours & Background Colours
+- Pure white (#FFFFFF) is utilized as the main background colour.
+- The info modal as well as the favicon and open graph image utilise (#948A7A) as a background-color. 
+This muted, warm gray-brown evokes feelings of calmness, stability and good legibility, making it an ideal choice.
 - The default text color is an off-black (#1E1C1C), which is applied to all text elements throughout the website.
 - An off-white (#F2F0EF) is used for text elements that appear over dark images and videos, ensuring optimal legibility and contrast.
+- A colour gradient chart was used to generate shades for hoover colours.
 
 
-- A colour gradient chart was used to generate shades between the two primary colours. These were used for hover and background colours.
+![Color palette](static/images/readme_images/colour_palette_the_shelter_creative.png)
 
-TEXT PRIMARY COLOR (OFF-BLACK): #1E1C1C;
-TEXT PRIMARY COLOR HOVER : #626060;
-
-TEXT SECONDARY COLOR (OFF-WHITE): #F2F0EF
-TEXT SECONDARY COLOR HOVER : #E0E0E0 (light), #C0C0C0 (dark)
-
-
-#### Styling Colours
-![Image of color palette](static/images/readme_imgs/colour_palette.png)
-![Image of color gradient](static/images/readme_imgs/colour_gradients.png)
 
 
 #### Typography Selection
@@ -129,26 +120,12 @@ This combination of sans-serif for headings and serif for body text creates a ba
 ## Features
 
 ### 404 Error Page
-<details><br>
+
 
 A custom 404 page was implemented to handle and site errors.
 <br>
 
-![Screenshot of 404 page mobile](static/images/readme_images/404_sm.jpg)
-![Screenshot of 404 page](static/images/readme_images/404.jpg)
-</details>
-
-### Landing Page
-
-#### Key Objectives and Features:
-- Capture user attention & generate intrigue to encourage further exploration of the website.
-- Foster an emotional connection with the user.
-- Aligne with the overall brand identity, including color schemes and style. 
- 
-The decision to leave out common features of a landing page such as a CTA button and text
- was made to preserve tone and personality.
-
-<br>
+![404 page](static/images/readme_images/404.png)
 
 
 ### Logo Design
@@ -169,18 +146,28 @@ The decision to leave out common features of a landing page such as a CTA button
 
 The contrast between the two typefaces adds depth and interest to the overall design, making it more memorable and visually appealing. The final logo design successfully balances tradition with innovation, creating a distinctive and versatile visual identity that effectively represents the company's brand across all platforms. It acts as a stamping mark on all pages of the website, reinforcing brand recognition and leaving a lasting impression on visitors.
 
+![Logo](static/images/readme_images/logo.png)
 
-
-
+### Landing Page
 
 #### Key Objectives and Features:
+- Capture user attention & generate intrigue to encourage further exploration of the website.
+- Foster an emotional connection with the user.
+- Aligne with the overall brand identity, including color schemes and style. 
+ 
+ #### Execution
+
+- An appropriate image was selected to accomplish the necessary criteria..
+- The decision was made to omit common features of a landing page, such as a CTA (Call-to-Action) button and text, in order to preserve the desired tone and personality.
+
+![Landing Page ](static/images/readme_images/landing.png)
 
 ### Header
 
 #### Key Objectives and Features:
 - Provide navigation links to the info and projects modal pages.
 - Showcase brand identity through strategic logo placement
-- Develop a distinctive, non-conventional header design therfore not using templates.
+- Impact. Develop a distinctive, non-conventional header design therfore not using standard templates
 - Maintain visual hierarchy that prioritizes main content of the page
 
 
@@ -195,17 +182,14 @@ The strategic header design reflects a thoughtful approach to layout, where form
 
 The header is implemented as an absolute element and, using fullpage.js anchoring, allows for easy colour transitionss between sections.
 
-![Screenshot of 404 page mobile](static/images/readme_images/header.jpg)
-![Screenshot of 404 page](static/images/readme_images/header_sm.jpg)
-<br>
-
+![Header](static/images/readme_images/header.jpg)
 
 
 
 ### Info modal
 
 
-
+The website features a unique approach to presenting essential information through an info modal, accessible via the header's info link. This design choice reimagines the traditional footer and about section, consolidating them into a single, easily accessible interface.
 
 #### Key Objectives and Features:
 - Comprehensive Company Overview: Offers concise yet informative details about the company's mission, values, and core competencies.
@@ -213,58 +197,49 @@ The header is implemented as an absolute element and, using fullpage.js anchorin
 
 #### Execution
 
-The website features a unique approach to presenting essential information through an info modal, accessible via the header's info link. This design choice reimagines the traditional footer and about section, consolidating them into a single, easily accessible interface.
 
 - Intergration of a customised Bootstrap 4 modal.
 - A custom layout was designed for the info page, keeping the 'about' text to the left and the essential information to the right in a column. This design creates a clean, refined, and easily legible layout that maintains visual hierarchy while achieving a balanced, asymmetric composition.
 
 
-#### Enhanced User Experience:
+#### User Experience:
 - Always readily available, eliminating the need for scrolling to access a footer
 - Provides a fresh, intriguing alternative to conventional website layouts
 - Efficient Information Architecture: Streamlines the user's journey to key information, improving overall site navigation and engagement
 
 
-![Screenshot of info modal](static/images/readme_images/info.jpg)
-![Screenshot of info modal mobile](static/images/readme_images/info_sm.jpg)
-
-
+![Screenshot of info modal](static/images/readme_images/info.png)
 
 
 
 ### Projects Modal
 
-
-
+The website features access to the companies past work accessible via the header's projects link.
 
 #### Key Objectives and Features:
-##### Comprehensive Project List:
-- Presents all projects in a clear, visually appealing manner
+
+- Present all projects in a clear, visually appealing manner
 - Each project entry acts as a clickable link for further exploration
 - Displays the client company name and primary service provided
 
-#####  Dynamic Visual Representation:
-- Assigns a unique, representative image to each project
-- Implements an innovative image display system:
-Default view: Shows a collage of three project images
-Interactive feature: On hover, the display transitions to showcase the specific project's image
 
-#####  Responsive Design:
-- Desktop: Utilizes the dynamic image container for an interactive experience
-- Mobile: Adapts layout to accommodate smaller screens while maintaining individual project images
+#### Execution
+
+- Intergration of a customised Bootstrap 4 modal.
+- A custom layout was designed for the projects modal. 
+- Dynamic Visual Representation. Desktop consistes of two colums, on the left consisting of a scrollable links to each project, and on the right a dynamic image container which containes a shows a collage of three project images which is replaced by a project image whien the project link is hoovered on. This is implemented by a custom Javascript script.
+- Responsive Design. Mobile consists of the project list in one column, each like being a 4:5 aspect image with project name and service.
+
+
 
 #####  Enhanced User Experience:
-- Provides visual context for each project, aiding in quick recognition and interest generation
-- Offers an intuitive, engaging way to browse through the company's work
+- Provides visual context for each project, aiding in quick recognition and interest generation and streamlines the user's journey from curiosity to detailed project exploration.
+- Offers an intuitive, organised and engaging way to browse through the company's work
 - Encourages exploration by combining textual information with visual elements
 
-#####  Efficient Information Architecture:
-- Consolidates project information in a single, easily accessible location
-- Streamlines the user's journey from curiosity to detailed project exploration
 
-![Screenshot of info modal](static/images/readme_images/projects.jpg)
-![Screenshot of info modal mobile](static/images/readme_images/projects_sm.jpg)
-The Info Modal, accessible via the header's info link, serves as an innovative project showcase, offering users an engaging and interactive way to explore the company's portfolio.
+![Screenshot of info modal](static/images/readme_images/projects.png)
+
 
 
 ### Home Page
@@ -274,29 +249,24 @@ As users scroll beyond the landing page, the rest of the homepage offers a galle
 
 #### Key Objectives and Features:
 ##### 
-- Visually Engaging Presentation: Displays all projects in a clear and captivating manner, drawing users in.
-- Foster Interest: Provides a glimpse into the company’s work, enticing users to explore projects in greater detail.
-- Contextual Information: Each project includes relevant details about the company name and primary services associated with the image or video.
-- Insight into Operations: The slides section offers information about the company’s working methods and processes.
+- Foster interest by providing a visually engaging presentation of a selection of the companies work.
+- Context about each section - having the project name and main service visible.
+- A section that offers insight into the way the way the company works. 
+ 
+#### Execution
+- Templates were created to allow for images to be presented in a variety of manners. then with the client it was decided on waht images to use for the home page and in wht configuration. 
+- Section 3 on the home page consists of three slides with text and act as an insight to the companies processes. 
+- Responsive Design: the poicture element was used to ensure that layouts adapt seamlessly to various screen sizes and to control art direction.
 
-
-##### Tailored Presentation:
-- Each section is presented using different templates that complements the content.
-
-#####  Responsive Design:
-- Performance Optimization: Utilizes the <picture> element to improve loading times and support art direction.
-- Responsive Templates: Ensures that layouts adapt seamlessly to various screen sizes.
 
 #####  Enhanced User Experience:
 - Immersive Scrolling: The full-page scrolling design provides users with an immersive, curated experience that allows them to fully appreciate the media content.
 - Encouragement for Exploration: Combines textual information with visual elements to motivate further site exploration.
 
-#####  Efficient Information Architecture:
-- Streamlined Navigation: Simplifies the user's journey through the content, increasing curiosity and engagement.
+
 
 This thoughtfully designed homepage not only showcases the client’s portfolio effectively but also enhances user interaction and satisfaction, making it a compelling entry point for visitors.
 
 
 
-
-![Screenshot of 404](static/images/readme_images/404_1.png)
+![Homepage](static/images/readme_images/homepage.png)

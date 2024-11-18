@@ -18,10 +18,6 @@
 	border: none;
 }
 
-.modal-content-info {
-	background-color: #948a7a;
-}
-
 .section-info::-webkit-scrollbar {
 	display: none;
 }
