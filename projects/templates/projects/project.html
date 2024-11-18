@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% load static %} 
 
+{% block extra_title %}
+<title>"{{ project.company }}  | {{ project.main_service }} by THE SHELTER CREATIVE"</title>
+{% endblock %}
+
 {% block extra_meta %}
-<meta name="description" content="{{ project.company }} - {{ project.main_service }} by The Shelter Creative, a creative agency specializing in unique branding solutions.">
-<meta name="keywords" content="{{ project.company }}, {{ project.main_service }}, creative agency, branding, {{ project.company }} branding">
+<meta name="description" content="{{ project.main_service }} for {{ project.company }} project page. THE SHELTER CREATIVE, a creative agency specializing in unique branding solutions">
 {% endblock %}
 
 {% block content %}

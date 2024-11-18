@@ -104,9 +104,6 @@ The typography choices for the website were carefully considered to align with t
 
 
  [Big Noodle Too](https://www.myfonts.com/collections/big-noodle-too-font-sentinel-type?gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPspweB8dLDucMRA3ii2S5-KCBvfQFYDur-5oPWZg2d6gYnDGusHoKUaApQXEALw_wcB) from myfonts.com is used on the logo. The client had already used this font before for the company logo.
-<br>
-
-![Image of Big Noodle Too]()
 
 
 Sans-serif for Headings and Navigation: 
@@ -115,7 +112,9 @@ Sans-serif for Headings and Navigation:
 [Reckless Neue Book ](https://displaay.net/typeface/reckless-collection/reckless-neue/) from Displaay Type Foundry, was chosen for the primary body text. Its elevated x-height enhances readability while imparting a contemporary and refined feel, aligning well with the desired website personality3.
 
 This combination of sans-serif for headings and serif for body text creates a balanced visual hierarchy, marrying modern design sensibilities with a touch of classic elegance. The contrast between the two typefaces adds visual interest while maintaining a cohesive and sophisticated overall appearance.
-
+<br>
+<br>
+![Image of fonts](static/images/readme_images/fonts.png)
 
 ## Features
 
@@ -171,19 +170,16 @@ The contrast between the two typefaces adds depth and interest to the overall de
 - Maintain visual hierarchy that prioritizes main content of the page
 
 
-
 #### Execution
 The header design deliberately deviated from conventional layouts by positioning the logo at the extreme left and navigation elements to the right. This unconventional approach achieved multiple design objectives:
 - Bold Visual Statement: The asymmetrical layout creates a striking, original composition that immediately communicates the website's innovative and creative personality.
 - Visual Hierarchy: The sparse, minimalist design allows imagery to become the focal point, drawing users' attention to the core visual content.
 - Functional Elegance: Despite its unconventional placement, the navigation remains intuitive and easily accessible, balancing aesthetic innovation with user experience.
+- The header is implemented as an absolute element and, using fullpage.js anchoring, allows for easy colour transitionss between sections.
 
 The strategic header design reflects a thoughtful approach to layout, where form follows function while simultaneously making a bold visual statement that aligns with the website's contemporary and refined aesthetic.
 
-The header is implemented as an absolute element and, using fullpage.js anchoring, allows for easy colour transitionss between sections.
-
-![Header](static/images/readme_images/header.jpg)
-
+![Header](static/images/readme_images/header.png)
 
 
 ### Info modal
@@ -232,7 +228,7 @@ The website features access to the companies past work accessible via the header
 
 
 
-#####  Enhanced User Experience:
+#### User Experience:
 - Provides visual context for each project, aiding in quick recognition and interest generation and streamlines the user's journey from curiosity to detailed project exploration.
 - Offers an intuitive, organised and engaging way to browse through the company's work
 - Encourages exploration by combining textual information with visual elements
@@ -240,10 +236,7 @@ The website features access to the companies past work accessible via the header
 
 ![Screenshot of info modal](static/images/readme_images/projects.png)
 
-
-
 ### Home Page
-
 
 As users scroll beyond the landing page, the rest of the homepage offers a gallery-like experience through one-page scrolling, showcasing a selection of the client's portfolio that includes both images and videos. This seamless journey loops back to the landing page at the end, creating a cohesive browsing experience.
 
@@ -270,3 +263,93 @@ This thoughtfully designed homepage not only showcases the client’s portfolio 
 
 
 ![Homepage](static/images/readme_images/homepage.png)
+
+
+## Back-End Design
+
+![Image of database](static/images/readme_imgs/database.png)
+
+### Service Model
+
+The Service model is a foundational component that catalogues all available services. Its structure allows for connection to each project instance in two ways:<br>
+- As a main service (ForeignKey in the Project model)
+- As secondary services (ManyToMany relationship in the Project model)
+
+
+### Template Model
+The Template model serves as a repository for reusable section layouts. Each template includes:
+- A unique name for easy identification
+- HTML content defining the structure
+- Optional CSS content for styling
+- A description to aid in template selection
+This model promotes consistency across project pages while allowing for customization when needed.
+
+### Project Model
+The Project model is the core entity, containing essential project information:
+- Company name
+- A unique slug for URL generation
+- Main service (ForeignKey to Service model)
+- Secondary services (ManyToMany relationship with Service model)
+- List position for ordering projects in the Projects Modal
+- An optional image for list display in the Projects Modal
+
+This model effectively organizes key project details and establishes relationships with services.
+
+### Project Page model
+The ProjectPage model acts as an aggregator, bringing together up to ten sections for a comprehensive project presentation. It:
+- Links to a specific project
+- Contains references to multiple Section instances (up to 10)
+- Provides a method to generate a unique URL for each project page
+
+### Section Model
+This comprehensive model encapsulates all the essential content required to construct a dynamic and customizable section for a project page quickly.
+Its structure includes:
+- Template Integration: It incorporates a reference to a pre-defined template from the template model, offering a foundation for consistent design.
+- Custom Styling Options: For enhanced flexibility, the model allows for the inclusion of custom HTML and CSS, enabling unique section designs when needed.
+- Content Management: Includes all the media and texts needed, including a video file field an multipe image fields including tablet and mobile sizes.
+- Colour Customization Functionality: Includes options to modify the color of the company-service text and header text of each section and on various screen sizes.
+
+The Section model is a highly flexible component for building project pages. It includes:
+- Reference to a specific project
+- Option to use a predefined template or custom HTML/CSS
+- Fields for project descriptions ( if texts are needed in the section )
+- Customizable color options for header and text elements, with responsive design support
+- Capability to include up to seven images with descriptions, each with tablet and mobile versions
+- An optional video field
+
+This model allows for rich, quick, customized content creation for each project section.
+
+<br>
+
+## Search Engine Optimization SEO and Marketing
+
+### SEO
+
+#### Keywords
+ A keyword list for long and short-tail keywords was made and the refined using [wordtracker](https://www.wordtracker.com/).
+ <details>
+
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/keywords.png)
+</details><br>
+
+#### HTML
+Descriptive meta tags were added to the base.html template, including title, description and keywords. Also, there is a content block for additional tags.
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/base_meta.png)
+<br>
+Further meta tags were added to the product pages & blog posts depending on the shown product or article. These included the product name and releated artist in the description and keywords.
+
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/product_meta.png)
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/blog_meta.png)
+<br>
+
+For the product image and article post images the relevant product name and artist is contained in the image alternative description.
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/product_img.png)
+![Screenshot of feature description](static/images/readme_imgs/SEO_images/blog_img.png)
+<br>
+
+Also implemented were:
+- Semantic HTML elements were implemented throughout the site.
+- The use of keywords in section headings where suitable.
+- The addition of high-quality content used on the site. This includes the product descriptions and especially the reviews.
+- A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/). This was generated using the deployed website. The file is included at the root level of the project.
+- A `robots.txt` file was created at the root level of the project. This file tells search engine crawlers which URLs they can access on the website.

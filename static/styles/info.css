@@ -3,11 +3,9 @@
 }
 
 
-.item,
-.info-text,
-.heading,
-.section-info .close-container button,
-.heading--contact a {
+p,
+h3,
+a {
 	color: #1E1C1C;
 }
 
@@ -59,33 +57,26 @@
 	padding: 2.9rem 0 3.1rem 0;
 }
 
-.sub-info-container--contact {
+.sub-info-container-contact {
 	gap: 1.8rem;
 	border-top: none;
 }
 
-.heading {	
+.sub-info-container h3 {	
 	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
 	font-size: 1.4rem;
 	font-style: normal;
 	line-height: normal;
 	padding-bottom: 1.4rem;
 	text-transform: capitalize;
+	margin: 0;
 }
 
-.heading--contact {
+.sub-info-container .heading-contact {
 	padding-bottom: 0;
 }
 
-.item {
-	font-family: "RecklessNeue", serif;
-	font-weight: 400;
-	font-size: 1.7rem;
-	line-height: 2.1rem;
-	letter-spacing: -0.17px;
-}
-
-.heading--contact a {
+.heading-contact a {
 	font-family: "RecklessNeue", serif;
 	font-weight: 400;
 	font-size: 1.4rem;
@@ -93,6 +84,21 @@
 	line-height: normal;
 	text-transform: lowercase;
 	transition: color 0.5s ease-in-out;
+}
+
+.info-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.info-list li {
+	font-family: "RecklessNeue", serif;
+	font-weight: 400;
+	font-size: 1.7rem;
+	line-height: 2.1rem;
+	letter-spacing: -0.17px;
+	text-decoration: none;
 }
 
 .client-container {
