@@ -1,8 +1,6 @@
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/header.css' %}">
-{% endblock %}
+
 
 <header class="header-container" id="header">
    <div class="header">
@@ -16,10 +14,10 @@
          </div>
       </div>
       <div class="header-right">
-         <button type="button" class="button--info" data-toggle="modal" data-target="#projects-modal">
+         <button type="button" data-toggle="modal" data-target="#projects-modal">
          projects
          </button>
-         <button type="button" class="button--info" data-toggle="modal" data-target="#info-modal">
+         <button type="button" data-toggle="modal" data-target="#info-modal">
          info
          </button>
       </div>

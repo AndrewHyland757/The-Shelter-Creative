@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+.image-container-center-portrait {
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-center-portrait {
+    height: 100%;
+    width: auto;
+  }
+  
+  .video {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	object-fit: cover;
+	overflow: hidden;
+	display: block;
+}
+
+
+
+</style>
+
+   <div class="section">
+    <picture class="image-container-center-portrait">
+      <source
+        srcset="{% static 'home/images/home_images/ch/The_Shelter_Creative_CH_ Carolina_Herrera_15.jpg' %}"
+        media="(max-width: 600px)">
+      <img
+        class="image-center-portrait"
+        src="{% static 'home/images/home_images/ch/The_Shelter_Creative_CH_ Carolina_Herrera_15.jpg' %}"
+        alt="A woman dressed in a white shirt and black skirt poses elegantly in black and white. - Carolina_Herrera The Shelter Creative">
+    </picture>
+    <div class="brand-service-container">
+      <div class="company">
+        <p>Carolina Herrera</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Creative Direction</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-------- SECTION 11 --------->
+
+  <div class="section">
+    <video class="video" autoplay muted loop playsinline>
+      <source
+        src="{% static '/home/images/home_images/video/The_Shelter_Creative_Levare.mp4' %}"
+        type="video/mp4"
+        >
+      Your browser does not support the video tag.
+    </video>
+    <div class="brand-service-container" style="opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease-in, visibility 0.3s ease-in !important;
+    will-change: opacity, visibility !important;
+    transform: translateZ(0) !important;">
+      <div class="company">
+        <p>Levare</p>
+      </div>
+      <div class="line"></div>
+      <div class="main-service">
+        <p>Brand Strategy</p>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

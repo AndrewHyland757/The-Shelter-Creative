@@ -15,16 +15,17 @@
 <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing.jpg' %}" as="image" media="(min-width: 1200px)">
 <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing_md.jpg' %}" as="image" media="(min-width: 600px) and (max-width: 1199px)">
 <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing_sm.jpg' %}" as="image" media="(max-width: 599px)">
+<link rel="preload" href="{% static 'styles/brand_container.css' %}" as="style">
 {% endblock %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="{% static 'home/styles//color_changes.css' %}" />
-  <link rel="stylesheet" href="{% static 'home/styles/section_slides.css' %}" />
   <link rel="stylesheet" href="{% static 'home/styles/home.css' %}" />
 {% endblock %}
 
 
 {% block content %}
+
+
 
   <!-------- SECTION 1 --------->
 
@@ -59,11 +60,11 @@
       </div>
     </div>
     <div class="brand-service-container">
-      <div class="company company--centered">
+      <div class="company">
         <p>S Moda</p>
       </div>
       <div class="line"></div>
-      <div class="main-service main-service--centered">
+      <div class="main-service">
         <p>Creative Production</p>
       </div>
     </div>
@@ -316,8 +317,5 @@
     </div>
   </div>
 
-{% endblock %}
 
-{% block extra_postloadjs %}
-  <script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}

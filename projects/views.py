@@ -185,10 +185,7 @@ def change_color(section, page_position, section_css):
         """
 
     return section_css
-
-    return section_css
     
-
 
 def change_text_color(section, page_position, section_css):
     """
@@ -209,7 +206,7 @@ def change_text_color(section, page_position, section_css):
     }}
     """
 
-    # Tablet styles (if specified)
+    # Tablet styles
     if new_color_tablet:
         section_css += f"""
         @media only screen and (max-width: 1024px) {{
@@ -222,7 +219,7 @@ def change_text_color(section, page_position, section_css):
         }}
         """
 
-    # Mobile styles (if specified)
+    # Mobile styles
     if new_color_mobile:
         section_css += f"""
         @media only screen and (max-width: 767px) {{
@@ -237,7 +234,6 @@ def change_text_color(section, page_position, section_css):
 
     return section_css
 
- 
 
 def project(request, project_slug):
     """

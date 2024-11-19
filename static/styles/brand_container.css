@@ -1,21 +1,25 @@
-.brand-service-container,
-.brand-service-container--scrollable {
+.section .brand-service-container,
+.section .brand-service-container--scrollable {
 	width: 100vw;
-	display: flex;
+	display: flex !important;
+	visibility: visible !important;
+	opacity: 1 !important;
 	justify-content: center;
 	align-items: end;
 	padding: 2.4rem .5rem;
 	position: absolute;
 	z-index: 20;
 	bottom: 0;
+
 }
 
-.brand-service-container {
+.section .brand-service-container {
 	height: 10rem;
 	position: absolute;
 }
 
-.brand-service-container--scrollable {
+
+.section .brand-service-container--scrollable {
 	height: fit-content;
 	position: relative;
 }
