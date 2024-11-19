@@ -1,17 +1,17 @@
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'styles/modal_base.css' %}" />
-<link rel="stylesheet" href="{% static 'styles/projects_modal.css' %}">
-{% endblock %}
-
-{% block extra_title %}
-<title>"Our Projects | The Shelter Creative - Showcasing Innovative Brand Transformations"</title>
+{% block title %}
+<title>Our Projects | The Shelter Creative - Showcasing Innovative Brand Transformations</title>
 {% endblock %}
 
 {% block extra_meta %}
 <meta name="description" content="Explore our portfolio of transformative brand projects. Each case study demonstrates our approach to crafting 
   compelling brand narratives and visual identities.">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/modal_base.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/projects_modal.css' %}">
 {% endblock %}
 
 <div

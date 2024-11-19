@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block title %}
+<title>The Shelter | Creative Studio</title>
+{% endblock %}
+
+{% block extra_meta %}
+<meta name="description" content="THE SHELTER: A creative studio specializing in brand experiences, creative direction and content development for luxury, retail, lifestyle, 
+    and cultural organizations worldwide. We reinvigorate brand visions through strategic analysis and unique identity design.">
+{% endblock %}
+
 {% block extra_preloads %}
 <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing.jpg' %}" as="image" media="(min-width: 1200px)">
 <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing_md.jpg' %}" as="image" media="(min-width: 600px) and (max-width: 1199px)">
