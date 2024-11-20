@@ -7,28 +7,18 @@
     {% block title %}
     {% endblock %}
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G87PBXJ9TG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-G87PBXJ9TG');
-    </script>
-    
     {% block meta %}
-
     <!-- Meta Tags -->  
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!-- OGP -->               
-      <meta property="og:title" content="The Shelter Creative">
-      <meta property="og:description" content="We guide brands to choose who they want to be.
-        Brand Culture Strategy - Creative & Communications direction.">
-      <meta property="og:type" content="website">
-      <meta property="og:image" content="{% static 'favicon/og-image.png' %}">
-      <meta property="og:url" content="https://thesheltercreative.com">
+    <!-- Open Graph (OG) Meta Tags -->               
+    <meta property="og:title" content="The Shelter Creative">
+    <meta property="og:description" content="We guide brands to choose who they want to be.
+      Brand Culture Strategy - Creative & Communications direction.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{% static 'favicon/og-image.png' %}">
+    <meta property="og:url" content="https://thesheltercreative.com">
     {% endblock %}
 
     {% block extra_meta %}
@@ -42,13 +32,10 @@
     <!-- site.webmanifest'-->
      <link rel="manifest" href="{% static 'site.webmanifest' %}">
       
-    
     {% block preloads %}
-
     <!-- Preloaded fonts -->  
     <link rel="preload" href="{% static 'fonts/logo_font/Myfontwebkit/webFonts/BigNoodleToo/font.woff2' %}" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="{% static 'fonts/helvetica_now/MyWebfontsKit/webFonts/HelveticaNowProTextMedium/font.woff2' %}" as="font" type="font/woff2" crossorigin="anonymous">
-
     {% endblock %}
 
     {% block extra_preloads %}
@@ -71,7 +58,6 @@
       *
       */
       -->
- 
     <!--
       /**
       * @license
@@ -90,7 +76,6 @@
       -->
 
     {% block corecss %}
-
     <!-- Fullpage CSS -->
     <link
       rel="stylesheet"
@@ -99,7 +84,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
       />
-
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -107,20 +91,24 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
       />
-
-   
-    
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/brand_container.css' %}" />
-
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJRT5DKGYZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VJRT5DKGYZ');
+    </script>
     {% endblock %}
 
     {% block extra_js %}
