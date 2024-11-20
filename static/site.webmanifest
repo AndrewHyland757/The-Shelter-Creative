@@ -3,7 +3,7 @@
   "short_name": "TheShleter",
   "description": "A creative studio specializing in brand experiences, creative direction and content development for luxury, retail, lifestyle, and cultural organizations worldwide.",
   "start_url": "/",
-  "display": "browser",
+  "display": "standalone",
 
   "background_color": "#ffffff",
   "theme_color": "#000000",
