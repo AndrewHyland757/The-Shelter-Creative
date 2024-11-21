@@ -42,8 +42,9 @@ html {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	/* smooth transitions */
-	-webkit-backface-visibility: hidden;
+	/* smooth transitions 
+
+	-webkit-backface-visibility: hidden;*/
 	/* iOS fix */
 
 }
@@ -65,10 +66,10 @@ div.fp-watermark {
 	width: 100vw;
 	position: relative;
 	overflow: hidden;
-	/* smooth transitions */
+	/* smooth transitions 
 	transform: translateZ(0);
 	will-change: transform;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;*/
 }
 
 a,

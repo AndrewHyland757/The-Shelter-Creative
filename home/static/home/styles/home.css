@@ -140,13 +140,32 @@
 
 /******** VIDEO ********/
 
-.video {
+/* For safari browsers */
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+
+	.video-non-safari {
+		display: none !important;
+	}
+
+	.video-safari {
+		display: block;
+		height: 100vh;
+		height: 100vdh;
+		width: 100vw;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url("/../static/home/images/home_images/video/The_Shelter_Creative_Levare.mp4");
+	}
+}
+
+/* For non-safari browsers */
+.video-non-safari {
+	display: block;
 	height: 100vh;
-	height: 100dvh;
+	height: 100vdh;
 	width: 100vw;
 	object-fit: cover;
 	overflow: hidden;
-	display: block;
 }
 
 

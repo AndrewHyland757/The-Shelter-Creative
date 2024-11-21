@@ -3,19 +3,19 @@
 
 
 {% block title %}
-<title>The Shelter | Creative Studio</title>
+  <title>The Shelter | Creative Studio</title>
 {% endblock %}
 
 {% block extra_meta %}
-<meta name="description" content="THE SHELTER: A creative studio specializing in brand experiences, creative direction and content development for luxury, retail, lifestyle, 
-    and cultural organizations worldwide. We reinvigorate brand visions through strategic analysis and unique identity design.">
+  <meta name="description" content="THE SHELTER: A creative studio specializing in brand experiences, creative direction and content development for luxury, retail, lifestyle, 
+      and cultural organizations worldwide. We reinvigorate brand visions through strategic analysis and unique identity design.">
 {% endblock %}
 
 {% block extra_preloads %}
-<link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing.jpg' %}" as="image" media="(min-width: 1200px)">
-<link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing_md.jpg' %}" as="image" media="(min-width: 600px) and (max-width: 1199px)">
-<link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing_sm.jpg' %}" as="image" media="(max-width: 599px)">
-<link rel="preload" href="{% static 'styles/brand_container.css' %}" as="style">
+  <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing.jpg' %}" as="image" media="(min-width: 1200px)">
+  <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing_md.jpg' %}" as="image" media="(min-width: 600px) and (max-width: 1199px)">
+  <link rel="preload" href="{% static 'home/images/home_images/landing/The_Shelter_Creative_Landing_sm.jpg' %}" as="image" media="(max-width: 599px)">
+  <link rel="preload" href="{% static 'styles/brand_container.css' %}" as="style">
 {% endblock %}
 
 {% block extra_css %}
@@ -24,8 +24,6 @@
 
 
 {% block content %}
-
-
 
   <!-------- SECTION 1 --------->
 
@@ -252,96 +250,10 @@
 
   <!-------- SECTION 11 --------->
 
-  <style>
-    .section .brand-service-container,
-  .section .brand-service-container--scrollable {
-    width: 100vw;
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    justify-content: center;
-    align-items: end;
-    padding: 2.4rem .5rem;
-    position: absolute;
-    z-index: 20;
-    bottom: 0;
-  }
-  
-  .section .brand-service-container {
-    height: fit-content;
-    position: absolute;
-  }
-  
-  
-  .section .brand-service-container--scrollable {
-    height: fit-content;
-    position: relative;
-  }
-  
-  .company--centered,
-  .main-service--centered {
-    /* Centered classes to keep the dash in the center of screen */
-    width: 50vw;
-    display: flex;
-  }
-  
-  .company--centered {
-    justify-content: end;
-  }
-  
-  .main-service--centered {
-    justify-content: flex-start;
-  }
-  
-  .company p,
-  .main-service p {
-    color: #1e1c1c;
-    font-family: "RecklessNeue", serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
-  }
-  
-  .company p {
-    font-style: italic;
-  }
-  
-  .line {
-    border-bottom: 1px solid #1e1c1c;
-    margin-right: 0.75rem;
-    margin-left: 0.9rem;
-    margin-bottom: .8rem;
-    width: 1.1rem;
-  }
-  
-  @media (max-width: 992px) {
-  
-    .brand-service-container {
-      padding: 1.2rem .5rem !important;
-    }
-  
-    .brand-service-container--scrollable {
-      padding: 1.2rem .5rem;
-      position: absolute;
-    }
-  
-    .company p,
-    .main-service p {
-      font-size: 1.6rem;
-    }
-  
-    .company--centered,
-    .main-service--centered {
-      width: unset;
-      display: unset;
-      justify-content: unset;
-    }
-  }
-  </style>
-
   <div class="section">
-    <video class="video" autoplay muted loop playsinline>
+    <div class="video video-safari">
+    </div>
+    <video class="video video-non-safari" autoplay muted loop playsinline>
       <source
         src="{% static '/home/images/home_images/video/The_Shelter_Creative_Levare.mp4' %}"
         type="video/mp4"
