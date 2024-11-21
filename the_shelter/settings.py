@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-DEBUG = True
+DEBUG = False
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
