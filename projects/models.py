@@ -1,12 +1,47 @@
+import os
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.db import transaction
 from django.db.models import Max
 from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
+from cloudinary.api import resources
 
 
-# Create your models here.
+def get_unique_image_name(instance, filename):
+    """
+    Generates image name using the project company name,
+    allowing Cloudinary to handle the uniqueness by appending identifiers if needed.
+    """
+
+    project_slug = slugify(instance.project.company)
+    base_filename = f"The-Shelter-Creative-{project_slug}"
+    file_extension = os.path.splitext(filename)[-1]
+
+    # Return the full path for the image
+    return f"project_images/{instance.project.slug}/{base_filename}{file_extension}"
+
+  
+
+# Function to generate the upload path for images in Cloudinary
+def get_project_image_upload_to(instance, filename):
+    
+    if instance.project and instance.project.slug:
+        project_folder = slugify(instance.project.slug)
+        return f'project_images/{project_folder}/{filename}'
+    else:
+        return f'project_images/default/{filename}'
+
+
+# Helper function to generate the upload path for videos
+def get_project_video_upload_to(instance, filename):
+
+    if instance.project and instance.project.slug:
+        project_folder = slugify(instance.project.slug)
+        return f'project_videos/{project_folder}/{filename}'
+    else:
+        return f'project_videos/default/{filename}'
+
 
 
 class Template(models.Model):
@@ -44,7 +79,7 @@ class Project(models.Model):
     main_service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True, related_name='main_service')
     services = models.ManyToManyField(Service, related_name='secondary_services')  # Corrected: ManyToManyField does not accept null=False
     list_position = models.IntegerField(unique=True)
-    list_image = models.ImageField(upload_to='project_images', blank=True, null=True)
+    list_image = models.ImageField(upload_to='project_images/list_images', blank=True, null=True)
 
     class Meta:
         ordering = ['list_position']
@@ -132,44 +167,48 @@ class Section(SectionCleanMixin, models.Model):
     new_text_color_mobile = models.CharField(max_length=200, blank=True, null=True)
 
     # Field for video file
-    video_file = CloudinaryField(resource_type='video', folder='project_videos', blank=True, null=True)
-    
-    # Images and descriptions for up to 7 images
-    img_1 = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_1_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_1_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
+
+    # Video file with dynamic upload path
+    video_file = CloudinaryField(resource_type='video', folder="media/project_videos", use_filename=True,
+        unique_filename=False, blank=True, null=True)
+
+    # Images and descriptions for up to 7 images with dynamic upload path
+    img_1 = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_1_tablet = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_1_mobile = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
     img_1_description = models.TextField(blank=True, null=True)
 
-    img_2 = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_2_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_2_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
+    img_2 = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_2_tablet = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_2_mobile = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
     img_2_description = models.TextField(blank=True, null=True)
 
-    img_3 = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_3_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_3_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
+    img_3 = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_3_tablet = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_3_mobile = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
     img_3_description = models.TextField(blank=True, null=True)
 
-    img_4 = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_4_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_4_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
+    img_4 = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_4_tablet = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_4_mobile = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
     img_4_description = models.TextField(blank=True, null=True)
 
-    img_5 = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_5_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_5_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
+    img_5 = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_5_tablet = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_5_mobile = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
     img_5_description = models.TextField(blank=True, null=True)
 
-    img_6 = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_6_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_6_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
+    img_6 = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_6_tablet = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_6_mobile = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
     img_6_description = models.TextField(blank=True, null=True)
 
-    img_7 = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_7_tablet = models.ImageField(upload_to='project_images', blank=True, null=True)
-    img_7_mobile = models.ImageField(upload_to='project_images', blank=True, null=True)
+    img_7 = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_7_tablet = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
+    img_7_mobile = models.ImageField(upload_to=get_unique_image_name, blank=True, null=True)
     img_7_description = models.TextField(blank=True, null=True)
- 
+
+    
 
     def __str__(self):
         return f"{self.project.company}: {self.html_description_name if self.html_description_name  else self.template.template_name}"
