@@ -1,3 +1,45 @@
+# Table Of Content
+
+-   [Front End Design](#front-end-design)
+    -   [User Stories](#user-stories)
+    -   [Site Goals](#site-goals)
+    -   [Scope](#scope)
+-   [Design](#design)
+    -   [Colour Scheme](#colour-scheme)
+    -   [Database Schema](#Database-Schema)
+    -   [Fonts](#Fonts)
+    -   [Wireframes](#Wireframes)
+    -   [Agile Methodology](#Agile-Methodology)
+         -   [Overview](#overview)
+         -   [EPICS(Milestones)](#epicsmilestones)
+         -   [User Stories issues](#user-stories-issues)
+         -   [MoSCoW prioritization](#moscow-prioritization)
+         -   [GitHub Projects](#github-projects)
+-   [Features](#features)
+    -   [Navbar](#Navbar)
+    -   [Footer](#Footer)
+    -   [Home](#Home)
+        -   [Hero Section](#hero-section)
+        -   [Search Form](#search-form)
+        -   [Product Card](#product-card)
+    -   [Profile Page](#profile-page)
+    -   [Sign In Page](#sign-in-page)
+    -   [Sign Up Page](#sign-up-page)
+    -   [Sign Out Confirmation](#sign-out-confirmation)
+    -   [Password reset](#password-reset)
+    -   [Password reset email sent](#password-reset-email-sent)
+    -   [Enter a new password](#enter-a-new-password)
+    -   [Password Reset Completed](#password-reset-completed)
+    -   [Error Pages](#error-pages)
+-   [Future Features](#future-features)
+-   [Marketing](#marketing)
+-   [Search Engine Optimization SEO](#search-engine-optimization-seo)
+-   [Testing](#testing)
+-   [Bugs](#Bugs)
+
+
+
+
 
 ## Role **: Full-Stack Developer  
 **Responsibilities**:
@@ -51,7 +93,7 @@ A secondary goal is to increase engagement expand the clients network and scope 
 
 
 
-## Front-End Design
+## Front End Design
 
 Given the company's expertise in branding, the website's design and functionality were meticulously crafted with visual communication as a primary driver. 
 Every design element was intentionally selected to create a cohesive, compelling narrative that resonates with the target audience and showcases the company's creative capabilities.
@@ -63,12 +105,7 @@ Every design element was intentionally selected to create a cohesive, compelling
 
 ### Execution
 
-#### UX 
 
-- Full-Page Scrolling was decided on to be used as the scrolling pattern and is a core element of the website.
-- This was implemented using Fullpage.js. 
-- This provides an immersive and curated experience allowing users to focus on one image at a time minimising distractions from surrounding content and traditional scrolling. 
-- This turned out particularly effective in showcasing the clients work which primarialy deals in photography, branding and creative production.
 
 #### Images & Videos
 
@@ -115,6 +152,22 @@ This combination of sans-serif for headings and serif for body text creates a ba
 <br>
 <br>
 ![Image of fonts](static/images/readme_images/fonts.png)
+
+## UX 
+
+### Full-Page Scrolling
+
+ Full-Page Scrolling was decided on to be used as the scrolling pattern and is a core element of the website. This was implemented using Fullpage.js. 
+This provides an immersive and curated experience allowing users to focus on one image at a time minimising distractions from surrounding content and traditional scrolling. 
+This turned out particularly effective in showcasing the clients work which primarialy deals in photography, branding and creative production.
+
+### Enhanced User Experience
+
+- Open Graph (OG) meta tags improve social media sharing by providing rich previews with accurate titles, descriptions, and images when the site is shared on platforms like Facebook or LinkedIn.
+- Favicon implementation across various devices and sizes enhances brand recognition and improves the site's visual appearance in browser tabs and bookmarks.
+- Font preloading optimizes page load times by prioritizing the loading of critical fonts, reducing layout shifts and improving perceived performance.
+- Manifest file enhances the user experience by providing a more app-like feel to the website and improving its integration with mobile devices.
+
 
 ## Features
 
@@ -267,7 +320,9 @@ This thoughtfully designed homepage not only showcases the client’s portfolio 
 
 ## Back-End Design
 
-![Image of database](static/images/readme_imgs/database.png)
+This database is a comprehensive Django project management system designed to create flexible, multi-section project pages with robust content management capabilities. It consists of five core models.
+
+![Image of database](static/images/readme_images/database.png)
 
 ### Service Model
 
@@ -319,37 +374,107 @@ The Section model is a highly flexible component for building project pages. It 
 
 This model allows for rich, quick, customized content creation for each project section.
 
-<br>
+
+### get_unique_image_name ( function ) 
+Generates unique names for images uploaded to Cloudinary by using the project's company name and slug. All images contain the 
+company's name and the client/project the images relates to. This saves time when uploading images, ensures consistent file names and improves SEO. 
+
+### get_project_image_upload_to ( function )  
+Determines the upload path for project images in Cloudinary, creating folders dynamically based on the project's slug. If no slug exists, it defaults to a standard folder.
+These functions facilitate effective asset management in Cloudinary by organizing images into relevant folders and ensuring that file names are unique, preventing overwrites during uploads.
+
+## Logic
+The views.py file in the projects app contains the code to process the backend data and connect it to the frontend. 
+
+### get_section_css(section): 
+This function retrieves the custom CSS for a section, either from a custom property or from the associated template.
+
+### get_section_html_content(section): 
+This function generates the HTML content for a section. It replaces placeholders like image URLs, descriptions, video URLs, and text descriptions with actual data from the section or project. The content includes dynamic fields such as project descriptions and associated services.
+
+### change_color(section, page_position, section_css) and change_text_color(section, page_position, section_css): 
+These functions modify the CSS styles for specific section elements, such as header colors or text color, depending on user-defined settings for desktop, tablet, and mobile views.
+
+### Main View Function (project):
+
+This function processes a single project page identified by the project_slug. It retrieves the corresponding Project and ProjectPage objects.
+It then checks each section (from section_1 to section_10) of the project page. If a section exists, the corresponding HTML content and CSS are generated and processed for any color changes.
+The sections' content and CSS are stored in variables, which are passed to the template for rendering.
+The overall goal of this view is to dynamically generate and render a project page with customizable content (HTML and CSS), where each section can have unique styles, images, and textual content tailored to the specific project being viewed.]
+
+
 
 ## Search Engine Optimization SEO and Marketing
 
 ### SEO
 
-#### Keywords
- A keyword list for long and short-tail keywords was made and the refined using [wordtracker](https://www.wordtracker.com/).
- <details>
-
-![Screenshot of feature description](static/images/readme_imgs/SEO_images/keywords.png)
-</details><br>
-
-#### HTML
-Descriptive meta tags were added to the base.html template, including title, description and keywords. Also, there is a content block for additional tags.
-![Screenshot of feature description](static/images/readme_imgs/SEO_images/base_meta.png)
-<br>
-Further meta tags were added to the product pages & blog posts depending on the shown product or article. These included the product name and releated artist in the description and keywords.
-
-![Screenshot of feature description](static/images/readme_imgs/SEO_images/product_meta.png)
-![Screenshot of feature description](static/images/readme_imgs/SEO_images/blog_meta.png)
-<br>
-
-For the product image and article post images the relevant product name and artist is contained in the image alternative description.
-![Screenshot of feature description](static/images/readme_imgs/SEO_images/product_img.png)
-![Screenshot of feature description](static/images/readme_imgs/SEO_images/blog_img.png)
-<br>
-
-Also implemented were:
+- Descriptive meta tags are dynamically added to every page.
+- Page titles are dynamically added to every page.
 - Semantic HTML elements were implemented throughout the site.
-- The use of keywords in section headings where suitable.
-- The addition of high-quality content used on the site. This includes the product descriptions and especially the reviews.
-- A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/). This was generated using the deployed website. The file is included at the root level of the project.
-- A `robots.txt` file was created at the root level of the project. This file tells search engine crawlers which URLs they can access on the website.
+- Image file names contain the company and related client.
+- Image descriptions: Images uploaded to the database have a "alt" value field. If left blank, an automatically generated "alt" value containing the company's name and client's name is generated.
+- A sitemap was generated using [xml-sitemaps](https://www.xml-sitemaps.com/). A url path was created fot the [sitemap](https://www.thesheltercreative.com/sitemap.xml) and then registered in Google Console.
+- A robots.txt file was created at the root level of the project. This file tells search engine crawlers which URLs they can access on the website.
+
+
+
+
+
+
+
+
+
+## Manual Testing of User Stories
+
+<mark>WAS = Works as expected</mark>
+
+### 1. General User Needs
+
+**Goal** | **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ | ------------ |
+Intuitively navigate through the website homepage | Test all sections on different screen sizes and browsers | Section render correctly | WAS |
+Find essential information about the company | Test the info link on different screen sizes | Content of the modal is presented | WAS |
+View the company'y projects | Test link to projects modal on different screen sizes | Content of the modal is presented | WAS |
+View further details on each project | Click on project link in the project modal | Related project is shown | WAS |
+
+## Code Validation
+All of my code has been validated using an online validator specific to the language, all code now passes with zero errors. 
+
+- [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate all HTML code written and used in this webpage.
+   
+    
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate all CSS code written and used in this webpage.
+    - No errors shown. 
+
+
+- [JSHint](https://jshint.com/)
+    - Used to validate JS code
+    - No errors shown.
+
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+    - Used to test my code for any issues or errors.
+    - Some lines in views.py that contained messages were left longer.
+
+
+- Lighthouse Google Developer Tools
+    - In addition to this I have also used online Lighthouse to test the accessibility of my website:
+
+![Image of lighthouse validation](static/images/readme_images/lighthouse.png)
+
+## Bugs and Fixes
+
+### Browser Compatabilites
+
+Videos in Safari covered the brand-service container, where the company name and main service are displayed. This issue occurred because Safari cannot render a video with text in front of it (using a higher z-index).
+
+The issue was resolved by adding a Safari-specific container in the HTML, visible only for Safari browsers. This container rendered the video as a background image. For all other browsers, this approach does not work, so the normal implementation using a <video> element was used.
+
+### Static Files Issues
+
+White noise is used to serve static files. This caused a problem if there were old files in the staticfiles folder from previous clooect static commands which had been deleted. This was 
+solved by changing the setting STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage" to STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage".
+This compresses static files but doesn't create a manifest which is more forgiving in dealing with deleted files. 
+
+

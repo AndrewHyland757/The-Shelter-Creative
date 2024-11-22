@@ -13,7 +13,6 @@ def get_unique_image_name(instance, filename):
     Generates image name using the project company name,
     allowing Cloudinary to handle the uniqueness by appending identifiers if needed.
     """
-
     project_slug = slugify(instance.project.company)
     base_filename = f"The-Shelter-Creative-{project_slug}"
     file_extension = os.path.splitext(filename)[-1]
@@ -22,26 +21,16 @@ def get_unique_image_name(instance, filename):
     return f"project_images/{instance.project.slug}/{base_filename}{file_extension}"
 
   
-
-# Function to generate the upload path for images in Cloudinary
 def get_project_image_upload_to(instance, filename):
-    
+    """
+    Generates image name using the project company name,
+    allowing Cloudinary to handle the uniqueness by appending identifiers if needed.
+    """
     if instance.project and instance.project.slug:
         project_folder = slugify(instance.project.slug)
         return f'project_images/{project_folder}/{filename}'
     else:
         return f'project_images/default/{filename}'
-
-
-# Helper function to generate the upload path for videos
-def get_project_video_upload_to(instance, filename):
-
-    if instance.project and instance.project.slug:
-        project_folder = slugify(instance.project.slug)
-        return f'project_videos/{project_folder}/{filename}'
-    else:
-        return f'project_videos/default/{filename}'
-
 
 
 class Template(models.Model):
