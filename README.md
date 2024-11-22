@@ -463,13 +463,38 @@ All of my code has been validated using an online validator specific to the lang
 
 ![Image of lighthouse validation](static/images/readme_images/lighthouse.png)
 
+
+
+
+## Deployment
+
+
+The deployment of this Django application incorporates several key implementations that enhance functionality, user experience, and media management. Below is a description of these implementations:
+
+### Media Files on Cloudinary
+For efficient handling of media files, the application integrates with Cloudinary. This service enables automatic uploads of images and videos, ensuring that all media assets are stored securely and can be accessed quickly. The use of Cloudinary also allows for dynamic image transformations and optimization, enhancing the performance of the application.
+
+### Static Files on WhiteNoise
+To serve static files efficiently, the application employs WhiteNoise. This middleware allows for the direct serving of static assets from the Django app itself, eliminating the need for an additional web server. WhiteNoise automatically compresses files and adds cache headers, improving load times and overall user experience.
+
+### Database and Hosting on Heroku
+The application is hosted on Heroku. Utilizing Heroku’s PostgreSQL database allows for reliable data storage and management. This setup ensures that the application can scale easily and handle varying loads while providing seamless access to the database.
+
+### Domain Registration with CDmon
+The domain for the application is registered with CDmon. The client had already the domain registered with this company.
+
+
+### DNS Management with Cloudflare
+DNS settings are managed through Cloudflare. By routing traffic through Cloudflare, the application benefits from DDoS protection, caching capabilities, and improved site speed. Additionally, Cloudflare’s SSL support ensures secure connections for users accessing the site.
+
+
 ## Bugs and Fixes
 
 ### Browser Compatabilites
 
 Videos in Safari covered the brand-service container, where the company name and main service are displayed. This issue occurred because Safari cannot render a video with text in front of it (using a higher z-index).
 
-The issue was resolved by adding a Safari-specific container in the HTML, visible only for Safari browsers. This container rendered the video as a background image. For all other browsers, this approach does not work, so the normal implementation using a <video> element was used.
+The issue was resolved by adding a Safari-specific container in the HTML, visible only for Safari browsers. This container rendered the video as a background image. For all other browsers, this approach does not work, so the normal implementation using a video element was used.
 
 ### Static Files Issues
 
@@ -478,3 +503,79 @@ solved by changing the setting STATICFILES_STORAGE="whitenoise.storage.Compresse
 This compresses static files but doesn't create a manifest which is more forgiving in dealing with deleted files. 
 
 
+## Technologies Used
+
+
+### Design/Content Tools
+- [Photoshop](https://www.adobe.com/ie/products/photoshop/landpa.html?gclid=Cj0KCQjwv7O0BhDwARIsAC0sjWPeCgU6FYu-ZKvAz6ymBFOviEoL8DOfkS6vavhnk9qIoopU-Tmp3OsaAlnyEALw_wcB&mv=search&mv=search&mv2=paidsearch&sdid=2XBSBWBF&ef_id=Cj0KCQjwv7O0BhDwARIsAC0sjWPeCgU6FYu-ZKvAz6ymBFOviEoL8DOfkS6vavhnk9qIoopU-Tmp3OsaAlnyEALw_wcB:G:s&s_kwcid=AL!3085!3!520877428951!e!!g!!photoshop!1423511192!58810496314&gad_source=1)
+    - Used to format images, including cropping, compressing and touch-ups.
+
+- [Figma](https://https://www.figma.com)
+    - Used to create the wireframes and preview section mock-ups with images. also used to create the favicon image.
+
+- [Coloors](https://coolors.co/)
+    - Used to create a colour palette and colour gradient chart.
+
+- [Favicon.io](https://favicon.io/)
+    - Used to create favicon files the website.
+
+<br>
+
+### Development 
+
+- [Django](https://www.djangoproject.com/)
+    - Django is the framework that has been used to build the website.
+
+- [Bootstrap](https://getbootstrap.com/)
+    - Used for creating responsive design elements. In particular the modal sections.
+
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+
+- [GitHub](https://github.com/)
+    - Used to store code for the project after being pushed.
+
+- [Gitpod](https://www.gitpod.io/)
+    - Used as the development environment.
+
+- [Heroku](https://dashboard.heroku.com/apps)
+    - used to deploy the live application.
+
+- [PostgreSQL](https://www.postgresql.org/)
+    - Used Heroku's PostgreSQL relational database in deployment to store the data for my models.
+
+- [Cloudinary](https://cloudinary.com/)
+    - Used to store all of the media files for the projects.
+
+
+    ### Formatting/Testing
+
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+    - Used to test the code for any issues or errors.
+- [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate all HTML code written and used in this webpage.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate all CSS code written and used in this webpage.
+- [JSHint](https://jshint.com/)
+    - Used to validate JS code
+- [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html)
+    - Used to accurately format my CSS code.
+
+- [Freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html)
+    - Used to accurately format my HTML code.
+
+- [AmIResponsive](http://ami.responsivedesign.is/)
+    - Used to generate responsive image used in README file.
+
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse)
+    - Used to audit for performance & accessibility.
+
+
+
+
+
+## Further Possible Additions
+
+- Google Analytics Integration: Implementing Google Analytics would provide valuable insights into user behavior, allowing for data-driven decisions to enhance the website's performance and user engagement.
+- Journal Section: Adding a journal section has been discussed a s a future addition to the website with the client. This could significantly increase user engagement and improve SEOand allow for regular updates, articles, or insights related to the brand, fostering a community around the content.
+- Custom Front-End for Admin: Developing a custom front-end for the admin panel would enhance usability for the owner, enabling easier and more intuitive management of projects in the database. This tailored interface would streamline workflows and improve overall efficiency in content management.
