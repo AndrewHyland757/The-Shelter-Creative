@@ -314,6 +314,34 @@ As users scroll beyond the landing page, the rest of the homepage offers a galle
 This thoughtfully designed homepage not only showcases the client’s portfolio effectively but also enhances user interaction and satisfaction, making it a compelling entry point for visitors.
 
 
+![Screenshot of info modal](static/images/readme_images/projects.png)
+
+### Templates
+Since the homepage and each project page feature a carousel of single-page scrolling sections, it was essential to create a predefined set of templates that accommodate various image configurations. These templates were designed in wireframes using Figma before being developed into HTML and CSS. This templating system allowed for the rapid upload of projects once they were completed.
+
+
+![Screenshot of info modal](static/images/readme_images/wireframes.png)
+
+<br>
+
+### Processes
+Each feature, including the logo, header and layouts iin general, were first woreframed and then designed in Figma where design decisions sush as spacing and layouts were refined. 
+Before adding each project, a preview was created in Figma with the selected images and approved by with the client to ensure everything looked as intended.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ![Homepage](static/images/readme_images/homepage.png)
 
