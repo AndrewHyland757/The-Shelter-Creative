@@ -40,56 +40,65 @@
 
 
 
+## Introduction
 
-## Role **: Full-Stack Developer  
+The website serves as a comprehensive platform to showcase the creative expertise and the diverse services provided by The Shelter Creative, a dynamic creative agency based in Madrid. The site features a modern, user-centric design that effectively integrates multimedia elements, including high-quality images and engaging videos. This approach not only captivates visitors but also highlights the agency's impressive portfolio, allowing potential clients to appreciate the breadth and depth of its work.
+The website is designed with the user experience in mind, ensuring that navigation is intuitive and content is easily accessible. By leveraging contemporary design principles and technology, The Shelter Creative aims to create an immersive online experience that reflects its innovative spirit and commitment to excellence in the creative industry.
+
+
+## Role: Full-Stack Developer  
 **Responsibilities**:
 - Design of the front-end for mobile and desktop using Figma.
 - Development the front-end.
-- Development of the back-end template database using Django.
+- Design and development of the back-end template database using Django.
 - Image Curation & image optimization including editing and resizing images. 
-- Deployment
-- SEO implementation 
+- Deployment using Heroku.
+- SEO implementation.
 
 
 ## Scope
 
 ### Business Goals
 
- The main objective of the website is to highlight the client's work and boost engagement in order to attract potential future business opportunities.
- This is to be achieved by:
-
-- A design and website personality that reflects the clients values and appeals to the target demographic.
-As the business is involved in branding, a strong empahsis was put on the visual elements of the website and also influnced functionality.
-
-- The presentation of the clients previous work. The showcasing and curation of images and videos were of primary importance.
+The main objective of the website is to highlight the company's work and boost engagement in order to attract potential future business opportunities. This is to be achieved by:
+- A design and website personality that reflects the company's values and appeals to the target demographic. As the business is involved in branding, a strong emphasis was placed on the visual elements of the website, which also influenced its functionality.
+- The presentation of the client's previous work. The showcasing and curation of images and videos are of primary importance.
 - A website that is easy and intuitive to navigate.
-- The ability for users to access essential information such as, contact information, services offered, and past projects.
-
+- The ability for users to access essential information such as contact information, services offered, and past projects.
 - Incorporating SEO features into the website.
 
-A secondary goal is to increase engagement expand the clients network and scope in the industry. 
+A secondary goal is to increase engagement by expanding the client's network and scope within the industry.
 
 
 ### Target Audience
 
-- Brands and clients in various industries, including fashion, retail, beauty, travel, and luxury lifestyle.
-- People working in creative production, photography, branding, fashion, visual media and content creation.
+The target audience for The Shelter Creative includes:
+- Brands and Clients Across Various Industries: This encompasses sectors such as fashion, retail, beauty, travel, and luxury lifestyle. These brands seek creative solutions that enhance their visibility and resonate with their target markets.
+- Creative Professionals: Individuals working in creative production, photography, branding, fashion, visual media, and content creation form another crucial segment. They often require specialized services that align with their artistic vision and professional needs.
+
+This diverse audience reflects the agency's commitment to serving a wide range of clients, providing tailored creative strategies that meet the unique demands of different industries.
 
 
 ### User Experience - Requirements and Expectations
-- A user-friendly website that balances information with an aesthetic that is appealing and modern.
-- A mobile-friendly website
-- A way to view the clients work.
-- Information about the clients business.
-- A way to make contact.
-- A way to easily access social media accounts from the website.
+The website is designed to meet the following user experience requirements and expectations:
+- Intuitive Design: A user-friendly website that strategically balances comprehensive information with a modern, visually appealing aesthetic.
+- Responsive Design: A mobile-friendly website that ensures seamless navigation and optimal viewing across various devices and screen sizes.
+- Portfolio Showcase: A clear and engaging method to view the client's work, highlighting their creative portfolio and demonstrating their professional capabilities.
+- Business Insights: Comprehensive information about the client's business, including services, expertise, and unique value proposition.
+- Contact Accessibility: A straightforward and prominent contact mechanism that enables potential clients to easily reach out and initiate communication.
+- Social Media Integration: Simple and direct access to the client's social media accounts, facilitating broader engagement and connection across digital platforms.
+
+These requirements are designed to create an engaging, informative, and user-centric digital experience that effectively communicates the client's brand identity and professional offerings.
 
 ### General User Needs
+
 1. As a user, I can intuitively navigate through the website so that I can easily access key information and view desired content.
-2. As a user, I can find essential information about the company, such as: services offered, contact info & social media links.
-3. As a user, I can view the clients work clearly.
-3. As a user, I can see a list of the clients past projects.
-4. As a user, I can explore each project further and see services offered, project description and releated images and videos.
+2. As a user, I can find essential information about the company, such as services offered, contact information, and social media links.
+3. As a user, I can view the client's work clearly.
+4. As a user, I can see a list of the client's past projects.
+5. As a user, I can explore each project further and see services offered, project descriptions, and related images and videos.
+
+These user stories effectively capture the core functionality and user expectations for the website. They focus on key aspects such as navigation, information accessibility, portfolio presentation, and detailed project exploration. These stories serve as a solid foundation for designing and developing a user-centered website that meets the needs of The Shelter Creative's target audience.
 
 
 
@@ -99,36 +108,37 @@ Given the company's expertise in branding, the website's design and functionalit
 Every design element was intentionally selected to create a cohesive, compelling narrative that resonates with the target audience and showcases the company's creative capabilities.
 
 ### Brief
-- A design communicates the brand value and appeals to the target audience.
-- A website personality and tone that is neutral, bold, confident, modern and that quitely reflects luxury and sophistication.
-- A website that is easy to navigate and locate necessary information for optimal user experience.
+- Brand Value Communication: The design effectively communicates the brand's value proposition and appeals directly to the target audience, reinforcing The Shelter Creative's position in the market.
+- Distinctive Website Personality: The website embodies a personality and tone that is:
+    - Neutral, allowing the work to speak for itself
+    - Bold, reflecting confidence in the company's capabilities
+    - Modern, demonstrating contemporary design sensibilities
+    - Quietly luxurious, subtly conveying sophistication without ostentation
+    - A website that is easy to navigate and locate necessary information for optimal user experience.
+
 
 ### Execution
-
-
 
 #### Images & Videos
 
 - As images are the primary content of the website much care was given them.
-- Art direction was implemented using the <picture> element to provide multiple versions of an image for different screen sizes and in controlling the exact crop of an image. 
+- Art direction was implemented using the picture element to provide multiple versions of an image for different screen sizes and in controlling the exact crop of an image. 
 
 #### Templates
 
-- A selection of templates were created to faciliate image selection and variety. 
-- These included various image grids and full screen arrangments.
-- This provided a fast was to upload the projects to the webite and prevented repetition. 
-- These grids were uploaded to the website database, when the could be further cusomiised for each section if needed.
-
-
+- A selection of templates was created to facilitate image selection and variety.
+These included various image grids and full-screen arrangements.
+- This provided a fast way to upload the projects to the website and prevented repetition.
+These grids were uploaded to the website database, where they could be further customized for each section if needed.
 
 
 #### Text Colours & Background Colours
-- Pure white (#FFFFFF) is utilized as the main background colour.
-- The info modal as well as the favicon and open graph image utilise (#948A7A) as a background-color. 
-This muted, warm gray-brown evokes feelings of calmness, stability and good legibility, making it an ideal choice.
+- Pure white (#FFFFFF) is utilized as the main background color.
+- The info modal, as well as the favicon and open graph image, utilize (#948A7A) as a background color.
+This muted, warm gray-brown evokes feelings of calmness, stability, and good legibility, making it an ideal choice.
 - The default text color is an off-black (#1E1C1C), which is applied to all text elements throughout the website.
 - An off-white (#F2F0EF) is used for text elements that appear over dark images and videos, ensuring optimal legibility and contrast.
-- A colour gradient chart was used to generate shades for hoover colours.
+A color gradient chart was used to generate shades for hover color
 
 
 ![Color palette](static/images/readme_images/colour_palette_the_shelter_creative.png)
@@ -140,39 +150,35 @@ This muted, warm gray-brown evokes feelings of calmness, stability and good legi
 The typography choices for the website were carefully considered to align with the brief of creating a modern yet refined and luxurious tone.
 
 
- [Big Noodle Too](https://www.myfonts.com/collections/big-noodle-too-font-sentinel-type?gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPspweB8dLDucMRA3ii2S5-KCBvfQFYDur-5oPWZg2d6gYnDGusHoKUaApQXEALw_wcB) from myfonts.com is used on the logo. The client had already used this font before for the company logo.
-
+ [Big Noodle Too](https://www.myfonts.com/collections/big-noodle-too-font-sentinel-type?gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPspweB8dLDucMRA3ii2S5-KCBvfQFYDur-5oPWZg2d6gYnDGusHoKUaApQXEALw_wcB)  is used on the logo. The client had already used this font before for the company logo.
 
 Sans-serif for Headings and Navigation: 
-[Helvetica Now ](https://www.myfonts.com/collections/helvetica-now-variable-font-monotype-imaging?gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPt9lteUZbeU0eapbzvWRKqirrfeP-TPfpJa1AQDZUr3y596Hq5TbyIaAqzbEALw_wcB) from myfonts.com, was selected for headings and navigation elements in the header. This modern update of the classic Helvetica offers improved legibility and a fresh aesthetic, perfectly complementing the website's contemporary design12. 
+[Helvetica Now ](https://www.myfonts.com/collections/helvetica-now-variable-font-monotype-imaging?gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPt9lteUZbeU0eapbzvWRKqirrfeP-TPfpJa1AQDZUr3y596Hq5TbyIaAqzbEALw_wcB) from myfonts.com was selected for headings and navigation elements in the header. This modern update of the classic Helvetica offers improved legibility and a fresh aesthetic, perfectly complementing the website's contemporary design.
 
-[Reckless Neue Book ](https://displaay.net/typeface/reckless-collection/reckless-neue/) from Displaay Type Foundry, was chosen for the primary body text. Its elevated x-height enhances readability while imparting a contemporary and refined feel, aligning well with the desired website personality3.
+[Reckless Neue Book ](https://displaay.net/typeface/reckless-collection/reckless-neue/) from Displaay Type Foundry was chosen for the primary body text. Its elevated x-height enhances readability while imparting a contemporary and refined feel, aligning well with the desired website personality.
 
-This combination of sans-serif for headings and serif for body text creates a balanced visual hierarchy, marrying modern design sensibilities with a touch of classic elegance. The contrast between the two typefaces adds visual interest while maintaining a cohesive and sophisticated overall appearance.
+his combination of sans-serif for headings and serif for body text creates a balanced visual hierarchy, marrying modern design sensibilities with a touch of classic elegance. The contrast between the two typefaces adds visual interest while maintaining a cohesive and sophisticated overall appearance.
+
 <br>
 <br>
 ![Image of fonts](static/images/readme_images/fonts.png)
 
-## UX 
+### UX 
 
-### Full-Page Scrolling
+#### Full-Page Scrolling
 
- Full-Page Scrolling was decided on to be used as the scrolling pattern and is a core element of the website. This was implemented using Fullpage.js. 
-This provides an immersive and curated experience allowing users to focus on one image at a time minimising distractions from surrounding content and traditional scrolling. 
-This turned out particularly effective in showcasing the clients work which primarialy deals in photography, branding and creative production.
+Full-Page Scrolling was decided to be used as the scrolling pattern and is a core element of the website. This was implemented using Fullpage.js. This provides an immersive and curated experience, allowing users to focus on one image at a time, minimizing distractions from surrounding content and traditional scrolling. This turned out particularly effective in showcasing the client's work, which primarily deals in photography, branding, and creative production.
 
-### Enhanced User Experience
+#### Enhanced User Experience
 
 - Open Graph (OG) meta tags improve social media sharing by providing rich previews with accurate titles, descriptions, and images when the site is shared on platforms like Facebook or LinkedIn.
 - Favicon implementation across various devices and sizes enhances brand recognition and improves the site's visual appearance in browser tabs and bookmarks.
-- Font preloading optimizes page load times by prioritizing the loading of critical fonts, reducing layout shifts and improving perceived performance.
-- Manifest file enhances the user experience by providing a more app-like feel to the website and improving its integration with mobile devices.
-
+- Font preloading optimizes page load times by prioritizing the loading of critical fonts, reducing layout shifts, and improving perceived performance.
+- The manifest file enhances the user experience by providing a more app-like feel to the website and improving its integration with mobile devices.
 
 ## Features
 
 ### 404 Error Page
-
 
 A custom 404 page was implemented to handle and site errors.
 <br>
@@ -187,7 +193,6 @@ A custom 404 page was implemented to handle and site errors.
 - Maintain brand continuity
 - Create a modern and sophisticated visual identity
 - Ensure versatility across various applications
-
 
 
 #### Execution
@@ -246,20 +251,15 @@ The website features a unique approach to presenting essential information throu
 
 #### Execution
 
-
 - Intergration of a customised Bootstrap 4 modal.
 - A custom layout was designed for the info page, keeping the 'about' text to the left and the essential information to the right in a column. This design creates a clean, refined, and easily legible layout that maintains visual hierarchy while achieving a balanced, asymmetric composition.
-
 
 #### User Experience:
 - Always readily available, eliminating the need for scrolling to access a footer
 - Provides a fresh, intriguing alternative to conventional website layouts
 - Efficient Information Architecture: Streamlines the user's journey to key information, improving overall site navigation and engagement
 
-
 ![Screenshot of info modal](static/images/readme_images/info.png)
-
-
 
 ### Projects Modal
 
@@ -271,14 +271,12 @@ The website features access to the companies past work accessible via the header
 - Each project entry acts as a clickable link for further exploration
 - Displays the client company name and primary service provided
 
-
 #### Execution
 
 - Intergration of a customised Bootstrap 4 modal.
 - A custom layout was designed for the projects modal. 
 - Dynamic Visual Representation. Desktop consistes of two colums, on the left consisting of a scrollable links to each project, and on the right a dynamic image container which containes a shows a collage of three project images which is replaced by a project image whien the project link is hoovered on. This is implemented by a custom Javascript script.
 - Responsive Design. Mobile consists of the project list in one column, each like being a 4:5 aspect image with project name and service.
-
 
 
 #### User Experience:
@@ -294,7 +292,6 @@ The website features access to the companies past work accessible via the header
 As users scroll beyond the landing page, the rest of the homepage offers a gallery-like experience through one-page scrolling, showcasing a selection of the client's portfolio that includes both images and videos. This seamless journey loops back to the landing page at the end, creating a cohesive browsing experience.
 
 #### Key Objectives and Features:
-##### 
 - Foster interest by providing a visually engaging presentation of a selection of the companies work.
 - Context about each section - having the project name and main service visible.
 - A section that offers insight into the way the way the company works. 
@@ -305,45 +302,75 @@ As users scroll beyond the landing page, the rest of the homepage offers a galle
 - Responsive Design: the poicture element was used to ensure that layouts adapt seamlessly to various screen sizes and to control art direction.
 
 
-#####  Enhanced User Experience:
+####  Enhanced User Experience:
 - Immersive Scrolling: The full-page scrolling design provides users with an immersive, curated experience that allows them to fully appreciate the media content.
 - Encouragement for Exploration: Combines textual information with visual elements to motivate further site exploration.
-
-
 
 This thoughtfully designed homepage not only showcases the client’s portfolio effectively but also enhances user interaction and satisfaction, making it a compelling entry point for visitors.
 
 
-![Screenshot of info modal](static/images/readme_images/projects.png)
+#### Home Page
+<img src="static/images/readme_images/figma_home.jpg" alt="Figma Homepage" width="50%">
 
-### Templates
-Since the homepage and each project page feature a carousel of single-page scrolling sections, it was essential to create a predefined set of templates that accommodate various image configurations. These templates were designed in wireframes using Figma before being developed into HTML and CSS. This templating system allowed for the rapid upload of projects once they were completed.
+### Individual Project Page
 
+#### Key Objectives and Features:
+- Showcase each project in comprehensive detail
+- Provide in-depth descriptions of the work involved in each project
+- Display a diverse range of media to fully represent project scope and outcomes
+ 
+#### Execution
+- Developed versatile templates to accommodate various image presentation styles, enabling flexible and dynamic visual storytelling for each project
+- Collaborated closely with the client to curate and arrange images, ensuring optimal representation of each project on its dedicated page
+- Implemented a consistent structure across project pages, with Section 2 dedicated to outlining the company's services and detailed work descriptions, providing visitors with a clear understanding of the project's scope and the company's expertise
+- Incorporated a flexible text section with an accompanying image, allowing for more extensive project narratives when needed, thus enhancing the depth of information available to visitors
 
-![Screenshot of info modal](static/images/readme_images/wireframes.png)
+This approach ensures that each project page serves as a comprehensive portfolio piece, offering visitors a thorough understanding of the project's challenges, solutions, and outcomes while maintaining a visually appealing and user-friendly layout.
 
+#### Sample of a Project Page
+<img src="static/images/readme_images/figma_U.jpg" alt="Figma Project Page" width="33%" height="auto">
+
+## Design Development Process
+
+### Wireframes: Creating low-fidelity sketches or digital outlines of the user interface
+- The wireframing process began with creating low-fidelity sketches in Figma to outline the basic structure of the homepage and project pages. Since these pages featured a carousel of single-page scrolling sections, it was crucial to develop a set of versatile templates that could accommodate various image configurations.
 <br>
 
-### Processes
-Each feature, including the logo, header and layouts iin general, were first woreframed and then designed in Figma where design decisions sush as spacing and layouts were refined. 
-Before adding each project, a preview was created in Figma with the selected images and approved by with the client to ensure everything looked as intended.
+- Wireframes served as the foundation for the design, focusing on layout, navigation, and information architecture without the distraction of visual details6. This approach allowed for quick iterations and easy communication of core functionalities to stakeholders.
+
+<img src="static/images/readme_images/wireframes.png" alt="Wireframes" width="100%">
+
+### Mockup Creation: Developing high-fidelity visual representations of the design in Figma
+
+- Building upon the wireframes, a set of reusable mockup templates were created in Figma. These high-fidelity mockups incorporated more detailed design elements, including placeholder images, typography, and color schemes2. The use of templates streamlined the design process, allowing for rapid previews and iterations with the client.
+<br>
+
+- This stage was crucial for visualizing different image configurations and making quick adjustments based on client feedback. Figma's collaborative features facilitated real-time editing and commenting, enhancing the iterative design process.
+
+<img src="static/images/readme_images/figma_templates_1.jpg" alt="Homepage" width="100%">
+
+### Final Mockup: Producing the polished, client-approved design ready for development
+
+- The final mockup stage involved refining the designs based on client feedback and approval. This phase focused on polishing visual details, ensuring consistency across all pages, and preparing the designs for development.
+<br>
+
+- For the project pages, attention was given to showcasing each project's unique aspects while maintaining a cohesive overall design. The homepage was designed to provide an engaging introduction to the portfolio, balancing aesthetics with functionality.
+Additional elements such as modals and favicons were also finalized, ensuring a complete and professional user experience across the site.
+
+#### Figma Project Pages
+<img src="static/images/readme_images/projects_pages.jpg" alt="Figma Project Pages" width="100%">
+
+#### Figma Homepage
+
+<img src="static/images/readme_images/figma_home.jpg" alt="Figma Homepage" width="50%">
+
+#### Figma Modals, 404 & Favicon
+<img src="static/images/readme_images/figma_miss.jpg" alt="Figma Modals & Favicon" width="50%">
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-![Homepage](static/images/readme_images/homepage.png)
 
 
 ## Back-End Design
@@ -466,7 +493,7 @@ View the company'y projects | Test link to projects modal on different screen si
 View further details on each project | Click on project link in the project modal | Related project is shown | WAS |
 
 ## Code Validation
-All of my code has been validated using an online validator specific to the language, all code now passes with zero errors. 
+All of the code has been validated using an online validator specific to the language, all code now passes with zero errors. 
 
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate all HTML code written and used in this webpage.
@@ -539,23 +566,26 @@ This compresses static files but doesn't create a manifest which is more forgivi
     - Used to format images, including cropping, compressing and touch-ups.
 
 - [Figma](https://https://www.figma.com)
-    - Used to create the wireframes and preview section mock-ups with images. also used to create the favicon image.
-
-- [Coloors](https://coolors.co/)
-    - Used to create a colour palette and colour gradient chart.
+    - Used to create the wireframes and preview section mock-ups with images. also used to create the favicon  and open graph images.
 
 - [Favicon.io](https://favicon.io/)
     - Used to create favicon files the website.
+
+- [Coloors](https://coolors.co/)
+    - Used to create a colour palette and colour gradient chart.
 
 <br>
 
 ### Development 
 
 - [Django](https://www.djangoproject.com/)
-    - Django is the framework that has been used to build the website.
+    - A python framework that has been used to build the website.
+
+- [FullPage.js](https://alvarotrigo.com/fullPage/)
+    - A JavaScript library that enables the creation of fullscreen scrolling websites.
 
 - [Bootstrap](https://getbootstrap.com/)
-    - Used for creating responsive design elements. In particular the modal sections.
+    - CSS framework used for creating responsive design elements, in particular the modal sections.
 
 - [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
     - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
@@ -575,17 +605,24 @@ This compresses static files but doesn't create a manifest which is more forgivi
 - [Cloudinary](https://cloudinary.com/)
     - Used to store all of the media files for the projects.
 
+- [Cloudfare](https://www.cloudflare.com/)
+    - DNS Management.
 
-    ### Formatting/Testing
+
+### Formatting/Testing
 
 - [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
     - Used to test the code for any issues or errors.
+
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate all HTML code written and used in this webpage.
+
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - Used to validate all CSS code written and used in this webpage.
+
 - [JSHint](https://jshint.com/)
-    - Used to validate JS code
+    - Used to validate JS code.
+
 - [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html)
     - Used to accurately format my CSS code.
 
@@ -597,9 +634,6 @@ This compresses static files but doesn't create a manifest which is more forgivi
 
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse)
     - Used to audit for performance & accessibility.
-
-
-
 
 
 ## Further Possible Additions
