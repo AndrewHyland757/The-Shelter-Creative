@@ -60,6 +60,8 @@ The target audience for The Shelter Creative includes:
 - Creative Professionals: Individuals working in creative production, photography, branding, fashion, visual media, and content creation form another crucial segment. They often require specialized services that align with their artistic vision and professional needs.
 
 This diverse audience reflects the agency's commitment to serving a wide range of clients, providing tailored creative strategies that meet the unique demands of different industries.
+<br>
+<br>
 
 
 # UX 
