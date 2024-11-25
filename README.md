@@ -6,8 +6,6 @@
 
 # Table Of Content
 
-## Table of Contents
-
 1. [Introduction](#introduction)
 2. [Scope](#scope)
 3. [UX](#ux)
