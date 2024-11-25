@@ -2,7 +2,7 @@
 
 ![Image of user landing page on different size screens](static/images/readme_images/screens.jpg)
 
-## [www.thesheltercreative.com](https://www.thesheltercreative.com/)
+## [www.thesheltercreative.com - Live Site ](https://www.thesheltercreative.com/){:target="_blank"}
 
 # Table Of Content
 
