@@ -3,6 +3,9 @@
 ![Image of user landing page on different size screens](static/images/readme_images/screens.jpg)
 
 ## [www.thesheltercreative.com - Live Site ](https://www.thesheltercreative.com/){:target="_blank"}
+## <a href="https://www.thesheltercreative.com" target="_blank">Live Site</a>
+
+
 
 # Table Of Content
 
