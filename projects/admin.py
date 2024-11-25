@@ -10,7 +10,7 @@ admin.site.register(Template)
 class SectionAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
-            'fields': ('project', 'template','html_description_name', 'use_custom_html', 'use_custom_css', 'change_header_color', 'change_text_color', 'video_file'),
+            'fields': ('project', 'template', 'html_description_name', 'use_custom_html', 'use_custom_css', 'change_header_color', 'change_text_color', 'video_file'),
         }),
         ('Custom HTML/CSS', {
             'classes': ('collapse',),  # This will collapse the section by default
@@ -29,8 +29,8 @@ class SectionAdmin(admin.ModelAdmin):
             'classes': ('collapse',),  # Collapses this section by default
             'fields': ('project_description_1', 'project_description_2'),
         }),
-      
-      # Image 1
+
+        # Image 1
         ('Image 1', {
             'classes': ('collapse',),  # Collapses this section by default
             'fields': ('img_1', 'img_1_tablet', 'img_1_mobile', 'img_1_description'),
@@ -67,8 +67,8 @@ class SectionAdmin(admin.ModelAdmin):
         }),
     )
 
-admin.site.register(Section, SectionAdmin)
 
+admin.site.register(Section, SectionAdmin)
 
 
 @admin.register(ProjectPage)

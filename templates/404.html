@@ -2,35 +2,34 @@
 {% load static %}
 
 {% block title %}
-    <title>Page Not Found</title>
+<title>Page Not Found</title>
 {% endblock %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'styles/404.css' %}">
+<link rel="stylesheet" href="{% static 'styles/404.css' %}">
 {% endblock %}
 
 
 {% block content %}
-    <div class="section">
-        <div class="container-404">
-            <picture>
-                <source
-                srcset="{% static '/images/404/the_shelter_creative_smoda_russian_red_alvaro_beamud_md.jpg' %}"
-                media="(max-width: 1200px)">
-                <img
-                class="img-full-screen img-full-screen-top"
-                src="{% static '/images/404/the_shelter_creative_smoda_russian_red_alvaro_beamud.jpg' %}"
-                alt="Image of an expansive modern roof structure with white beams. Image by The Shelter Creative">
-            </picture>
-            <div class="text-container-404">
-                <div class="text">
-                <p>404</p>
-                <p>The page you are looking for does not exist or has been removed from the site.</p>
-                </div>
-            </div>
+<div class="section">
+    <div class="container-404">
+        <picture>
+        <source
+            srcset="{% static '/images/404/the_shelter_creative_smoda_russian_red_alvaro_beamud_md.jpg' %}"
+            media="(max-width: 1200px)">
+        <img
+            class="img-full-screen img-full-screen-top"
+            src="{% static '/images/404/the_shelter_creative_smoda_russian_red_alvaro_beamud.jpg' %}"
+            alt="Image of an expansive modern roof structure with white beams. Image by The Shelter Creative">
+        </picture>
+        <div class="text-container-404">
+        <div class="text">
+            <p>404</p>
+            <p>The page you are looking for does not exist or has been removed from the site.</p>
+        </div>
         </div>
     </div>
-
+</div>
 {% endblock %}
 
 

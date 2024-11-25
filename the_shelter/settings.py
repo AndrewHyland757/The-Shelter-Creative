@@ -15,9 +15,9 @@ DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [
-    '8000-andrewhylan-theshelterc-wd0qckapmaa.ws-eu116.gitpod.io', 
-    'the-shelter-creative-1cb9f175cfbe.herokuapp.com', 
-    'www.thesheltercreative.com', 
+    '8000-andrewhylan-theshelterc-wd0qckapmaa.ws-eu116.gitpod.io',
+    'the-shelter-creative-1cb9f175cfbe.herokuapp.com',
+    'www.thesheltercreative.com',
     'thesheltercreative.com'
 ]
 
@@ -136,14 +136,14 @@ CLOUDINARY_STORAGE = {
 
 # Static files settings
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Media files settings
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'  
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

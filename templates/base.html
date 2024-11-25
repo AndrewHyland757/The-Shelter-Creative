@@ -24,15 +24,13 @@
     {% block extra_meta %}
     {% endblock %}
 
-     <!-- Favicon -->
-     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
-     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
-     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
- 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     <!-- site.webmanifest' -->
-     <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
  
-      
     {% block preloads %}
     <!-- Preloaded fonts -->  
     <link rel="preload" href="{% static 'fonts/logo_font/Myfontwebkit/webFonts/BigNoodleToo/font.woff2' %}" as="font" type="font/woff2" crossorigin="anonymous">
@@ -101,15 +99,6 @@
     {% endblock %}
 
     {% block corejs %}
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJRT5DKGYZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-VJRT5DKGYZ');
-    </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -118,23 +107,17 @@
   </head>
 
   <body>
-
     {% include 'header.html' %}
     {% include 'info_modal.html' %}
     {% include 'projects_modal.html' %}
-    
-    <!--fullpage -->
 
     <div id="fullpage">
       {% block content %}
       {% endblock %}
-      
     </div>
 
     {% block postloadjs %}
-
     <!-- Base template js -->
-
     <script src="{% static 'js/base.js' %}"></script>
 
     <!-- Fullpage.js -->

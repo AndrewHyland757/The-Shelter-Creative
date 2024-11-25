@@ -1,3 +1,5 @@
+/* FONTS */
+
 /*
 TEXT PRIMARY COLOR (OFF-BLACK): #1E1C1C;
 TEXT PRIMARY COLOR HOVER : #626060;
@@ -5,10 +7,6 @@ TEXT PRIMARY COLOR HOVER : #626060;
 TEXT SECONDARY COLOR (OFF-WHITE): #F2F0EF
 TEXT SECONDARY COLOR HOVER : #E0E0E0 (light), #C0C0C0 (dark)
 */
-
-/******** GENERAL CLASSES ********/
-
-
 
 @font-face {
 	font-family: 'BigNoodleToo';
@@ -25,6 +23,8 @@ TEXT SECONDARY COLOR HOVER : #E0E0E0 (light), #C0C0C0 (dark)
 	src: url('/static/fonts/reckless_neue/RecklessNeue-Book.woff2') format('woff2');
 }
 
+/* GENERAL CLASSES */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -37,13 +37,11 @@ TEXT SECONDARY COLOR HOVER : #E0E0E0 (light), #C0C0C0 (dark)
 }
 
 html {
-	
 	font-size: 62.5%;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	/* smooth transitions 
-
 	-webkit-backface-visibility: hidden;*/
 	/* iOS fix */
 
@@ -54,8 +52,6 @@ body:has(modal[open]) {
 	overflow: hidden;
 }
 
-
-/* Remove fullpage.js watermark */
 div.fp-watermark {
 	display: none;
 }
@@ -81,9 +77,131 @@ p {
 	margin-bottom: 0;
 }
 
+/* HEADER CLASSES */
 
+.header-container {
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
 
-/******** MODAL CLASSES ********/
+.header {
+	height: fit-content;
+	margin: 0rem 3rem;
+	margin-top: 2.4rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-left {
+	display: block;
+}
+
+.logo {
+	font-family: "BigNoodleToo", "Arial Narrow", sans-serif !important;
+	font-size: 3.6rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 3.04px;
+	color: #1e1c1c;
+	/* Section transitions */
+	transition: color .75s ease-in-out;
+}
+
+.header-right {
+	height: fit-content;
+	display: flex;
+	gap: 1.8rem;
+}
+
+.sublogo,
+.header-right button {
+	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.12px;
+	color: #1e1c1c;
+	/* Section transitions */
+	transition: color .75s ease-in-out;
+}
+
+.sublogo {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}
+
+.header-right button {
+	font-size: 1.3rem;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.header-right button:visited {
+	background-color: transparent;
+}
+
+.logo:hover,
+.logo:active,
+.sublogo--email:hover,
+.sublogo--email:active,
+.header-right button:hover,
+.header-right button:active {
+	color: #626060;
+	text-decoration: none;
+	cursor: pointer !important;
+	/* Hover transitions */
+	transition: color 0.1s ease-in-out;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header-left {
+		text-align: center;
+	}
+
+	.header-right {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.sublogo,
+	.header-right button {
+		font-size: 1.2rem;
+		line-height: 1.3rem;
+		letter-spacing: 0.25px;
+	}
+
+	.logo {
+		font-size: 3.4rem;
+		letter-spacing: 6.84px;
+		letter-spacing: 3.04px;
+	}
+
+	.sublogo--email {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.logo {
+		font-size: 3.2rem;
+		letter-spacing: 3px;
+	}
+}
+
+/* BASE MODAL CLASSES */
 
 .modal-dialog {
 	margin: 0;
@@ -132,7 +250,7 @@ p {
 	cursor: pointer;
 }
 
-/******** INFO MODAL CLASSES ********/
+/* INFO MODAL CLASSES */
 
 .modal-content-info {
 	background-color: #948a7a;
@@ -289,7 +407,7 @@ a {
 	}
 }
 
-/******** PROJECTS MODAL CLASSES ********/
+/* PROJECTS MODAL CLASSES */
 
 p,
 .close-container button {
@@ -590,131 +708,5 @@ p,
 
 	.line-project-small {
 		display: none;
-	}
-}
-
-
-/******** HEADER CLASSES ********/
-
-.header-container {
-	z-index: 1;
-	width: 100%;
-	position: absolute;
-	top: 0;
-}
-
-.header {
-	height: fit-content;
-	margin: 0rem 3rem;
-	margin-top: 2.4rem;
-	display: flex;
-	justify-content: space-between;
-}
-
-.header-left {
-	display: block;
-}
-
-.logo {
-	font-family: "BigNoodleToo", "Arial Narrow", sans-serif !important;
-	font-size: 3.6rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 3.04px;
-	color: #1e1c1c;
-	/* Section transitions */
-	transition: color .75s ease-in-out;
-}
-
-.header-right {
-	height: fit-content;
-	display: flex;
-	gap: 1.8rem;
-}
-
-.sublogo,
-.header-right button {
-	font-family: "HelveticaNowProTextMedium", Arial, sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 0.12px;
-	color: #1e1c1c;
-	/* Section transitions */
-	transition: color .75s ease-in-out;
-}
-
-.sublogo {
-	font-size: 1.2rem;
-	line-height: 1.4rem;
-}
-
-.header-right button {
-	font-size: 1.3rem;
-	text-decoration: none;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-
-}
-
-.header-right button:visited {
-	background-color: transparent;
-}
-
-.logo:hover,
-.logo:active,
-.sublogo--email:hover,
-.sublogo--email:active,
-.header-right button:hover,
-.header-right button:active {
-	color: #626060;
-	text-decoration: none;
-	cursor: pointer !important;
-	/* Hover transitions */
-	transition: color 0.1s ease-in-out;
-}
-
-@media only screen and (max-width: 992px) {
-
-	.header {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.header-left {
-		text-align: center;
-	}
-
-	.header-right {
-		flex-direction: column;
-		gap: 0;
-	}
-
-	.sublogo,
-	.header-right button {
-		font-size: 1.2rem;
-		line-height: 1.3rem;
-		letter-spacing: 0.25px;
-	}
-
-	.logo {
-		font-size: 3.4rem;
-		letter-spacing: 6.84px;
-		letter-spacing: 3.04px;
-	}
-
-	.sublogo--email {
-		display: none;
-	}
-}
-
-@media (max-width: 480px) {
-
-	.logo {
-		font-size: 3.2rem;
-		letter-spacing: 3px;
 	}
 }

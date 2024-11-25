@@ -7,19 +7,14 @@
 	justify-content: center;
 	align-items: end;
 	padding: 2.4rem .5rem;
-
 	z-index: 50;
 	bottom: 0;
-
 }
 
 .section .brand-service-container {
 	height: 10rem;
 	position: absolute;
-
-	
 }
-
 
 .section .brand-service-container--scrollable {
 	height: fit-content;

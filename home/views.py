@@ -5,7 +5,7 @@ from projects.models import Project
 
 def home(request):
     """
-    Renders home page.
+    Renders home page
     """
 
     projects = Project.objects.all()
@@ -15,17 +15,4 @@ def home(request):
     }
     template = "home/home.html"
   
-    return render(request, template, context)
-
-
-def test(request):
-
-
-    projects = Project.objects.all()
-
-    context = {
-    "projects": projects,
-    }
-    template = "home/test.html"
-
     return render(request, template, context)

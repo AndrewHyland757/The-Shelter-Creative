@@ -3,8 +3,8 @@ from projects.models import Project
 
 
 def handler404(request, exception):
-    """ 
-    Error Handler 404 - Page Not Found 
+    """
+    Error Handler 404 - Page Not Found
     """
 
     projects = Project.objects.all()
@@ -14,8 +14,3 @@ def handler404(request, exception):
     }
 
     return render(request, "404.html", context=context, status=404)
-
-    
-
-
-

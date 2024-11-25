@@ -13,7 +13,7 @@ def get_section_css(section):
 
 def get_section_html_content(section):
     """
-    Retrieves a Section instance for the given project_page and returns 
+    Retrieves a Section instance for the given project_page and returns
     the HTML with image URLs, video URL, and other placeholders replaced.
     """
     company = section.project.company
@@ -22,11 +22,9 @@ def get_section_html_content(section):
     project_description_1 = section.project_description_1 if section.project_description_1 else ''
     project_description_2 = section.project_description_2 if section.project_description_2 else ''
 
-    
     services = section.project.services.all()
     if services:  # Check if services exists and is not empty
         services_list = ''.join(f'<p class="service">{service.service_name}</p>' for service in services)
-        
     else:
         services_list = ''
 
@@ -75,7 +73,6 @@ def get_section_html_content(section):
         if img_field:
             img_url = img_field.url  # Convert ImageFieldFile to URL string
             section_html_with_images = section_html_with_images.replace(placeholder, img_url)
-    
 
     image_descriptions = [
         (section.img_1_description, '{{ img_1_description }}'),
@@ -92,7 +89,7 @@ def get_section_html_content(section):
         if desc_field:
             description = desc_field
         else:
-            description = f"{company}: {main_service_name} by The Shelter Creative" 
+            description = f"{company}: {main_service_name} by The Shelter Creative"
         section_html_with_images = section_html_with_images.replace(placeholder, description)
 
     # Replace video URL if video_file is not null
@@ -108,10 +105,9 @@ def get_section_html_content(section):
         .replace('{{ services }}', services_list)
         .replace('{{ project_company }}', company)
         .replace('{{ project_main_service }}', main_service_name)
-)
+    )
 
     return section_html_with_content
-
 
 
 def change_color(section, page_position, section_css):
@@ -185,7 +181,7 @@ def change_color(section, page_position, section_css):
         """
 
     return section_css
-    
+
 
 def change_text_color(section, page_position, section_css):
     """
@@ -195,7 +191,7 @@ def change_text_color(section, page_position, section_css):
     new_color = section.new_text_color
     new_color_tablet = section.new_text_color_tablet
     new_color_mobile = section.new_text_color_mobile
-    
+
     # Base styles
     section_css += f"""
     .fp-viewing-{position} .company p,
@@ -264,10 +260,8 @@ def project(request, project_slug):
     section_9_css = None
     section_10_html_content = None
     section_10_css = None
-    
-   
-    # Process Section if they exist.
 
+    # Process Section if they exist.
     if project_page.section_1:
         section_1 = project_page.section_1
         section_1_html_content = get_section_html_content(section_1)
@@ -348,7 +342,7 @@ def project(request, project_slug):
             section_9_css = change_color(section_9, "9", section_9_css)
         if section_9.change_text_color:
             section_9_css = change_text_color(section_9, "9", section_9_css)
-    
+
     if project_page.section_10:
         section_10 = project_page.section_10
         section_10_html_content = get_section_html_content(section_10)
@@ -357,8 +351,6 @@ def project(request, project_slug):
             section_10_css = change_color(section_10, "10", section_10_css)
         if section_10.change_text_color:
             section_10_css = change_text_color(section_10, "10", section_10_css)
-
-    
 
     context = {
         "projects": projects,
@@ -387,5 +379,5 @@ def project(request, project_slug):
     }
 
     template = "projects/project.html"
-    
+
     return render(request, template, context)
