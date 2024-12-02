@@ -32,6 +32,10 @@
     <link rel="manifest" href="{% static 'site.webmanifest' %}">
  
     {% block preloads %}
+    <!-- Preconnect to the CookieYes CDN -->
+    <link rel="preconnect" href="https://cdn-cookieyes.com" />
+    <!-- Preload the CookieYes script -->
+    <link rel="preload" href="https://cdn-cookieyes.com/client_data/0846caedb99fe61a1d0f3d49/script.js" as="script" />
     <!-- Preloaded fonts -->  
     <link rel="preload" href="{% static 'fonts/logo_font/Myfontwebkit/webFonts/BigNoodleToo/font.woff2' %}" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="{% static 'fonts/helvetica_now/MyWebfontsKit/webFonts/HelveticaNowProTextMedium/font.woff2' %}" as="font" type="font/woff2" crossorigin="anonymous">
@@ -100,7 +104,7 @@
 
     {% block corejs %}
     <!-- Start cookieyes banner -->
-    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/0846caedb99fe61a1d0f3d49/script.js"></script>
+    <script async id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/0846caedb99fe61a1d0f3d49/script.js"></script>
     <!-- End cookieyes banner -->
 
     <!-- Google tag (gtag.js) -->
