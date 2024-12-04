@@ -118,14 +118,14 @@
 
     {% block postloadjs %}
     <!-- Base template js -->
-    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/base.js' %}" defer ></script>
 
     <!-- Fullpage.js -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.28/fullpage.min.js"
       integrity="sha512-X0OyMwqsleyiPQgdq3FZzQihWPJ3bf5VrMk9Z8Fi34TUbdzHHOfwu9QoC0Y/yUiMxwpFD6eMHUJcMK8FwvgTtQ=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer">
+      referrerpolicy="no-referrer" >
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.0/fullpage.extensions.min.js" crossorigin="anonymous"></script>

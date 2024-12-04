@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
  });
  
  
- /* PROJECTS MODAL SCRIPT 
-  Handles dynamic image changes on the project modal list
-  */
+ /* PROJECTS MODAL SCRIPT */
+  // Handles dynamic image changes on the project modal list
+   
  
  document.addEventListener("DOMContentLoaded", function () {
     const projectItems = document.querySelectorAll(".project-item");
@@ -84,8 +84,3 @@ document.addEventListener('DOMContentLoaded', function () {
        });
     });
  });
-
-
-
-
-  
