@@ -15,7 +15,7 @@ DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [
-    '8000-andrewhylan-theshelterc-dj7kbz5tkdu.ws-eu117.gitpod.io',
+    '8000-andrewhylan-theshelterc-blgmrearvpw.ws-eu118.gitpod.io',
     'the-shelter-creative-1cb9f175cfbe.herokuapp.com',
     'www.thesheltercreative.com',
     'thesheltercreative.com'
@@ -23,7 +23,7 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://the-shelter-creative-1cb9f175cfbe.herokuapp.com',
-    'https://8000-andrewhylan-theshelterc-dj7kbz5tkdu.ws-eu117.gitpod.io',
+    'https://8000-andrewhylan-theshelterc-blgmrearvpw.ws-eu118.gitpod.io',
     'https://www.thesheltercreative.com',
     'https://thesheltercreative.com'
 ]
